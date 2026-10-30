@@ -2,6 +2,8 @@
 
 ## Use what you know
 
+Not sure what these words mean? See [How apps work](../basics/), especially [Stacks](../basics/stacks.md).
+
 A hackathon isn't a good time to learn a new language or framework. If you don't have a preference:
 
 - **Website**: Next.js with Tailwind. Deploys to Vercel with almost no setup.

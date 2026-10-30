@@ -100,7 +100,7 @@ Expect to be tired, for the Wi-Fi to be slow, and for something to break near th
 
 ## Next
 
-Get your laptop ready with [Start here](setup/start-here.md), then read [the guide](guide/README.md), which takes you from the week before the event to the demo.
+Get your laptop ready with [Start here](setup/start-here.md), learn the basics in [How apps work](basics/) and [Git and GitHub](git/), then read [the guide](guide/README.md), which takes you from the week before the event to the demo.
 
 ## Image credits
 

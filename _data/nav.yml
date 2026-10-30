@@ -27,6 +27,22 @@
     - title: Troubleshooting
       url: /setup/troubleshooting.html
 
+- title: How apps work
+  url: /basics/
+  pages:
+    - title: How the web works
+      url: /basics/how-the-web-works.html
+    - title: Frontend and backend
+      url: /basics/frontend-backend.html
+    - title: APIs
+      url: /basics/apis.html
+    - title: Databases
+      url: /basics/databases.html
+    - title: Stacks
+      url: /basics/stacks.html
+    - title: Deploying
+      url: /basics/deploying.html
+
 - title: Git and GitHub
   url: /git/
   pages:
