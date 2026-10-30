@@ -1,5 +1,7 @@
 # 1. Before the event
 
+If a word in this guide is unfamiliar, check the [glossary](../resources/glossary.md).
+
 ## A week before
 
 Set up your laptop while you still have time to fix problems.

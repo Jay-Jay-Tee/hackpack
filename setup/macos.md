@@ -1,8 +1,10 @@
 # macOS setup
 
-Takes about 15 minutes.
+Takes about 15 minutes. New to the terminal? Read [start-here.md](start-here.md) first.
 
 ## 1. Homebrew
+
+Homebrew is a tool for installing developer software on macOS from the terminal. It will ask for your Mac password; nothing appears while you type it, which is normal.
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -18,18 +20,18 @@ eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 ## 2. Install the basics
 
 ```bash
-brew install git gh node uv
+brew install git gh node python
 brew install --cask visual-studio-code
 ```
 
-`uv` installs and manages Python for you: `uv python install 3.12`.
+Skip `python` if you won't use it. On macOS, Python's commands are `python3` and `pip3`.
 
 The same list is in [`scripts/Brewfile`](../scripts/Brewfile). [`scripts/install.sh`](../scripts/install.sh) installs it, but only prints what it would do unless you pass `--apply`.
 
 Check in a new terminal:
 
 ```bash
-git --version && gh --version && code --version && node -v && uv --version
+git --version && gh --version && code --version && node -v && python3 --version
 ```
 
 If `code` isn't found, open VS Code, press `Cmd+Shift+P` and run **Shell Command: Install 'code' command in PATH**.
@@ -41,6 +43,7 @@ git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 git config --global init.defaultBranch main
 git config --global push.autoSetupRemote true
+git config --global pull.rebase false
 gh auth login
 ```
 

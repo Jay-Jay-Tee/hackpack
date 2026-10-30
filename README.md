@@ -6,8 +6,11 @@ Take whatever's useful and ignore the rest.
 
 ## Contents
 
+New to coding setup? Start with [setup/start-here.md](setup/start-here.md). It explains what each tool is and how to use the terminal.
+
 - [`setup/`](setup/) – installing the basics on [Windows](setup/windows.md), [macOS](setup/macos.md) or [Linux](setup/linux.md), then [VS Code](setup/vscode.md), [AI coding agents](setup/ai-agents.md), and [fixes for common errors](setup/troubleshooting.md).
 - [`resources/commands.md`](resources/commands.md) – terminal, git and GitHub commands worth knowing.
+- [`resources/glossary.md`](resources/glossary.md) – short explanations of terms like API, deploy, branch and `.env`.
 - [`guide/`](guide/) – notes on the event, in order: preparing, picking an idea, building, git with a team, using AI, the demo, and common mistakes.
 - [`templates/`](templates/) – a project README, a pitch outline and a submission checklist.
 - [`resources/`](resources/) – free tiers, public APIs and what to learn first.
@@ -26,7 +29,7 @@ There's also a web version at <https://jay-jay-tee.github.io/hackpack/>.
 
 ## Getting started
 
-Follow the setup page for your OS, then [VS Code](setup/vscode.md) and [AI agents](setup/ai-agents.md). Afterwards, on macOS or Linux:
+Read [start here](setup/start-here.md), follow the setup page for your OS, then [VS Code](setup/vscode.md) and [AI agents](setup/ai-agents.md). Afterwards, on macOS or Linux:
 
 ```bash
 git clone https://github.com/Jay-Jay-Tee/hackpack.git

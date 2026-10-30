@@ -31,7 +31,7 @@ row "npm"    npm  -v        required
 
 printf '\n%sPython%s\n' "$BOLD" "$RESET"
 row "python3" python3 --version
-row "uv"      uv      --version
+row "pip3"    pip3    --version
 
 printf '\n%sAI agents (one is enough)%s\n' "$BOLD" "$RESET"
 row "claude" claude --version && agents=$((agents + 1))

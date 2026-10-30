@@ -24,6 +24,7 @@ git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 git config --global init.defaultBranch main
 git config --global push.autoSetupRemote true
+git config --global pull.rebase false
 ```
 
 `push.autoSetupRemote` means you don't need `--set-upstream` the first time you push a branch. A list of everyday commands is in [resources/commands.md](../resources/commands.md).
@@ -32,7 +33,7 @@ git config --global push.autoSetupRemote true
 
 Commit a `.gitignore` before anyone installs dependencies. You can start from the one in [this repo](../.gitignore).
 
-Don't commit `node_modules/`, `venv/`, `dist/`, `build/`, `.env` or key files. Do commit lockfiles (`package-lock.json`, `bun.lockb`, `uv.lock`) and a `.env.example` that lists variable names with placeholder values:
+Don't commit `node_modules/`, `venv/`, `dist/`, `build/`, `.env` or key files. Do commit lockfiles (such as `package-lock.json`) and a `.env.example` that lists variable names with placeholder values:
 
 ```bash
 # .env (not committed)
@@ -49,11 +50,11 @@ If you push a key by accident, revoke it in the provider's dashboard straight aw
 **Two or three people**: everyone can work on `main` if you're working in different files.
 
 ```bash
-git pull --rebase
+git pull
 # work, then:
 git add -A
 git commit -m "add upload page"
-git pull --rebase
+git pull
 git push
 ```
 
@@ -80,9 +81,9 @@ A conflict means two people changed the same lines. Git marks them in the file:
 >>>>>>> upload-page
 ```
 
-Edit the file so it says what it should (often a mix of both), delete the marker lines, then `git add <file>` and `git rebase --continue` (or `git commit` if you were merging). VS Code shows buttons for picking either side.
+Edit the file so it says what it should (often a mix of both), delete the marker lines, then run `git add <file>` and `git commit`. VS Code shows buttons above each conflict for picking one side or both.
 
-If it gets confusing, `git rebase --abort` (or `git merge --abort`) puts you back where you started.
+If it gets confusing, `git merge --abort` puts you back where you were before the pull.
 
 ## Undoing things
 

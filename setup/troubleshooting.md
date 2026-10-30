@@ -45,6 +45,10 @@ echo 'export PATH="$HOME/.npm-global/bin:$PATH"' >> ~/.zshrc
 exec zsh
 ```
 
+## Windows: `python` opens the Microsoft Store
+
+Go to Settings → Apps → Advanced app settings → App execution aliases, and turn off the entries for `python.exe` and `python3.exe`. Then open a new terminal.
+
 ## Windows: "running scripts is disabled on this system"
 
 ```powershell
@@ -107,7 +111,7 @@ Or use another port: `npm run dev -- --port 3001`.
 
 ```bash
 git stash
-git pull --rebase
+git pull
 git stash pop
 ```
 

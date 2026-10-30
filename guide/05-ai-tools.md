@@ -6,7 +6,7 @@ The main rule I'd follow: understand everything you ship. Judges often ask how s
 
 ## Where they help
 
-- Boilerplate: forms, CRUD routes, database schemas
+- Repetitive code: forms, basic create/read/update/delete routes, database tables
 - Layout and styling fixes
 - Explaining an error or an unfamiliar piece of code
 - Writing a minimal request against an API when you paste in its docs

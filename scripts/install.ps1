@@ -32,7 +32,7 @@ $packages = @(
   'GitHub.cli',
   'Microsoft.VisualStudioCode',
   'OpenJS.NodeJS.LTS',
-  'astral-sh.uv'
+  'Python.Python.3.12'
 )
 
 foreach ($id in $packages) {
@@ -69,7 +69,7 @@ if (Get-Command gh -ErrorAction SilentlyContinue) {
 
 Section "Next"
 if ($Apply) {
-  Write-Host "  Close and reopen the terminal, check: git --version; node -v; uv --version"
+  Write-Host "  Close and reopen the terminal, check: git --version; node -v; python --version"
   Write-Host "  Then set up an AI agent: setup/ai-agents.md"
 } else {
   Write-Host "  Run again with -Apply to install."

@@ -1,19 +1,21 @@
 # Linux setup
 
-Written for Ubuntu/Debian (including WSL). Fedora and Arch commands are at the end.
+Written for Ubuntu/Debian (including WSL). Fedora and Arch commands are at the end. New to the terminal? Read [start-here.md](start-here.md) first.
+
+`sudo` runs a command as administrator and will ask for your password. Nothing appears while you type it, which is normal.
 
 ## 1. Packages
 
 ```bash
 sudo apt update
-sudo apt install -y build-essential curl git gh
+sudo apt install -y build-essential curl git gh python3 python3-pip python3-venv
 ```
 
 On older Ubuntu releases `gh` isn't in the default repositories; see <https://github.com/cli/cli/blob/trunk/docs/install_linux.md>.
 
 ## 2. Node
 
-`fnm` installs Node without sudo and lets you switch versions:
+The Node in Ubuntu's package list is often old, so use `fnm` instead. It installs Node in your home folder:
 
 ```bash
 curl -fsSL https://fnm.vercel.app/install | bash
@@ -24,12 +26,7 @@ node -v
 
 ## 3. Python
 
-`uv` installs and manages Python versions without touching the system Python:
-
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-uv python install 3.12
-```
+Installed in step 1. The commands are `python3` and `pip3`. Use a virtual environment for each project (see [commands](../resources/commands.md#python)).
 
 ## 4. VS Code
 
@@ -42,6 +39,7 @@ git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 git config --global init.defaultBranch main
 git config --global push.autoSetupRemote true
+git config --global pull.rebase false
 gh auth login
 ```
 

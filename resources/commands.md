@@ -1,5 +1,7 @@
 # Commands worth knowing
 
+New to the terminal? See [setup/start-here.md](../setup/start-here.md).
+
 ## Terminal
 
 | Command | Does |
@@ -22,7 +24,7 @@
 | `git add -A` | Stage all changes |
 | `git commit -m "message"` | Save a snapshot |
 | `git push` | Upload commits |
-| `git pull --rebase` | Get teammates' commits |
+| `git pull` | Get teammates' commits |
 | `git log --oneline` | List recent commits |
 | `git diff` | See unstaged changes |
 | `git switch -c name` | Make a new branch and switch to it |
@@ -58,14 +60,20 @@ To add teammates: repo **Settings → Collaborators** on GitHub.
 | `npm run build` | Production build (run this before deploying) |
 | `npx vercel` | Deploy to Vercel |
 
-## Python with uv
+## Python
+
+On macOS and Linux use `python3` and `pip3`; on Windows, `python` and `pip`.
 
 | Command | Does |
 | --- | --- |
-| `uv init` | Start a new project |
-| `uv add <package>` | Add a dependency |
-| `uv run main.py` | Run a script in the project's environment |
-| `uv sync` | Install dependencies after cloning |
+| `python -m venv .venv` | Make a virtual environment (a private set of packages for this project) |
+| `.venv\Scripts\activate` (Windows) or `source .venv/bin/activate` (macOS/Linux) | Turn it on; do this each time you open a new terminal |
+| `pip install <package>` | Install a package |
+| `pip install -r requirements.txt` | Install a project's packages after cloning |
+| `pip freeze > requirements.txt` | Save the list of packages so teammates can install them |
+| `python main.py` | Run a script |
+
+Add `.venv/` to `.gitignore`.
 
 ## AI agents
 

@@ -35,7 +35,7 @@ Work out the exact clicks you'll make during the demo and make that path reliabl
 
 ## Things to skip
 
-Thorough test suites, CI, microservices, password reset, email verification, dark mode. One smoke test for the main path is enough.
+Thorough test suites, CI, microservices, password reset, email verification, dark mode. A quick check that the main path works is enough.
 
 ## When you're stuck
 
@@ -44,7 +44,7 @@ Thorough test suites, CI, microservices, password reset, email verification, dar
 3. Search the error text with your own file paths removed.
 4. Ask an AI tool, and give it the full error and the relevant file.
 5. Ask a mentor. That's what they're there for.
-6. After about 20 minutes, stub it out, move on and come back later.
+6. After about 20 minutes, replace it with a placeholder (for example, return fixed data), move on and come back later.
 
 ---
 

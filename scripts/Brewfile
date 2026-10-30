@@ -4,6 +4,6 @@
 brew "git"
 brew "gh"
 brew "node"
-brew "uv"
+brew "python"
 
 cask "visual-studio-code"
