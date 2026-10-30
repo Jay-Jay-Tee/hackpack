@@ -435,18 +435,7 @@ ul.task-list li::marker { content: ""; }
 .cards strong { display: inline; color: var(--accent); font-size: 0.98rem; }
 .cards span { color: var(--muted); font-size: 0.88rem; line-height: 1.5; }
 
-/* Each card gets a coloured top edge, so the grid stays calm but not grey. */
-.cards a { border-left: 3px solid var(--card, var(--accent)); }
-.cards a.c-intro     { --card: #b45309; }
-.cards a.c-setup     { --card: #1d4ed8; }
-.cards a.c-basics    { --card: #0f766e; }
-.cards a.c-git       { --card: #c2410c; }
-.cards a.c-ai        { --card: #6d28d9; }
-.cards a.c-guide     { --card: #be123c; }
-.cards a.c-resources { --card: #15803d; }
-.cards a.c-templates { --card: #0369a1; }
-.cards a.c-scripts   { --card: #475569; }
-.cards a.c-extras    { --card: #475569; }
+/* One colour on the whole grid; the section colours stay in the sidebar. */
 
 /* Previous / next */
 .pager {
