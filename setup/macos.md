@@ -1,10 +1,6 @@
-# Setup · macOS
+# macOS setup
 
-> This is the machine the configs in this repo came from: Apple M5, 24 GB, macOS 26.6.
-
-**Time:** ~20 minutes on decent Wi-Fi.
-
----
+The configs in this repo come from my MacBook (Apple Silicon). Takes about 20 minutes.
 
 ## 1. Homebrew
 
@@ -12,98 +8,72 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-On Apple Silicon, add it to your PATH (the installer prints this — don't skip it):
+The installer prints two lines to add Homebrew to your PATH. Run them:
 
 ```bash
 echo 'eval "$(/opt/homebrew/bin/brew shellenv zsh)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv zsh)"
-brew --version
 ```
 
----
-
-## 2. The essentials
+## 2. Essentials
 
 ```bash
-brew install git gh node bun python@3.12 openjdk jq ripgrep fd
+brew install git gh node python@3.12 jq ripgrep fd
 ```
 
-Check:
+Optional: `bun`, `uv`, and `openjdk` for Java. For `openjdk`, Homebrew prints a `sudo ln -sfn ...` command so macOS can find it; run that too.
+
+Or install everything I use from the Brewfile:
 
 ```bash
-git --version && gh --version && node -v && python3.12 --version
+brew bundle --file=scripts/Brewfile
 ```
 
-Or install everything at once with the Brewfile:
+[`scripts/install.sh`](../scripts/install.sh) does the same thing, but only prints what it would do unless you pass `--apply`.
+
+## 3. Terminal tools (optional)
 
 ```bash
-brew bundle --file=./scripts/Brewfile
-```
-
-> `scripts/install.sh` wraps this with a **dry-run by default**. See [../scripts/install.sh](../scripts/install.sh).
-
----
-
-## 3. The shell stack
-
-This is the part people notice. It's not required — it just makes the terminal pleasant.
-
-```bash
-brew install starship zoxide fzf eza bat git-delta btop lazygit tmux
+brew install starship zoxide fzf eza bat git-delta lazygit btop tmux \
+  zsh-autosuggestions zsh-syntax-highlighting zsh-completions
 brew install --cask ghostty font-jetbrains-mono-nerd-font
 ```
 
-| Tool | Replaces | Why |
-| --- | --- | --- |
-| **Ghostty** | Terminal.app | Fast, native, GPU-rendered, config file you can read |
-| **starship** | your prompt | Git branch, language versions, timing — one line |
-| **zoxide** | `cd` | `z proj` jumps to any directory you've visited |
-| **fzf** | `Ctrl+R` | Fuzzy history search, file picker |
-| **eza** | `ls` | Icons, git status, tree view |
-| **bat** | `cat` | Syntax highlighting + line numbers |
-| **git-delta** | `git diff` | Side-by-side, syntax-highlighted diffs |
-| **lazygit** | git commands | A TUI for staging/committing/pushing |
-| **btop** | Activity Monitor | CPU/RAM/network in the terminal |
-| **tmux** | — | Split panes that survive a closed window |
+- Ghostty: terminal app
+- starship: prompt with git branch and language versions
+- zoxide: jump to directories you've visited
+- fzf: fuzzy history search (`Ctrl+R`) and file picking
+- eza, bat: `ls` and `cat` with colours and icons
+- git-delta: readable diffs
+- lazygit: terminal UI for git
+- btop: system monitor
+- tmux: split panes and sessions that survive closing the window
 
----
-
-## 4. Copy my configs
+## 4. My configs
 
 ```bash
-# Terminal
-mkdir -p ~/.config/ghostty
+mkdir -p ~/.config/ghostty ~/.config/git
 cp dotfiles/ghostty.config ~/.config/ghostty/config
-
-# Prompt (works on Windows too)
-mkdir -p ~/.config
 cp dotfiles/starship.toml ~/.config/starship.toml
-
-# Shell — MERGE this, don't overwrite yours
-cat dotfiles/.zshrc >> ~/.zshrc
-
-# Git
-cp dotfiles/.gitconfig ~/.gitconfig   # then edit name/email inside
+cp dotfiles/git-ignore ~/.config/git/ignore
 ```
 
-> ⚠️ **Don't blind-copy `.zshrc`.** If you already have one, open both files and take the blocks you want. Overwriting is how people lose their PATH.
->
-> The `.zshrc` sources `~/.config/secrets.env` if it exists. That file is **not** in this repo and never should be. Create your own for API keys:
->
-> ```bash
-> echo 'export OPENAI_API_KEY="sk-..."' >> ~/.config/secrets.env
-> chmod 600 ~/.config/secrets.env
-> ```
-
-Reload:
+For `.zshrc` and `.gitconfig`, compare them with yours and copy the parts you want rather than overwriting. Your existing `.zshrc` probably sets up your PATH.
 
 ```bash
-exec zsh
+code --diff dotfiles/.zshrc ~/.zshrc
 ```
 
----
+My `.zshrc` loads `~/.config/secrets.env` if it exists. That's where I keep API keys, and it isn't in this repo:
 
-## 5. Git identity + GitHub
+```bash
+echo 'export OPENAI_API_KEY="..."' >> ~/.config/secrets.env
+chmod 600 ~/.config/secrets.env
+```
+
+Run `exec zsh` to reload.
+
+## 5. Git and GitHub
 
 ```bash
 git config --global user.name "Your Name"
@@ -111,57 +81,35 @@ git config --global user.email "you@example.com"
 gh auth login
 ```
 
-SSH keys (optional — HTTPS works fine, `gh` handles the credentials):
+`gh` handles HTTPS credentials, so SSH keys are optional.
+
+## 6. macOS settings
 
 ```bash
-ssh-keygen -t ed25519 -C "you@example.com"
-gh ssh-key add ~/.ssh/id_ed25519.pub
-```
-
----
-
-## 6. macOS tweaks worth doing
-
-```bash
-# Show hidden files in Finder
+# show hidden files in Finder
 defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder
 
-# Faster key repeat
+# faster key repeat (log out and back in to apply)
 defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
-
-# Screenshots without the shadow
-defaults write com.apple.screencapture disable-shadow -bool true && killall SystemUIServer
 ```
 
-Useful apps for a hackathon: **Rectangle** (window snapping — `brew install --cask rectangle`), **Stats** (menu bar CPU/RAM), **AltTab** (better ⌘-Tab).
+Apps I use: Rectangle (window snapping), Stats (CPU/RAM in the menu bar), AltTab. All are in the Brewfile.
 
----
-
-## 7. Test that you can ship
+## 7. Test a deploy
 
 ```bash
-mkdir -p ~/dev/hello && cd ~/dev/hello
-npm create vite@latest . -- --template react
-npm install && npm run dev
+npm create vite@latest hello -- --template react
+cd hello && npm install && npm run dev
 ```
 
-Open <http://localhost:5173>, then:
+Open <http://localhost:5173>, then deploy with `npx vercel`.
 
-```bash
-npm i -g vercel && vercel
-```
+## Checklist
 
----
+- [ ] `brew`, `git`, `gh`, `node` and `python3.12` work in a new terminal
+- [ ] `gh auth status` shows you're logged in
+- [ ] `./scripts/check.sh` shows nothing important missing
+- [ ] You've deployed something once
 
-## 8. Checklist
-
-- [ ] `brew --version` works in a **new** terminal
-- [ ] `node -v`, `python3.12 --version`, `git --version`, `gh --version`
-- [ ] `gh auth status` logged in
-- [ ] Ghostty opens with Catppuccin Mocha and JetBrains Mono
-- [ ] Starship prompt shows the current branch
-- [ ] `ls` shows icons, `cat` shows line numbers
-- [ ] You deployed something once
-
-Common problems → [troubleshooting.md](troubleshooting.md)
+Problems: [troubleshooting.md](troubleshooting.md)

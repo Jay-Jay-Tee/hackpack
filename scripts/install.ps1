@@ -1,17 +1,11 @@
-# ─────────────────────────────────────────────────────────────────────
-#  install.ps1 — safe, dry-run-first setup for Windows
+# install.ps1: Windows setup using winget.
 #
-#  Default behaviour: PRINT what it would do. Changes nothing.
+#   .\scripts\install.ps1                    print what would happen
+#   .\scripts\install.ps1 -Apply             install packages
+#   .\scripts\install.ps1 -Apply -Dotfiles   also copy starship.toml (existing file is backed up)
 #
-#      .\scripts\install.ps1                 # dry run (safe)
-#      .\scripts\install.ps1 -Apply          # actually install
-#      .\scripts\install.ps1 -Apply -Dotfiles  # also copy configs
-#
-#  Notes:
-#    - Uses winget only. No sudo, no registry hacks.
-#    - Close and reopen your terminal afterwards so PATH refreshes.
-#    - If scripts are blocked: Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
-# ─────────────────────────────────────────────────────────────────────
+# If scripts are blocked: Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+# Reopen the terminal afterwards so PATH updates.
 [CmdletBinding()]
 param(
   [switch]$Apply,
@@ -21,159 +15,87 @@ param(
 $ErrorActionPreference = 'Stop'
 $Root = Split-Path -Parent $PSScriptRoot
 
-function Write-Head($t) { Write-Host ""; Write-Host $t -ForegroundColor Cyan -Bold }
-function Write-Ok($t)   { Write-Host "  [ok] $t"   -ForegroundColor Green }
-function Write-Skip($t) { Write-Host "  [--] $t"   -ForegroundColor DarkGray }
-function Write-Warn($t) { Write-Host "  [!!] $t"   -ForegroundColor Yellow }
-function Write-Todo($t) { Write-Host "   ->  $t"   -ForegroundColor DarkGray }
+function Section($t) { Write-Host ""; Write-Host $t -ForegroundColor Cyan }
+function Ok($t)      { Write-Host "  ok  $t" -ForegroundColor Green }
+function Skip($t)    { Write-Host "  --  $t" -ForegroundColor DarkGray }
+function Warn($t)    { Write-Host "  !!  $t" -ForegroundColor Yellow }
 
-if (-not $Apply) {
-  Write-Warn "DRY RUN - nothing will be installed. Re-run with -Apply to execute."
-}
-
-# ─────────────────────────────────────────────────────────────────────
-Write-Head "1. Platform"
-Write-Ok "$([System.Environment]::OSVersion.VersionString)"
-Write-Ok "PowerShell $($PSVersionTable.PSVersion)"
+if (-not $Apply) { Warn "Dry run: nothing will be installed. Add -Apply to install." }
 
 if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
-  Write-Warn "winget not found. Install 'App Installer' from the Microsoft Store, then reopen this terminal."
+  Warn "winget not found. Install 'App Installer' from the Microsoft Store and reopen the terminal."
   exit 1
 }
-Write-Ok "winget $((winget --version) -replace 'v','')"
 
-# ─────────────────────────────────────────────────────────────────────
-Write-Head "2. Packages"
+Section "Packages"
+$packages = @(
+  'Microsoft.WindowsTerminal',
+  'Microsoft.PowerShell',
+  'Git.Git',
+  'GitHub.cli',
+  'Microsoft.VisualStudioCode',
+  'OpenJS.NodeJS.LTS',
+  'astral-sh.uv',
+  'Starship.Starship',
+  'BurntSushi.ripgrep.MSVC',
+  'sharkdp.bat',
+  'eza-community.eza',
+  'junegunn.fzf',
+  'ajeetdsouza.zoxide',
+  'dandavison.delta',
+  'JesseDuffield.lazygit',
+  'jqlang.jq',
+  'DEVCOM.JetBrainsMonoNerdFont'
+)
 
-# id => friendly name
-$packages = [ordered]@{
-  'Microsoft.WindowsTerminal'   = 'Windows Terminal'
-  'Microsoft.PowerShell'        = 'PowerShell 7'
-  'Git.Git'                     = 'Git'
-  'GitHub.cli'                  = 'GitHub CLI'
-  'Microsoft.VisualStudioCode'  = 'VS Code'
-  'OpenJS.NodeJS.LTS'           = 'Node.js LTS'
-  'Schniz.fnm'                  = 'fnm (node versions)'
-  'astral-sh.uv'                = 'uv (Python)'
-  'Microsoft.OpenJDK.21'        = 'OpenJDK 21'
-  'Starship.Starship'           = 'Starship prompt'
-  'BurntSushi.ripgrep.MSVC'     = 'ripgrep'
-  'sharkdp.bat'                 = 'bat'
-  'eza-community.eza'           = 'eza'
-  'junegunn.fzf'                = 'fzf'
-  'ajeetdsouza.zoxide'          = 'zoxide'
-  'dandavison.delta'            = 'git-delta'
-  'JesseDuffield.lazygit'       = 'lazygit'
-  'jqlang.jq'                   = 'jq'
-  'DEVCOM.JetBrainsMonoNerdFont' = 'JetBrains Mono Nerd Font'
-}
+foreach ($id in $packages) {
+  winget list --id $id -e --accept-source-agreements *> $null
+  if ($LASTEXITCODE -eq 0) { Skip "$id already installed"; continue }
 
-$installed = @()
-try { $installed = (winget list --accept-source-agreements 2>$null) -join "`n" } catch { }
-
-foreach ($id in $packages.Keys) {
-  $name = $packages[$id]
-  if ($installed -match [regex]::Escape($name.Split(' (')[0])) {
-    Write-Skip "$name already installed"
-    continue
-  }
   if ($Apply) {
-    Write-Host "  installing $name ..." -NoNewline
-    winget install --id $id -e --source winget --accept-package-agreements --accept-source-agreements --silent 2>&1 | Out-Null
-    Write-Host " done" -ForegroundColor Green
+    Write-Host "  installing $id"
+    winget install --id $id -e --source winget --accept-package-agreements --accept-source-agreements
   } else {
-    Write-Host "  would install: $name  ($id)" -ForegroundColor DarkGray
+    Write-Host "  would install $id"
   }
 }
 
-# ─────────────────────────────────────────────────────────────────────
-Write-Head "3. Git identity"
-$name  = git config --global user.name  2>$null
+Section "Git"
 $email = git config --global user.email 2>$null
 if ($email) {
-  Write-Ok "git user: $name <$email>"
+  Ok "$(git config --global user.name) <$email>"
 } else {
-  Write-Warn "git identity not set. Run:"
-  Write-Todo 'git config --global user.name  "Your Name"'
-  Write-Todo 'git config --global user.email "you@example.com"'
-  Write-Todo 'git config --global init.defaultBranch main'
-  Write-Todo 'git config --global core.autocrlf true'
-  Write-Todo 'git config --global pull.rebase true'
+  Warn "Name and email not set. Run:"
+  Write-Host '      git config --global user.name "Your Name"'
+  Write-Host '      git config --global user.email "you@example.com"'
+  Write-Host '      git config --global core.autocrlf true'
 }
 
-# ─────────────────────────────────────────────────────────────────────
-Write-Head "4. GitHub CLI"
 if (Get-Command gh -ErrorAction SilentlyContinue) {
-  try {
-    gh auth status *> $null
-    if ($LASTEXITCODE -eq 0) { Write-Ok "gh logged in" }
-    else { Write-Warn "gh installed but not logged in -> run: gh auth login" }
-  } catch { Write-Warn "run: gh auth login" }
-} else {
-  Write-Skip "gh not on PATH yet (reopen terminal after install)"
+  gh auth status *> $null
+  if ($LASTEXITCODE -eq 0) { Ok "gh logged in" } else { Warn "gh not logged in yet. Run: gh auth login" }
 }
 
-# ─────────────────────────────────────────────────────────────────────
-Write-Head "5. Dotfiles"
+Section "Dotfiles"
 if (-not $Dotfiles) {
-  Write-Skip "skipped (add -Dotfiles to copy configs, with .bak backups)"
+  Skip "skipped (add -Dotfiles to copy starship.toml)"
 } else {
-  function Copy-Cfg($src, $dst) {
-    $dir = Split-Path -Parent $dst
-    if (-not (Test-Path $dir)) {
-      if ($Apply) { New-Item -ItemType Directory -Path $dir -Force | Out-Null }
-      else { Write-Host "  would create $dir" -ForegroundColor DarkGray }
-    }
-    if (Test-Path $dst) {
-      $bak = "$dst.bak.$(Get-Date -Format yyyyMMddHHmmss)"
-      if ($Apply) {
-        Copy-Item $dst $bak
-        Copy-Item $src $dst -Force
-        Write-Ok "backed up + replaced $dst"
-      } else {
-        Write-Host "  would back up $dst -> $bak" -ForegroundColor DarkGray
-        Write-Host "  would copy $src -> $dst"    -ForegroundColor DarkGray
-      }
-    } else {
-      if ($Apply) { Copy-Item $src $dst; Write-Ok "created $dst" }
-      else { Write-Host "  would create $dst" -ForegroundColor DarkGray }
-    }
-  }
-
-  $cfg = Join-Path $HOME '.config'
-  Copy-Cfg (Join-Path $Root 'dotfiles/starship.toml') (Join-Path $cfg 'starship.toml')
-
-  # Git config: create only if missing
-  $gitcfg = Join-Path $HOME '.gitconfig'
-  if (Test-Path $gitcfg) {
-    Write-Warn "$gitcfg exists - leaving it alone. Compare manually:"
-    Write-Todo "code (Join-Path '$Root' 'dotfiles/.gitconfig') $gitcfg"
+  $src = Join-Path $Root 'dotfiles/starship.toml'
+  $dst = Join-Path $HOME '.config/starship.toml'
+  if (-not $Apply) {
+    if (Test-Path $dst) { Write-Host "  would back up $dst and replace it" } else { Write-Host "  would create $dst" }
   } else {
-    if ($Apply) {
-      Copy-Item (Join-Path $Root 'dotfiles/.gitconfig') $gitcfg
-      Write-Ok "created ~/.gitconfig (now set name/email!)"
-    } else {
-      Write-Host "  would create ~/.gitconfig" -ForegroundColor DarkGray
-    }
+    New-Item -ItemType Directory -Path (Split-Path -Parent $dst) -Force | Out-Null
+    if (Test-Path $dst) { Copy-Item $dst "$dst.bak.$(Get-Date -Format yyyyMMddHHmmss)" }
+    Copy-Item $src $dst -Force
+    Ok "copied $dst"
   }
-
-  Write-Warn "PowerShell profile is never auto-replaced. Add Starship to it manually:"
-  Write-Todo "notepad `$PROFILE"
-  Write-Todo "add: Invoke-Expression (&starship init powershell)"
+  Skip "Your PowerShell profile isn't changed. See setup/windows.md for what to add."
 }
 
-# ─────────────────────────────────────────────────────────────────────
-Write-Head "Done"
-if (-not $Apply) {
-  Write-Host "  This was a dry run. To execute:" -ForegroundColor White
-  Write-Host "      .\scripts\install.ps1 -Apply"            -ForegroundColor Yellow
-  Write-Host "      .\scripts\install.ps1 -Apply -Dotfiles"  -ForegroundColor Yellow
+Section "Next"
+if ($Apply) {
+  Write-Host "  Close and reopen the terminal, then check: git --version; node -v; uv --version"
 } else {
-  Write-Host "  CLOSE AND REOPEN your terminal, then:" -ForegroundColor White
-  Write-Host "      gh auth login"  -ForegroundColor Yellow
-  Write-Host "      node -v; git --version; uv --version" -ForegroundColor Yellow
-  Write-Host ""
-  Write-Host "  Then deploy something once:" -ForegroundColor White
-  Write-Host "      npm create vite@latest hello; cd hello; npm i; npx vercel" -ForegroundColor Yellow
+  Write-Host "  Run again with -Apply (and -Dotfiles if you want the Starship config)."
 }
-Write-Host ""

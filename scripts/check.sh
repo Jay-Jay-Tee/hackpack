@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
-# ─────────────────────────────────────────────────────────────────────
-#  check.sh — "am I ready?" in one command
-#  Read-only. Prints versions and flags anything missing.
-# ─────────────────────────────────────────────────────────────────────
+# check.sh: lists which tools are installed. Changes nothing.
 set -uo pipefail
 
 GREEN=$'\033[32m'; RED=$'\033[31m'; YELLOW=$'\033[33m'; DIM=$'\033[2m'; BOLD=$'\033[1m'; RESET=$'\033[0m'
@@ -25,14 +22,14 @@ row "node"    node    -v
 row "npm"     npm     -v
 row "python"  python3 --version
 
-printf '\n%sBig time-savers%s\n' "$BOLD" "$RESET"
+printf '\n%sUseful%s\n' "$BOLD" "$RESET"
 row "uv"      uv       --version
 row "bun"     bun      --version
 row "jq"      jq       --version
 row "rg"      rg       --version
 row "fzf"     fzf      --version
 
-printf '\n%sShell polish%s\n' "$BOLD" "$RESET"
+printf '\n%sOptional%s\n' "$BOLD" "$RESET"
 row "starship" starship --version
 row "zoxide"   zoxide   --version
 row "eza"      eza      --version
@@ -40,7 +37,7 @@ row "bat"      bat      --version
 row "delta"    delta    --version
 row "lazygit"  lazygit  --version
 
-printf '\n%sAccounts & identity%s\n' "$BOLD" "$RESET"
+printf '\n%sAccounts%s\n' "$BOLD" "$RESET"
 printf '  %-14s' "git user"
 if email=$(git config --global user.email 2>/dev/null) && [ -n "$email" ]; then
   printf '%s✓%s %s\n' "$GREEN" "$RESET" "$(git config --global user.name) <$email>"
@@ -57,7 +54,7 @@ fi
 
 printf '\n'
 if [ "$missing" -eq 0 ]; then
-  printf '%sAll good. Now go deploy something.%s\n\n' "$GREEN" "$RESET"
+  printf '%sNothing missing.%s\n\n' "$GREEN" "$RESET"
 else
   printf '%s%d thing(s) missing.%s See setup/ for your OS.\n\n' "$YELLOW" "$missing" "$RESET"
 fi

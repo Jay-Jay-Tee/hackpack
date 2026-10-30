@@ -1,100 +1,50 @@
-# hackpack 🎒
+# hackpack
 
-**Everything you need for your first hackathon — my actual setup, my notes, and the mistakes I made so you don't have to.**
+Setup guides, configs and notes for people going to their first hackathon. It's what I'd send a friend the week before one: how to get a laptop ready, my terminal and editor config, and a short guide to the event itself.
 
-This isn't a course. It's the folder I wish someone had handed me before my first 36-hour sprint: my terminal config, my install scripts, and a playbook that fits on a few pages.
+Take whatever's useful and ignore the rest.
 
-Clone it, steal the parts you like, delete the rest.
+## Contents
 
-```
+- [`guide/`](guide/) – notes on the event, in order: preparing, picking an idea, building, git with a team, AI tools, the demo, and common mistakes.
+- [`setup/`](setup/) – installing tools on [Windows](setup/windows.md), [macOS](setup/macos.md) and [Linux](setup/linux.md), plus [editor setup](setup/editors.md) and [fixes for common errors](setup/troubleshooting.md).
+- [`dotfiles/`](dotfiles/) – my zsh, git, Starship, Ghostty and VS Code configs.
+- [`scripts/`](scripts/) – install scripts for macOS and Windows, and `check.sh` to see what's missing.
+- [`templates/`](templates/) – a project README, a pitch outline and a submission checklist.
+- [`resources/`](resources/) – free tiers, public APIs and what to learn first.
+
+There's also a web version at <https://jay-jay-tee.github.io/hackpack/>.
+
+## Getting started
+
+```bash
 git clone https://github.com/Jay-Jay-Tee/hackpack.git
+cd hackpack
 ```
 
----
+Then follow the setup page for your OS. On macOS or Linux, `./scripts/check.sh` lists which tools you have and which are missing. It doesn't change anything.
 
-## What's in here
+The install scripts only print what they would do. Pass `--apply` (or `-Apply` on Windows) to actually install.
 
-| Folder | What it's for |
-| --- | --- |
-| [`guide/`](guide/) | The playbook. Read this first — 20 minutes, start to finish. |
-| [`setup/`](setup/) | Step-by-step machine setup for **Windows**, **macOS**, **Linux**. |
-| [`dotfiles/`](dotfiles/) | My real configs: zsh, starship, git, Ghostty, VS Code. |
-| [`scripts/`](scripts/) | `install.sh` / `install.ps1` — safe by default, dry-run first. |
-| [`templates/`](templates/) | README template, pitch template, submission checklist. |
+## If you only read one part
 
----
+- Install and test everything a week before. Deploy a hello-world page somewhere so you know that works.
+- Pick an idea you can demo in two minutes, and cut everything that isn't needed for that demo.
+- Deploy in the first hour and keep the deployed version working.
+- Keep `.env` and API keys out of git.
+- Submit early. The submission deadline is usually before judging.
+- Sleep at some point.
 
-## Pick your path
+The rest is in [`guide/`](guide/01-before.md).
 
-**Windows (my main machine)**
-→ [setup/windows.md](setup/windows.md) · then `scripts/install.ps1`
+## My setup
 
-**macOS**
-→ [setup/macos.md](setup/macos.md) · then `scripts/install.sh`
+My main laptop runs Windows. The configs here come from my MacBook: Ghostty, zsh with Starship, and VS Code with the Catppuccin Mocha theme and JetBrains Mono Nerd Font. Runtimes are Node, Bun, Python 3.12 and JDK 25.
 
-**Linux**
-→ [setup/linux.md](setup/linux.md) · then `scripts/install.sh`
+You don't need any of this. Git, Node, an editor and a browser are enough.
 
-**"I just want the advice, not the config"**
-→ [guide/01-before.md](guide/01-before.md) and keep going. It's numbered for a reason.
+## Contact
 
----
+Open an issue if something is wrong or unclear, or reach me at [@Jay-Jay-Tee](https://github.com/Jay-Jay-Tee) / <joshuajacobthomas1@gmail.com>.
 
-## The short version
-
-If you read nothing else:
-
-1. **Install everything a week before, not the morning of.** Test that you can deploy *something* to a public URL before you arrive.
-2. **Scope for a 2-minute demo, not a 2-year product.** One feature that makes people go "oh, nice" beats ten that half-work.
-3. **Deploy on day one**, even if the page just says "hello". A working URL changes everything.
-4. **Commit early, commit often.** A broken main branch at hour 40 is how teams lose.
-5. **Never commit secrets.** `.env` stays out of git; plain `.env.example` goes in.
-6. **Build for the judges, not for yourself.** Know the rubric. If there's a sponsor prize, use the sponsor's API.
-7. **Rehearse the demo twice.** Have a recorded video as backup. Wi-Fi will betray you.
-8. **Sleep.** A 4-hour-nap team beats a 36-hour-awake team every single time.
-
-Full detail → [guide/07-mistakes.md](guide/07-mistakes.md)
-
----
-
-## My setup at a glance
-
-| | |
-| --- | --- |
-| **Main laptop** | Windows — where the real work happens |
-| **This repo's config** | macOS (Apple M5, 24 GB) — my second machine |
-| **Terminal** | Ghostty + zsh + Starship |
-| **Shell tools** | `eza` `bat` `fzf` `zoxide` `ripgrep` `fd` `delta` `lazygit` `btop` |
-| **Editor** | VS Code (Catppuccin Mocha, JetBrains Mono Nerd Font) |
-| **Runtimes** | Node 26 · Bun · Python 3.12 · OpenJDK 25 |
-| **Package managers** | Homebrew (macOS) · winget (Windows) |
-| **AI** | Claude Code, Codex, Copilot — see [guide/05-ai-tools.md](guide/05-ai-tools.md) |
-
-None of this is required to win. A laptop with VS Code, Node, Git and a browser is enough. The config just removes friction.
-
----
-
-## Ground rules for using this
-
-- **The scripts default to dry-run.** Nothing changes until you pass `--apply`. Read what it prints.
-- **Don't blindly copy dotfiles.** Merge them into yours, or you'll break something you already had.
-- **Your setup should be boring.** The hackathon is the wrong time to try a new OS, a new language, and a new editor at once.
-
----
-
-## Found a bug / want to add something?
-
-Open an issue or a PR. If you're a first-timer and something here was confusing, that's a bug too — tell me.
-
-## Questions
-
-- GitHub: [@Jay-Jay-Tee](https://github.com/Jay-Jay-Tee)
-- Email: <joshuajacobthomas1@gmail.com>
-
-<!-- TODO: add LinkedIn / Discord / Instagram if you want them public -->
-
-Good luck. Ship something small and ship it early. 🚀
-
----
-
-<sub>MIT licensed. Take it, fork it, put your name on it.</sub>
+MIT licence.

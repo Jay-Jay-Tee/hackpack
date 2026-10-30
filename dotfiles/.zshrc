@@ -1,13 +1,6 @@
-# ─────────────────────────────────────────────────────────────────────
-#  .zshrc — my shell setup
-#
-#  Not required for a hackathon. It just removes friction: better ls,
-#  better cat, fuzzy history, smart cd, git status in the prompt.
-#
-#  ⚠️  If you already have a .zshrc, MERGE these blocks. Don't overwrite.
-#  ⚠️  Requires: starship, zoxide, fzf, eza, bat, zsh-autosuggestions,
-#      zsh-syntax-highlighting, zsh-completions  (see ../scripts/Brewfile)
-# ─────────────────────────────────────────────────────────────────────
+# My ~/.zshrc (macOS, Apple Silicon).
+# If you already have a .zshrc, copy the sections you want instead of replacing it.
+# Needs the packages in scripts/Brewfile.
 
 # ─── Homebrew (Apple Silicon) ────────────────────────────────────────
 # Intel Macs: /usr/local/bin/brew
@@ -111,9 +104,8 @@ mkcd() { mkdir -p "$1" && cd "$1"; }              # mkdir + cd in one
 ports() { lsof -iTCP -sTCP:LISTEN -P -n | sort -k9; }  # what's on :3000?
 
 # ─── Java ────────────────────────────────────────────────────────────
-# macOS only. `java_home -v` must match an installed JDK.
 if [ -x /usr/libexec/java_home ]; then
-  export JAVA_HOME=$(/usr/libexec/java_home -v 21 2>/dev/null)
+  export JAVA_HOME=$(/usr/libexec/java_home 2>/dev/null)
   [ -n "$JAVA_HOME" ] && export PATH="$JAVA_HOME/bin:$PATH"
 fi
 

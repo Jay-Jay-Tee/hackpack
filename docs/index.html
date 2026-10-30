@@ -1,211 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>hackpack — your first hackathon, minus the setup hell</title>
-<meta name="description" content="A friendly starter pack for first-time hackathons: a short playbook, cross-platform setup guides, and a real dotfiles config you can steal." />
-<meta property="og:title" content="hackpack" />
-<meta property="og:description" content="Your first hackathon, minus the setup hell." />
-<meta property="og:type" content="website" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="./assets/style.css" />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎒</text></svg>" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hackpack</title>
+<meta name="description" content="Setup guides, configs and notes for a first hackathon.">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<main>
 
-<header class="nav">
-  <div class="wrap nav-inner">
-    <a class="brand" href="./">
-      <span class="brand-mark">🎒</span>
-      <span>hackpack</span>
-    </a>
-    <nav class="nav-links">
-      <a href="#guide">Guide</a>
-      <a href="#setup">Setup</a>
-      <a href="#inside">What's inside</a>
-      <a class="ghost" href="https://github.com/Jay-Jay-Tee/hackpack">GitHub ↗</a>
-    </nav>
-  </div>
-</header>
+<h1>hackpack</h1>
 
-<main id="main">
+<p>Setup guides, configs and notes for people going to their first hackathon. It's what I'd send a friend the week before one: how to get a laptop ready, my terminal and editor config, and a short guide to the event itself.</p>
 
-  <section class="hero wrap">
-    <p class="badge">MIT · free to steal · made by a student, for students</p>
-    <h1>Your first hackathon,<br /><span class="grad">minus the setup hell.</span></h1>
-    <p class="lede">
-      Everything I wish someone had handed me before my first 36-hour sprint:
-      a playbook that fits on a few pages, setup guides for every OS,
-      and my actual terminal config.
-    </p>
-    <div class="cta">
-      <a class="btn primary" href="https://github.com/Jay-Jay-Tee/hackpack#readme">Read the README</a>
-      <a class="btn" href="https://github.com/Jay-Jay-Tee/hackpack/blob/main/guide/01-before.md">Start with the guide</a>
-      <a class="btn" href="https://github.com/Jay-Jay-Tee/hackpack">Clone it ↗</a>
-    </div>
+<p>The files live on <a href="https://github.com/Jay-Jay-Tee/hackpack">GitHub</a>.</p>
 
-    <pre class="install"><code><span class="dim">$</span> git clone https://github.com/Jay-Jay-Tee/hackpack.git
-<span class="dim">$</span> cd hackpack &amp;&amp; ./scripts/check.sh   <span class="dim"># am I ready?</span></code></pre>
-  </section>
+<pre><code>git clone https://github.com/Jay-Jay-Tee/hackpack.git</code></pre>
 
-  <section class="wrap strips">
-    <div class="strip"><strong>20 min</strong><span>to read the whole playbook</span></div>
-    <div class="strip"><strong>3 OSes</strong><span>Windows · macOS · Linux</span></div>
-    <div class="strip"><strong>Dry-run</strong><span>installers change nothing by default</span></div>
-    <div class="strip"><strong>0 fluff</strong><span>no cloud accounts, no sign-up</span></div>
-  </section>
+<h2>Guide</h2>
+<ol>
+  <li><a href="https://github.com/Jay-Jay-Tee/hackpack/blob/main/guide/01-before.md">Before the event</a></li>
+  <li><a href="https://github.com/Jay-Jay-Tee/hackpack/blob/main/guide/02-ideas-and-scoping.md">Ideas and scoping</a></li>
+  <li><a href="https://github.com/Jay-Jay-Tee/hackpack/blob/main/guide/03-building.md">Building</a></li>
+  <li><a href="https://github.com/Jay-Jay-Tee/hackpack/blob/main/guide/04-git-with-a-team.md">Git with a team</a></li>
+  <li><a href="https://github.com/Jay-Jay-Tee/hackpack/blob/main/guide/05-ai-tools.md">AI tools</a></li>
+  <li><a href="https://github.com/Jay-Jay-Tee/hackpack/blob/main/guide/06-demo-and-pitch.md">Demo and pitch</a></li>
+  <li><a href="https://github.com/Jay-Jay-Tee/hackpack/blob/main/guide/07-mistakes.md">Common mistakes</a></li>
+</ol>
 
-  <section class="wrap" id="rules">
-    <h2>The short version</h2>
-    <p class="sub">If you read nothing else, read these seven lines.</p>
-    <ol class="rules">
-      <li><b>Set up a week early.</b> Test that you can deploy <i>something</i> to a public URL before you arrive.</li>
-      <li><b>Scope for a 2-minute demo.</b> One feature that makes people lean in beats ten that half-work.</li>
-      <li><b>Deploy on hour one.</b> A working URL changes how the whole team behaves.</li>
-      <li><b>Commit early, commit often.</b> A broken main branch at hour 40 is how teams lose.</li>
-      <li><b>Never commit secrets.</b> <code>.env</code> stays out, <code>.env.example</code> goes in.</li>
-      <li><b>Build for the rubric.</b> Know what's being scored, and use the sponsor's API if there's a prize.</li>
-      <li><b>Sleep.</b> A rested team beats a 36-hour-awake team every time.</li>
-    </ol>
-  </section>
+<h2>Setup</h2>
+<ul>
+  <li><a href="https://github.com/Jay-Jay-Tee/hackpack/blob/main/setup/windows.md">Windows</a></li>
+  <li><a href="https://github.com/Jay-Jay-Tee/hackpack/blob/main/setup/macos.md">macOS</a></li>
+  <li><a href="https://github.com/Jay-Jay-Tee/hackpack/blob/main/setup/linux.md">Linux</a></li>
+  <li><a href="https://github.com/Jay-Jay-Tee/hackpack/blob/main/setup/editors.md">Editor</a></li>
+  <li><a href="https://github.com/Jay-Jay-Tee/hackpack/blob/main/setup/troubleshooting.md">Troubleshooting</a></li>
+</ul>
+<p>The install scripts only print what they would do unless you pass <code>--apply</code> (<code>-Apply</code> on Windows).</p>
 
-  <section class="wrap" id="guide">
-    <h2>The playbook</h2>
-    <p class="sub">Numbered so you can read it in order — or jump to the part you're about to get wrong.</p>
-    <div class="cards">
-      <a class="card" href="https://github.com/Jay-Jay-Tee/hackpack/blob/main/guide/01-before.md">
-        <span class="num">01</span>
-        <h3>The week before</h3>
-        <p>Accounts, installs, the deploy test nobody does, and what to pack.</p>
-      </a>
-      <a class="card" href="https://github.com/Jay-Jay-Tee/hackpack/blob/main/guide/02-ideas-and-scoping.md">
-        <span class="num">02</span>
-        <h3>Ideas &amp; scoping</h3>
-        <p>Pick an idea in 45 minutes. The one-wow rule. The 36-hour shape.</p>
-      </a>
-      <a class="card" href="https://github.com/Jay-Jay-Tee/hackpack/blob/main/guide/03-building.md">
-        <span class="num">03</span>
-        <h3>Building</h3>
-        <p>Boring stack, vertical slice, fake data that looks real, demo path first.</p>
-      </a>
-      <a class="card" href="https://github.com/Jay-Jay-Tee/hackpack/blob/main/guide/04-git-with-a-team.md">
-        <span class="num">04</span>
-        <h3>Git with a team</h3>
-        <p>Branches, conflicts, undo commands, and how not to lose code at 3am.</p>
-      </a>
-      <a class="card" href="https://github.com/Jay-Jay-Tee/hackpack/blob/main/guide/05-ai-tools.md">
-        <span class="num">05</span>
-        <h3>AI without it using you</h3>
-        <p>Where it wins, where it burns you, and prompts that actually work.</p>
-      </a>
-      <a class="card" href="https://github.com/Jay-Jay-Tee/hackpack/blob/main/guide/06-demo-and-pitch.md">
-        <span class="num">06</span>
-        <h3>Demo &amp; pitch</h3>
-        <p>A minute-by-minute script, what judges score, and the 5 questions you'll get.</p>
-      </a>
-      <a class="card wide" href="https://github.com/Jay-Jay-Tee/hackpack/blob/main/guide/07-mistakes.md">
-        <span class="num">07</span>
-        <h3>The mistakes list</h3>
-        <p>Fifteen ways people lose a weekend — over-scoping, 3am refactors, skipping sleep — and the fix for each.</p>
-      </a>
-    </div>
-  </section>
+<h2>Other files</h2>
+<ul>
+  <li><a href="https://github.com/Jay-Jay-Tee/hackpack/tree/main/dotfiles">dotfiles</a>: zsh, git, Starship, Ghostty and VS Code configs</li>
+  <li><a href="https://github.com/Jay-Jay-Tee/hackpack/tree/main/templates">templates</a>: project README, pitch outline, submission checklist</li>
+  <li><a href="https://github.com/Jay-Jay-Tee/hackpack/tree/main/resources">resources</a>: free tiers, public APIs, what to learn first</li>
+</ul>
 
-  <section class="wrap" id="setup">
-    <h2>Set up your machine</h2>
-    <p class="sub">Copy-paste commands, real errors and their fixes, and a script that tells you what's missing.</p>
-    <div class="cards three">
-      <a class="card os" href="https://github.com/Jay-Jay-Tee/hackpack/blob/main/setup/windows.md">
-        <span class="emoji">🪟</span>
-        <h3>Windows</h3>
-        <p>winget, Windows Terminal, PowerShell 7, WSL2 if you need it.</p>
-        <span class="tag">my main machine</span>
-      </a>
-      <a class="card os" href="https://github.com/Jay-Jay-Tee/hackpack/blob/main/setup/macos.md">
-        <span class="emoji">🍎</span>
-        <h3>macOS</h3>
-        <p>Homebrew, Ghostty, zsh, Starship, and the actual configs in this repo.</p>
-        <span class="tag">where these dotfiles come from</span>
-      </a>
-      <a class="card os" href="https://github.com/Jay-Jay-Tee/hackpack/blob/main/setup/linux.md">
-        <span class="emoji">🐧</span>
-        <h3>Linux</h3>
-        <p>apt/dnf/pacman, fnm, uv, and the same shell stack.</p>
-        <span class="tag">Ubuntu / Fedora / Arch</span>
-      </a>
-    </div>
-
-    <div class="callout">
-      <h3>⚠️ The installers are dry-run by default</h3>
-      <p>
-        <code>./scripts/install.sh</code> prints every command and changes nothing.
-        Add <code>--apply</code> when you're happy with the plan. It never uses <code>sudo</code>,
-        never deletes files, and backs up any config it replaces.
-      </p>
-    </div>
-  </section>
-
-  <section class="wrap" id="inside">
-    <h2>What's inside</h2>
-    <p class="sub">Steal the parts you like. Delete the rest.</p>
-    <div class="table">
-      <div class="tr">
-        <a href="https://github.com/Jay-Jay-Tee/hackpack/tree/main/guide">guide/</a>
-        <span>The playbook — read this first.</span>
-      </div>
-      <div class="tr">
-        <a href="https://github.com/Jay-Jay-Tee/hackpack/tree/main/setup">setup/</a>
-        <span>Step-by-step setup for Windows, macOS, Linux, plus editors and troubleshooting.</span>
-      </div>
-      <div class="tr">
-        <a href="https://github.com/Jay-Jay-Tee/hackpack/tree/main/dotfiles">dotfiles/</a>
-        <span>My real <code>.zshrc</code>, <code>.gitconfig</code>, <code>starship.toml</code>, Ghostty and VS Code configs.</span>
-      </div>
-      <div class="tr">
-        <a href="https://github.com/Jay-Jay-Tee/hackpack/tree/main/scripts">scripts/</a>
-        <span><code>install.sh</code>, <code>install.ps1</code>, <code>Brewfile</code>, and <code>check.sh</code> — "am I ready?".</span>
-      </div>
-      <div class="tr">
-        <a href="https://github.com/Jay-Jay-Tee/hackpack/tree/main/templates">templates/</a>
-        <span>README template, pitch script, submission checklist.</span>
-      </div>
-      <div class="tr">
-        <a href="https://github.com/Jay-Jay-Tee/hackpack/tree/main/resources">resources/</a>
-        <span>Free credits, APIs you can call in 5 minutes, and what to learn in 2 weeks.</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="wrap" id="stack">
-    <h2>My setup</h2>
-    <p class="sub">None of this is required. A laptop with Git, Node and a browser is enough — this just removes friction.</p>
-    <div class="stack">
-      <div><span>Terminal</span><b>Ghostty</b></div>
-      <div><span>Shell</span><b>zsh + Starship</b></div>
-      <div><span>Tools</span><b>eza · bat · fzf · zoxide · rg · delta · lazygit</b></div>
-      <div><span>Editor</span><b>VS Code · Catppuccin Mocha</b></div>
-      <div><span>Runtimes</span><b>Node 26 · Bun · Python 3.12 · JDK 25</b></div>
-      <div><span>Deploy</span><b>Vercel · Cloudflare</b></div>
-      <div><span>AI</span><b>Claude Code · Codex · Copilot</b></div>
-    </div>
-  </section>
+<h2>Contact</h2>
+<p><a href="https://github.com/Jay-Jay-Tee">@Jay-Jay-Tee</a> · <a href="mailto:joshuajacobthomas1@gmail.com">joshuajacobthomas1@gmail.com</a></p>
 
 </main>
-
-<footer class="wrap foot">
-  <div>
-    <p class="foot-title">Questions? Just ask.</p>
-    <p>
-      <a href="https://github.com/Jay-Jay-Tee">@Jay-Jay-Tee</a> ·
-      <a href="mailto:joshuajacobthomas1@gmail.com">joshuajacobthomas1@gmail.com</a>
-    </p>
-  </div>
-  <p class="fine">MIT licensed · <a href="https://github.com/Jay-Jay-Tee/hackpack">source on GitHub</a></p>
-</footer>
-
 </body>
 </html>

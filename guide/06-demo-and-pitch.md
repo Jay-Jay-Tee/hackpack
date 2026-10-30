@@ -1,89 +1,52 @@
-# 06 · Demo and pitch
+# 6. Demo and pitch
 
-> The best project does not always win. The best *demo* usually does.
+## Structure
 
-## The 3-minute structure
+Pitches are usually two to five minutes. For three minutes, something like:
 
-Most pitches are 2–5 minutes. Use this skeleton:
+1. **Problem (about 40 seconds).** Who has the problem and what it costs them. Start with this rather than introducing the team.
+2. **Demo (about 100 seconds).** Show the main path working.
+3. **How it works (about 20 seconds).** The stack in a sentence and the part you're proudest of.
+4. **What's next (about 20 seconds).** Who would use it and the next step.
 
-| Time | Beat | What you say |
-| --- | --- | --- |
-| 0:00–0:20 | **Hook** | One sentence about a real person's pain. No "hello everyone, we are team…" |
-| 0:20–0:40 | **Problem** | Who hurts, how often, what it costs them |
-| 0:40–2:20 | **Demo** | Live. The happy path. Narrate what the user feels, not what the code does |
-| 2:20–2:40 | **How** | One architecture sentence + the one clever bit |
-| 2:40–3:00 | **Impact + ask** | Who'd use it, what's next, what you'd need |
+Then stop.
 
-Then stop. Don't fill silence with apologies.
+## The demo
 
-## The hook
+- Demo live, but have a short screen recording ready in case it fails.
+- Pre-fill inputs so you don't have to type on stage.
+- Describe what the user gets, not which endpoint is being called.
+- Reset the data beforehand so there are no test entries.
+- If it breaks, switch to the recording and carry on.
 
-Bad: "Hi, we're Team Synergy, and we built a platform that leverages AI to revolutionise…"
+## Judging
 
-Good: "My grandmother texts me a photo of her fridge every Sunday and asks what to cook. We built the app that answers her."
+Read the actual criteria on the event page. Common ones are usefulness, technical difficulty, originality, how complete it is, and the presentation. It helps to go through the pitch and check you've covered each one.
 
-One concrete human, one concrete moment. That's the whole trick.
+Sponsor prizes ("best use of X") often have fewer serious entries. If you go for one, the sponsor's product should be part of the core feature, and you should mention it in the pitch, README and submission. Sponsor mentors can tell you what they're looking for.
 
-## Demo rules
+## Questions you'll probably get
 
-- **Live demo, but never *only* live.** Record a 60-second screen capture as backup and have it open in a tab.
-- **Do the demo in the order the story needs**, not the order you built it.
-- **Narrate outcomes:** "…and now she gets three recipes in under two seconds." Not "…and this calls the /api/generate endpoint."
-- **Never type on stage.** Pre-fill everything. Clicking is fine; typing invites typos and dead air.
-- **Prepare for failure.** If it breaks: "Let me show you the recording" — and keep talking. Nobody remembers a smooth recovery; everybody remembers panic.
-- **Reset your data** before you present. No leftover "test test asdf" rows.
+Have a short answer ready for each:
 
-## What judges actually score
+- How is this different from an existing product?
+- What was the hardest part? (Have a real technical answer.)
+- What's mocked, and how would it work for real?
+- Did you use AI, and for what?
+- What would you do next?
 
-Typical rubric weights (they vary, but these themes repeat):
+## The video
 
-| Criterion | What it really means |
-| --- | --- |
-| **Impact / usefulness** | Would a real person use this next week? |
-| **Technical execution** | Does it work? Is the clever part actually clever? |
-| **Originality** | Have I seen this exact thing before? |
-| **Completeness / polish** | Does it feel finished, or like a prototype? |
-| **Presentation** | Can they explain it clearly in the time given? |
-| **Sponsor fit** | Did they use the sponsor's tool *meaningfully*? |
+If the event wants a video, record it a few hours before the deadline. One to two minutes of screen recording with voice-over is enough. Listen to the audio before uploading, and upload early because uploads near deadlines often fail.
 
-Read the actual rubric on the event page and write your pitch against it. Literally map each slide to a criterion.
+macOS: `Cmd+Shift+5`. Windows: `Win+Alt+R`. OBS works on both.
 
-## Sponsor prizes are usually the easiest win
+## Practice
 
-Most teams ignore them. If there's a "Best use of X" prize:
+Run through it twice with a timer, once in front of someone not on the team. The first run is usually too long; cut from the introduction, not the demo.
 
-- Use X in a way that's **core to the product**, not bolted on.
-- Say the sponsor's name in the pitch, once, naturally.
-- Mention it in the README and the submission form.
-- Grab the sponsor's mentor early — they often have inside info on what they're looking for.
-
-## Q&A: the five questions you'll get
-
-Prepare one-line answers:
-
-1. **"How is this different from [existing product]?"** → the specific niche/person you serve.
-2. **"How does it scale / what about cost?"** → "For a demo we mocked X; at scale we'd…"
-3. **"What was the hardest part?"** → have a real technical answer ready. This is where you show depth.
-4. **"Did you use AI?"** → yes, and here's what you used it for (see [05-ai-tools.md](05-ai-tools.md)).
-5. **"What's next?"** → one concrete next step, not a wishlist.
-
-## Recording the demo video
-
-If the event requires a video (many do), record it at hour 30, not hour 35.
-
-- 60–120 seconds, screen + voice, no fancy editing
-- Script it: 3 sentences of problem, 60 seconds of clicking, 2 sentences of impact
-- **Read the audio back** before submitting. Bad audio kills good demos.
-- Upload early — video uploads fail at deadlines.
-
-Quick tools: macOS `Cmd+Shift+5`, Windows `Win+Alt+R` (Xbox Game Bar), or OBS if you want narration + screen.
-
-## Rehearse
-
-Twice, out loud, with a timer. Once in front of a person who wasn't on the team.
-
-The first run is always 90 seconds too long. Cut the intro, not the demo.
+A fill-in outline is in [templates/PITCH.md](../templates/PITCH.md).
 
 ---
 
-Next → [07-mistakes.md](07-mistakes.md)
+Next: [7. Common mistakes](07-mistakes.md)

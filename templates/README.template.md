@@ -1,82 +1,55 @@
-# <Project Name>
+# Project name
 
-> One sentence: what it does, for whom. Not "a platform that leverages AI".
+One sentence on what it does and who it's for.
 
-<One or two screenshots or a GIF here. This is the single highest-value thing in the README.>
+![Screenshot](docs/screenshot.png)
 
-[**Live demo**](https://your-app.vercel.app) · [**Demo video**](https://youtu.be/xxx) · [Devpost](https://devpost.com/xxx)
+[Live demo](https://your-app.vercel.app) · [Video](https://youtu.be/xxx) · [Devpost](https://devpost.com/software/xxx)
 
----
+## Problem
 
-## The problem
+Two or three sentences: who has the problem and what it costs them.
 
-Two or three sentences. A real person, a real moment, a real annoyance. No market-size statistics.
+## What it does
 
-## What we built
-
-What it does in plain language. Then the one thing that makes it interesting.
-
-```
-screenshot / diagram / before-after
-```
+What a user can do with it, in plain terms.
 
 ## How it works
 
-```
-[ User ] → [ Next.js app ] → [ API route ] → [ OpenAI / your model ]
-                                   ↓
-                            [ Postgres (Supabase) ]
-```
+- Frontend:
+- Backend:
+- Database:
+- Hosting:
+- Sponsor APIs used:
 
-- **Frontend:** Next.js 15 + Tailwind + shadcn/ui
-- **Backend:** Next.js API routes (serverless)
-- **Database:** Supabase Postgres
-- **Deploy:** Vercel
-- **Sponsor tech used:** <name the API/SDK and how it's core, not bolted on>
-
-## Run it locally
+## Running it locally
 
 ```bash
 git clone https://github.com/<you>/<repo>.git
 cd <repo>
 npm install
-cp .env.example .env       # then fill in your keys
-npm run dev                # http://localhost:3000
+cp .env.example .env   # fill in the values
+npm run dev
 ```
 
-### Environment variables
-
-| Variable | What it's for |
+| Variable | Used for |
 | --- | --- |
-| `DATABASE_URL` | Postgres connection string |
-| `OPENAI_API_KEY` | Model calls |
+| `DATABASE_URL` | |
+| `API_KEY` | |
 
-## What's mocked / not built
+## What's mocked
 
-Being honest here makes the demo *more* credible, not less.
+- 
+- 
 
-- Payments are stubbed — no Stripe keys in the demo
-- The "recommendations" use a cached response to keep the demo under 2s
-- No auth — the demo route loads a seeded account
+## Next steps
 
-## What we'd do next
-
-- [ ] One concrete next step
-- [ ] Another one
-- [ ] The thing we'd need money/help for
+- 
+- 
 
 ## Team
 
-| Name | What they did |
-| --- | --- |
-| [@handle](https://github.com/handle) | Frontend, demo script |
-| [@handle](https://github.com/handle) | Backend, deploy |
-| [@handle](https://github.com/handle) | Design, pitch |
+- [Name](https://github.com/handle): what they worked on
+- [Name](https://github.com/handle): what they worked on
 
-## Built at
-
-<Hackathon name> · <Month Year> · <track/prize, if any>
-
----
-
-<sub>Built with a lot of coffee and a little sleep.</sub>
+Built at <hackathon name>, <month year>.

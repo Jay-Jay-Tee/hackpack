@@ -1,79 +1,46 @@
-# Free stuff you should claim before your first hackathon
+# Free tiers and student offers
 
-> Credits and offers change constantly — always check the current terms. This is the map, not the territory.
+Offers change often, so check the current terms on each provider's site.
 
-## Do this first (30 minutes, saves you real money)
+## GitHub Student Developer Pack
 
-### 1. GitHub Student Developer Pack
 <https://education.github.com/pack>
 
-Free while you're a student, and it stacks:
+Includes GitHub Copilot, cloud credits, a free domain for a year, JetBrains IDEs and free plans for a lot of other tools. You need a student email or proof of enrolment, and approval can take a few days, so apply early.
 
-- **GitHub Copilot** — free
-- **DigitalOcean** — $200 credit
-- **Azure** — $100 credit
-- **Namecheap** — free `.me` domain for a year
-- **JetBrains** — full IDE suite
-- **Heroku / MongoDB / Sentry / Postman / Notion** — free tiers
-- Plus a long tail of SaaS freebies
+## Hosting and databases
 
-Verification needs a student email or a photo of your student ID. Do it **days** before, not hours — approval isn't instant.
+- **Vercel**: easiest option for Next.js
+- **Netlify**, **Cloudflare Pages**: static sites and serverless functions
+- **Render**, **Railway**, **Fly.io**: backends and long-running servers
+- **Supabase**: Postgres with auth and file storage
+- **Firebase**: Firestore, auth and hosting
+- **Neon**: serverless Postgres
+- **MongoDB Atlas**: small free cluster
 
-### 2. Cloud free tiers
-| Provider | What you get |
-| --- | --- |
-| **Vercel** | Free hobby tier — the easiest deploy for anything Next.js |
-| **Netlify** | Free tier, great for static sites |
-| **Cloudflare Pages / Workers** | Generous free tier, fast globally |
-| **Supabase** | Free Postgres + auth + storage + realtime |
-| **Firebase** | Free Spark plan — Firestore, auth, hosting |
-| **Render / Railway / Fly.io** | Free or near-free app hosting |
-| **MongoDB Atlas** | Free 512 MB cluster |
-| **Neon** | Free serverless Postgres |
+## LLM APIs
 
-### 3. Model APIs
-| Provider | Notes |
-| --- | --- |
-| **OpenAI** | Paid, but you can get trial credits; often a sponsor at hackathons |
-| **Anthropic (Claude)** | Paid; check for student/hackathon credits |
-| **Google AI Studio (Gemini)** | Generous free tier — great for a hackathon |
-| **Groq** | Very fast inference, free tier |
-| **OpenRouter** | One key for many models, some free |
-| **Hugging Face** | Free inference tier + models + datasets |
+- **Google AI Studio (Gemini)**: has a free tier
+- **Groq**: fast inference, free tier
+- **OpenRouter**: one key for many models, some free
+- **Hugging Face**: free inference for many open models
+- **OpenAI**, **Anthropic**: paid, but sometimes a hackathon sponsor with credits
 
-> **Hackathon tip:** most events hand out sponsor API keys or credits at the opening ceremony. Grab them **first** — they run out, and the mentors can help you get set up.
+Events often give out sponsor credits at the start. Collect them early, since they can run out.
 
-### 4. Design & assets
-- **Figma** — free tier, and the student pack adds more
-- **Unsplash / Pexels** — free photos
-- **Lucide / Heroicons** — free icons
-- **shadcn/ui + Tailwind** — free, looks good instantly
-- **Coolors** — palettes in 10 seconds
-- **Excalidraw** — architecture diagrams that look hand-drawn (judges love these)
+## Design
 
-### 5. Domains
-A real domain makes a demo feel 3× more finished. `.me`, `.dev`, `.app` are cheap; Namecheap gives students a free `.me`.
+- **Figma** for mockups
+- **Unsplash**, **Pexels** for photos
+- **Lucide**, **Heroicons** for icons
+- **shadcn/ui** with Tailwind for components
+- **Excalidraw** for architecture diagrams
 
----
+## Minimum to sign up for
 
-## What to actually claim for a 36-hour event
+- GitHub (and the Student Pack if you're eligible)
+- Vercel or Netlify
+- One database: Supabase or Firebase
+- One LLM API key, if your idea needs it
 
-Minimum viable:
-
-- [ ] GitHub account + Student Pack
-- [ ] Vercel (or Netlify) account
-- [ ] One database (Supabase or Firebase)
-- [ ] One LLM key (Gemini free tier is the least friction)
-- [ ] Figma account
-
-Everything else is a distraction until you've shipped something.
-
----
-
-## Scams and time-wasters
-
-- Anything that asks for a credit card "just to verify" for a *free* tier — read the fine print
-- "Student discount" sites that want your password. Use official provider pages only
-- Setting up 12 services before writing a line of code
-
-Back to → [README](../README.md)
+Be wary of free tiers that need a credit card, and only claim offers through the provider's own site.

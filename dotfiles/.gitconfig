@@ -1,10 +1,7 @@
-# ─────────────────────────────────────────────────────────────────────
-#  .gitconfig — sane defaults for hackathon speed
-#  Copy to ~/.gitconfig, then change name + email.
-# ─────────────────────────────────────────────────────────────────────
+# My ~/.gitconfig. Change the name and email if you copy it.
+# core.pager and interactive.diffFilter need git-delta installed.
 
 [user]
-	# TODO: change these to yours
 	name = Your Name
 	email = you@example.com
 
@@ -15,12 +12,10 @@
 	prune = true
 
 [pull]
-	# rebase keeps history linear and avoids noisy merge commits
+	# refuse to pull if branches have diverged; use `git pull --rebase` then
 	ff = only
-	rebase = true
 
 [push]
-	# no more `--set-upstream` on every new branch
 	autoSetupRemote = true
 
 [rebase]
@@ -28,13 +23,12 @@
 	autostash = true
 
 [merge]
-	# shows the common ancestor in conflicts — much easier to resolve
+	# also show the original version in conflicts
 	conflictstyle = zdiff3
 
 [core]
 	editor = code --wait
 	pager = delta
-	# stop .DS_Store / Thumbs.db from ever being committed
 	excludesFile = ~/.config/git/ignore
 
 [interactive]
@@ -55,7 +49,6 @@
 [color]
 	ui = auto
 
-# ─── Shortcuts ───────────────────────────────────────────────────────
 [alias]
 	st = status -sb
 	co = checkout
@@ -65,5 +58,4 @@
 	unstage = reset HEAD --
 	undo = reset --soft HEAD~1
 	wip = commit -am "wip"
-	# what am I about to push?
 	outgoing = log --oneline @{u}..HEAD

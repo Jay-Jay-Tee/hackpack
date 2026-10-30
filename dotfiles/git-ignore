@@ -1,20 +1,13 @@
-# ─────────────────────────────────────────────────────────────────────
-#  git ignore — global excludes
-#  Path: ~/.config/git/ignore   (set via core.excludesFile)
-#  Stops OS junk from ever showing up in `git status`.
-# ─────────────────────────────────────────────────────────────────────
+# Global gitignore. Goes in ~/.config/git/ignore (set by core.excludesFile).
 
 .DS_Store
-.DS_Store?
 ._*
 .Spotlight-V100
 .Trashes
-ehthumbs.db
 Thumbs.db
+ehthumbs.db
 desktop.ini
 
-# Editor junk
 *.swp
 *~
 .idea/
-.vscode/settings.json   # remove this line if you WANT to share editor settings

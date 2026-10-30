@@ -1,29 +1,18 @@
-# Setup · Windows
+# Windows setup
 
-> My main machine is Windows. Everything here is what I'd install on a fresh laptop before a hackathon.
+Needs Windows 10 (21H2 or later) or Windows 11. Takes about 30 minutes, mostly downloads.
 
-**Time:** ~30 minutes, mostly downloads.
-**Requires:** Windows 10 (21H2+) or Windows 11, admin rights.
+## 1. winget
 
----
-
-## 1. Start with `winget`
-
-Windows 11 ships with **App Installer** (`winget`). Check it:
+Windows 11 includes `winget`. Check with:
 
 ```powershell
 winget --version
 ```
 
-If that fails, install "App Installer" from the Microsoft Store, then reopen your terminal.
+If that fails, install "App Installer" from the Microsoft Store and reopen the terminal. Run everything below in a normal (non-admin) terminal unless a step says otherwise.
 
-> **Tip:** run everything below in **Windows Terminal** as a normal user. Only use an Administrator terminal if a step says so.
-
----
-
-## 2. The essentials
-
-Copy this into PowerShell. It's idempotent — re-running skips what's already installed.
+## 2. Essentials
 
 ```powershell
 $apps = @(
@@ -33,50 +22,37 @@ $apps = @(
   "GitHub.cli",
   "Microsoft.VisualStudioCode",
   "OpenJS.NodeJS.LTS",
-  "Schniz.fnm",
-  "astral-sh.uv",
-  "Microsoft.OpenJDK.21",
-  "Docker.DockerDesktop",
-  "Google.Chrome"
+  "astral-sh.uv"
 )
-
 foreach ($app in $apps) {
-  winget install --id $app --source winget --accept-package-agreements --accept-source-agreements --silent
+  winget install --id $app -e --source winget --accept-package-agreements --accept-source-agreements
 }
 ```
 
-Then close **and reopen** the terminal so `PATH` refreshes.
+Optional, depending on what you're building:
 
-Check it worked:
+```powershell
+winget install --id Microsoft.OpenJDK.21 -e      # Java / Android
+winget install --id Schniz.fnm -e                # switching Node versions
+winget install --id Docker.DockerDesktop -e      # only if a track needs it; it's large
+```
+
+Close and reopen the terminal so `PATH` updates, then check:
 
 ```powershell
 git --version
 gh --version
 node -v
-npm -v
 uv --version
-java -version
 ```
 
-> Prefer a script? `scripts/install.ps1` does the same thing with a dry-run mode. See [../scripts/install.ps1](../scripts/install.ps1).
+`uv` manages Python for you: `uv python install 3.12`, then `uv run`, `uv venv` and so on.
 
-### Notes on each
+[`scripts/install.ps1`](../scripts/install.ps1) installs the same list. It only prints what it would do unless you pass `-Apply`.
 
-| Tool | Why |
-| --- | --- |
-| **Windows Terminal** | Tabs, panes, real fonts, sane copy-paste. Essential. |
-| **PowerShell 7** | Modern shell. `pwsh`, not the old blue `powershell`. |
-| **Git for Windows** | Includes Git Bash, which makes POSIX commands work. |
-| **GitHub CLI** | `gh auth login` once, then clone/create/push/PR without passwords. |
-| **VS Code** | Editor + integrated terminal. |
-| **Node LTS** | Most web stacks. Use `fnm` if you need multiple versions. |
-| **uv** | The fastest Python toolchain — installs Python itself, no admin needed. |
-| **OpenJDK 21** | Java/Android/Kotlin tracks. Skip if you're not doing Java. |
-| **Docker Desktop** | Only if a track needs it. Heavy; skip otherwise. |
+## 3. Terminal tools (optional)
 
----
-
-## 3. The nice-to-haves (my actual shell setup)
+These are what I use. None are required.
 
 ```powershell
 $tools = @(
@@ -91,148 +67,104 @@ $tools = @(
   "jqlang.jq",
   "DEVCOM.JetBrainsMonoNerdFont"
 )
-
-foreach ($t in $tools) { winget install --id $t -e --accept-package-agreements --accept-source-agreements --silent }
+foreach ($t in $tools) {
+  winget install --id $t -e --source winget --accept-package-agreements --accept-source-agreements
+}
 ```
 
-These give you: a prompt that shows git status and language versions (**Starship**), fast search (`rg`, `fzf`), better `ls`/`cat` (`eza`, `bat`), smart `cd` (`zoxide`), readable diffs (`delta`), a git TUI (`lazygit`), and a monospace font with icons.
+- `starship`: prompt showing the git branch and language versions
+- `rg`, `fzf`: fast search and fuzzy finding
+- `eza`, `bat`: `ls` and `cat` with colours and icons
+- `zoxide`: jump to directories you've visited before
+- `delta`: readable git diffs
+- `lazygit`: terminal UI for git
 
----
+### Font
 
-## 4. Make the terminal feel right
-
-### Set the font
-
-Windows Terminal → **Settings** → your profile → **Appearance** → Font face: **JetBrainsMono Nerd Font**, size 11–12.
-
-Without a Nerd Font, Starship and `eza` icons render as boxes.
+In Windows Terminal, go to Settings → your profile → Appearance and set the font to **JetBrainsMono Nerd Font**. Without a Nerd Font, Starship and eza icons show as boxes.
 
 ### PowerShell profile
 
 ```powershell
+if (-not (Test-Path $PROFILE)) { New-Item -Path $PROFILE -Type File -Force }
 notepad $PROFILE
 ```
 
-If the file doesn't exist:
+Add:
 
 ```powershell
-New-Item -Path $PROFILE -Type File -Force
-notepad $PROFILE
-```
-
-Paste:
-
-```powershell
-# ── Prompt ──
 Invoke-Expression (&starship init powershell)
-
-# ── Smart cd ──
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
-# ── Aliases ──
-function ls { eza --icons --group-directories-first @args }
-function ll { eza -lah --icons --group-directories-first --git @args }
-function lt { eza --tree --level=2 --icons @args }
-function cat { bat --style=plain --paging=never @args }
+# ls and cat are built-in aliases, so remove them before redefining
+Remove-Item Alias:ls  -Force -ErrorAction SilentlyContinue
+Remove-Item Alias:cat -Force -ErrorAction SilentlyContinue
+
+function ls   { eza --icons --group-directories-first @args }
+function ll   { eza -lah --icons --group-directories-first --git @args }
+function lt   { eza --tree --level=2 --icons @args }
+function cat  { bat --style=plain --paging=never @args }
+function gs   { git status -sb @args }
+function gd   { git diff @args }
+function glog { git log --oneline --graph --decorate -25 @args }
 Set-Alias lg lazygit
 
-# ── Git ──
-Set-Alias gs 'git status -sb'
-Set-Alias gd 'git diff'
-Set-Alias gl 'git log --oneline --graph --decorate -25'
-
-# ── Quality of life ──
 $env:EDITOR = "code --wait"
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle ListView
 ```
 
-Reload with `. $PROFILE`.
+Reload with `. $PROFILE`. The Starship config in [dotfiles/starship.toml](../dotfiles/starship.toml) works on Windows too; copy it to `$HOME\.config\starship.toml`.
 
-> My macOS shell config is [../dotfiles/.zshrc](../dotfiles/.zshrc) and the prompt theme is [../dotfiles/starship.toml](../dotfiles/starship.toml) — Starship config is cross-platform, so you can use the same file on Windows at `~/.config/starship.toml`.
-
----
-
-## 5. Git identity + GitHub auth
+## 4. Git and GitHub
 
 ```powershell
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 git config --global init.defaultBranch main
-git config --global pull.rebase true
 git config --global push.autoSetupRemote true
-git config --global core.autocrlf true   # Windows only: fixes line-ending noise
+git config --global core.autocrlf true
 
 gh auth login
-# GitHub.com → HTTPS → login with browser
 ```
 
-`core.autocrlf true` prevents the "every file changed" diff that ruins Windows/macOS teams.
+`core.autocrlf true` stops line-ending differences from showing up as changes when your team uses a mix of Windows and macOS.
 
-Verify:
+## 5. Other useful settings
 
-```powershell
-gh auth status
-```
-
----
-
-## 6. Optional but genuinely useful
-
-**WSL 2 + Ubuntu** — if your team is on macOS/Linux or a track needs a Linux tool:
+**WSL 2**, if your team is on macOS/Linux or a tool only runs on Linux:
 
 ```powershell
 wsl --install -d Ubuntu
 ```
 
-Then inside Ubuntu: `sudo apt update && sudo apt install -y build-essential git curl`.
+Then follow [linux.md](linux.md) inside Ubuntu. Keep projects in the Linux filesystem (`~/projects`) rather than under `/mnt/c`, which is much slower.
 
-Keep your code **inside** the Linux filesystem (`~/projects`), not `/mnt/c/...` — it's dramatically faster.
-
-**Enable long paths** (some Node projects break without it):
+**Long paths**, which some Node projects need (run as Administrator):
 
 ```powershell
-# Run as Administrator
 New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" `
   -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
 ```
 
-**Developer Mode** (symlinks, some build tools):
+**Developer Mode** (Settings → System → For developers) allows symlinks without admin rights.
 
-Settings → System → For developers → Developer Mode **On**.
-
----
-
-## 7. Test that you can ship
+## 6. Test a deploy
 
 ```powershell
-mkdir $HOME\projects\hello
-cd $HOME\projects\hello
-
-npm create vite@latest . -- --template react
+npm create vite@latest hello -- --template react
+cd hello
 npm install
 npm run dev
 ```
 
-Open <http://localhost:5173>. Then deploy it:
+Open <http://localhost:5173>, then deploy with `npx vercel`. If you get a public URL that works, you're set.
 
-```powershell
-npm i -g vercel
-vercel
-```
+## Checklist
 
-If you see your app on a public URL, you're ready.
-
----
-
-## 8. Pre-hackathon checklist
-
-- [ ] `git`, `gh`, `node`, `npm`, `uv`, `java` all print versions
-- [ ] `gh auth status` shows you logged in
+- [ ] `git`, `gh`, `node`, `npm` and `uv` print versions
+- [ ] `gh auth status` shows you're logged in
 - [ ] VS Code opens and its terminal works
-- [ ] Nerd Font set in Windows Terminal
-- [ ] Starship prompt renders with icons
-- [ ] You deployed something to a public URL once
-- [ ] You know where `winget` is and can install a package
+- [ ] You've deployed something once
 
-Common problems → [troubleshooting.md](troubleshooting.md)
+Problems: [troubleshooting.md](troubleshooting.md)

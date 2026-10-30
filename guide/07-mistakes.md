@@ -1,101 +1,33 @@
-# 07 · The mistakes list
+# 7. Common mistakes
 
-> Written from experience, mostly mine. If you avoid half of these you'll have a good weekend.
+**Over-scoping.** This is the one that got me. Early on it feels like there's lots of time, and every feature takes about three times longer than planned. Build one main feature, list everything else as out of scope, and cut anything not started by the halfway point.
 
-## 1. Over-scoping (the big one)
+**No repo for the first few hours.** Someone builds a prototype in a local folder and nobody else can use it. Create the repo, `.gitignore` and README in the first hour.
 
-You will feel, at hour 5, that you have loads of time. You do not.
+**Deploying at the end.** Environment variables, build errors and Node versions all show up at deploy time. Deploy in the first hour and keep it working.
 
-The plan always looks like: 3 features, each 4 hours, 36 hours total. Reality: each feature takes 3× longer, plus debugging, plus integration, plus the demo prep you forgot.
+**Setting up during the event.** Wrong Python version, Node missing, scripts that don't run on Windows. Do the [setup](../setup/) a week before.
 
-**Fix:** scope to *one* wow feature. Put everything else in a "Won't build" list in the README. At the halfway point, anything not started is cut, permanently.
+**Ignoring the judging criteria.** A technically impressive project can score badly if it doesn't match what's being judged. Read the criteria before deciding what to build.
 
-If you're asking "should we add one more feature?" at hour 25, the answer is no.
+**Committing secrets.** Keep `.env` out of git from the first commit. If a key leaks, revoke it first.
 
-## 2. Starting to code before the repo exists
+**Unclear roles.** Two people build the same screen while someone else waits around. Split work by feature, write it down, and check in every few hours.
 
-Twenty minutes in, someone has a working prototype in a folder called `final_final_v2` and nobody else has it.
+**Late refactors.** Don't clean up the code in the last half of the event. Messy code that works is fine.
 
-**Fix:** repo + `.gitignore` + README + deploy in the first hour. No exceptions.
+**No sleep.** Code written at 4am takes longer to debug than it took to write. A few hours of sleep is worth it.
 
-## 3. Not deploying until the end
+**Submitting at the deadline.** Portals go down and uploads fail. Submit a working version a couple of hours early, then update it if the rules allow.
 
-The deploy is where all the surprises live: env vars, build errors, CORS, file paths, Node versions.
+**Explaining the code instead of the product.** Judges want to know what it does and who it's for. Keep the technical part short.
 
-**Fix:** deploy on hour one. Re-deploy every few hours. Keep a known-good URL.
+**Not asking for help.** Mentors are there to help, and a few minutes with one can save hours.
 
-## 4. Twelve hours of setup
+**Forgetting part of the submission.** Public repo, video, team members added to the entry. Use the [checklist](../templates/CHECKLIST.md).
 
-Node isn't installed. Python is 3.9 and the library needs 3.11. The Windows laptop can't run the shell script. Someone's `brew` is broken.
-
-**Fix:** [setup/](../setup/) exists for this. Do it a week early. Test on the venue's Wi-Fi if you can.
-
-## 5. Building for yourself instead of the judges
-
-Beautiful architecture, no visible wow. Or a feature you love that the rubric doesn't mention.
-
-**Fix:** read the rubric. Write the pitch before you write the code. Then build the thing the pitch promises.
-
-## 6. Committing secrets
-
-A key in a public repo can mean disqualification, a drained API balance, or a very awkward email.
-
-**Fix:** `.env` ignored from commit one, `.env.example` committed. Revoke first, panic later.
-
-## 7. Nobody knows who's doing what
-
-Two people built the same login screen. Three people edited the router. One person did nothing for six hours and felt awful.
-
-**Fix:** split by feature. Write the split on a whiteboard. Check in every 2–3 hours out loud.
-
-## 8. The 3am refactor
-
-"It'll be cleaner if we rewrite this properly." At 3am. With 8 hours left.
-
-**Fix:** never refactor after the halfway mark. Duplicate code is fine. Ugly code that runs wins.
-
-## 9. Skipping sleep
-
-You think you're gaining 4 hours. You're losing 4 hours of quality work, plus the demo.
-
-**Fix:** sleep. Even 4 hours in a chair. Your 3am code costs more to debug than it saves.
-
-## 10. Submitting at the deadline
-
-Submission portals crash. Videos fail to upload. Forms need fields you don't have. The deadline is often *before* the demo.
-
-**Fix:** submit a working version 2 hours early, then improve and resubmit if allowed.
-
-## 11. Explaining the tech instead of the product
-
-"…so we used a transformer with a retrieval layer and…" — the judges have stopped listening.
-
-**Fix:** lead with the person and the moment. Tech is one sentence, at 2:20.
-
-## 12. Not asking mentors for help
-
-Mentors are bored. They want to help. A 5-minute conversation can save you 3 hours.
-
-**Fix:** when stuck >20 minutes, go find one. Also: sponsor mentors know what their company is judging for.
-
-## 13. Forgetting the deliverables
-
-Repo public? Video uploaded? Devpost submitted? Team members added? Screenshots in the README?
-
-**Fix:** [templates/CHECKLIST.md](../templates/CHECKLIST.md). Tick it at hour 30.
-
-## 14. Not talking to anyone
-
-The best part of a hackathon is the people. You will learn more in one hallway conversation than in ten tutorials.
-
-**Fix:** talk to the team next to you. Ask what they're building. Be the person who helps someone debug. That's how you get invited to the next one.
-
-## 15. Thinking you have to win
-
-Most people don't. Most people still get: a project for their portfolio, a story, new friends, and usually free food.
-
-**Fix:** pick one thing you want to learn, and make sure you learn it. That's a successful hackathon regardless of the scoreboard.
+Also: you don't have to win. Talk to other teams, learn something, and you'll leave with a project and some new contacts either way.
 
 ---
 
-Back to → [README](../README.md)
+Back to the [README](../README.md)

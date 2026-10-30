@@ -1,75 +1,49 @@
-# Pitch script — <Project Name>
+# Pitch outline: project name
 
-> Fill this in **before** you build, not the night before the demo. If the script doesn't make sense, the product doesn't either.
+Length: 3 minutes. Speakers:
 
-**Length:** 3 minutes · **Speakers:** <names>
+Writing this before you build is a good way to check the idea makes sense.
 
----
+## Problem (about 40 seconds)
 
-## 0:00 — Hook (20s)
+Who has the problem, how often, and what it costs them.
 
-> <One sentence about a real person and a real moment. No greetings, no team intro.>
+## Demo (about 100 seconds)
 
-*e.g. "My grandmother texts me a photo of her fridge every Sunday and asks what to cook."*
+Steps, in order:
 
-## 0:20 — Problem (20s)
+1.
+2.
+3.
 
-> <Who hurts. How often. What it costs them — time, money, embarrassment.>
+Have inputs pre-filled and the backup recording open in another tab.
 
-## 0:40 — Demo (100s)
+## How it works (about 20 seconds)
 
-Live. In this exact order:
+The stack in one sentence, and the most interesting technical part.
 
-1. <Open the seeded demo page>
-2. <Upload the photo / click the thing>
-3. <Show the result — pause, let them read it>
-4. <Show the one extra thing that makes it feel real>
+## What's next (about 20 seconds)
 
-Narration rules:
-- Say what the **user feels**, not what the code does.
-- Never type on stage. Everything is pre-filled.
-- If it breaks: "Let me show you the recording" — keep talking.
+Who would use it and the next concrete step.
 
-## 2:20 — How (20s)
+## Answers to likely questions
 
-> "Under the hood it's <stack in one breath>. The interesting part is <the one clever bit>, which lets us <concrete benefit>."
+- How is it different from existing products?
+- What was the hardest part?
+- What's mocked?
+- Did you use AI, and for what?
+- What would you do next?
 
-## 2:40 — Impact + ask (20s)
+## Practice runs
 
-> "<Who would use this>. Next we'd <one concrete step>. What we'd need is <one concrete ask>."
-
----
-
-## Prepared answers
-
-**"How is this different from <obvious competitor>?"**
-> <The specific person/niche you serve that they don't.>
-
-**"What was the hardest part?"**
-> <A real technical answer. This is where you show depth.>
-
-**"Did you use AI?"**
-> "Yes — for boilerplate and debugging. The idea, scoping, and demo flow are ours."
-
-**"How does it scale / what about cost?"**
-> "For the demo we mocked <X>. At scale we'd <Y>."
-
-**"What's next?"**
-> <One step. Not a wishlist.>
-
----
-
-## Rehearsal log
-
-| Run | Time | What to cut |
+| Run | Time | Notes |
 | --- | --- | --- |
 | 1 | | |
 | 2 | | |
 
-## Backup plan
+## Before presenting
 
-- [ ] 60-second screen recording, downloaded locally
-- [ ] Local dev server running, seeded data reset
-- [ ] Laptop + presenter adapter + charger packed
-- [ ] Browsers tabs pre-opened: demo, video, slides
-- [ ] Submitted to the portal 2 hours early
+- [ ] Backup recording downloaded locally
+- [ ] Demo data reset
+- [ ] Display adapter and charger
+- [ ] Tabs open: demo, recording, slides
