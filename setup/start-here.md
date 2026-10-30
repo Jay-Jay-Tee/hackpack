@@ -1,6 +1,6 @@
 # Start here
 
-Never set up a laptop for coding before? Same, at some point. This page explains what you're about to install, why, and just enough terminal to get through the rest without panicking.
+Never set up a laptop for coding before? This page explains what you're about to install, why, and just enough terminal to get through the rest without panicking.
 
 (Not sure what a hackathon even is yet? Read [What is a hackathon?](../what-is-a-hackathon.md) first.)
 
