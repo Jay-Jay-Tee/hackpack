@@ -89,37 +89,37 @@ Three skills in this repo, ready to copy. To add them to a project for Claude Co
 ```bash
 # from inside your project folder, with hackpack cloned next to it
 mkdir -p .claude/skills
-cp -r ../hackpack/ai/skills/* .claude/skills/
+cp -r ../hackpack/ai/example-skills/* .claude/skills/
 ```
 
-Or copy one from the boxes below into `.claude/skills/<name>/SKILL.md` yourself. They're also [on GitHub](https://github.com/Jay-Jay-Tee/hackpack/tree/main/ai/skills).
+Or copy one from the boxes below into `.claude/skills/<name>/SKILL.md` yourself. They're also [on GitHub](https://github.com/Jay-Jay-Tee/hackpack/tree/main/ai/example-skills).
 
 ### scope-idea
 
-[View the file on GitHub](https://github.com/Jay-Jay-Tee/hackpack/blob/main/ai/skills/scope-idea/SKILL.md)
+[View the file on GitHub](https://github.com/Jay-Jay-Tee/hackpack/blob/main/ai/example-skills/scope-idea/SKILL.md)
 
 Turns a rough idea into must/should/won't lists, a demo script and a timeline. Good for the first hour.
 
 ~~~markdown
-{% include_relative skills/scope-idea/SKILL.md %}
+{% include_relative example-skills/scope-idea/SKILL.md %}
 ~~~
 
 ### explain-changes
 
-[View the file on GitHub](https://github.com/Jay-Jay-Tee/hackpack/blob/main/ai/skills/explain-changes/SKILL.md)
+[View the file on GitHub](https://github.com/Jay-Jay-Tee/hackpack/blob/main/ai/example-skills/explain-changes/SKILL.md)
 
 Explains what the code (or the AI) did, in plain words, and prepares answers for judges' questions.
 
 ~~~markdown
-{% include_relative skills/explain-changes/SKILL.md %}
+{% include_relative example-skills/explain-changes/SKILL.md %}
 ~~~
 
 ### demo-check
 
-[View the file on GitHub](https://github.com/Jay-Jay-Tee/hackpack/blob/main/ai/skills/demo-check/SKILL.md)
+[View the file on GitHub](https://github.com/Jay-Jay-Tee/hackpack/blob/main/ai/example-skills/demo-check/SKILL.md)
 
 Checks the build, secrets, README and git status before you submit, and reports problems without fixing them.
 
 ~~~markdown
-{% include_relative skills/demo-check/SKILL.md %}
+{% include_relative example-skills/demo-check/SKILL.md %}
 ~~~

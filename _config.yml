@@ -9,4 +9,4 @@ kramdown:
 
 exclude:
   - LICENSE
-  - ai/skills
+  - ai/example-skills
