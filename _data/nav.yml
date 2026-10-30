@@ -22,6 +22,8 @@
       url: /setup/vscode.html
     - title: AI coding agents
       url: /setup/ai-agents.html
+    - title: Docker (optional)
+      url: /setup/docker.html
     - title: Troubleshooting
       url: /setup/troubleshooting.html
 

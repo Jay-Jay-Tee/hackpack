@@ -1,10 +1,10 @@
 # macOS setup
 
-Takes about 15 minutes. New to the terminal? Read [start-here.md](start-here.md) first.
+Takes about 15 minutes, most of it Homebrew downloading things. New to the terminal? Read [start-here.md](start-here.md) first.
 
 ## 1. Homebrew
 
-Homebrew is a tool for installing developer software on macOS from the terminal. It will ask for your Mac password; nothing appears while you type it, which is normal.
+Homebrew is a tool for installing developer software on macOS from the terminal. It will ask for your Mac password. Nothing shows up while you type it. Your keyboard isn't broken, just type it and press Enter.
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -70,6 +70,6 @@ Open <http://localhost:5173>, then deploy with `npx vercel`.
 - [ ] An AI agent is installed and logged in
 - [ ] You've deployed something once
 
-If you want to change how the terminal looks, see [extras/](../extras/). It's optional.
+If your project needs Docker, see [docker.md](docker.md). If you want to change how the terminal looks, see [extras/](../extras/). It's optional.
 
 Problems: [troubleshooting.md](troubleshooting.md)

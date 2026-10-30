@@ -1,6 +1,6 @@
 # Windows setup
 
-Needs Windows 10 (21H2 or later) or Windows 11. Takes about 20 minutes, mostly downloads.
+Needs Windows 10 (21H2 or later) or Windows 11. Takes about 20 minutes, most of which is watching progress bars. Do it at home, not on the venue Wi-Fi.
 
 New to the terminal? Read [start-here.md](start-here.md) first.
 
@@ -72,6 +72,8 @@ Choose GitHub.com, HTTPS, and log in with the browser. These set your name on co
 - [AI coding agents](ai-agents.md)
 
 ## Optional
+
+**Docker**, only if your project needs it: see [docker.md](docker.md).
 
 **WSL 2**, if your team is on macOS/Linux or a tool only runs on Linux:
 

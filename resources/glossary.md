@@ -1,6 +1,6 @@
 # Glossary
 
-Words that come up in these guides and at hackathons.
+Words people at hackathons say as if everyone already knows what they mean.
 
 **API**: a way for one program to ask another for data or to do something. "Calling the weather API" means your code sends a request to a weather service and gets data back.
 
@@ -25,6 +25,8 @@ Words that come up in these guides and at hackathons.
 **Deploy**: put your app on the internet so anyone can open it with a link.
 
 **Dev server**: a copy of your app running on your own computer while you work on it, usually at an address like `http://localhost:3000`.
+
+**Docker / container**: a way to run software in a self-contained box that includes everything it needs, so it works the same on every computer. See [Docker](../setup/docker.md).
 
 **Endpoint / route**: a specific URL on your backend that does one thing, such as `/api/upload`.
 

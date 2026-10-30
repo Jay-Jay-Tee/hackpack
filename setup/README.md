@@ -7,4 +7,6 @@ Go through these in order.
 3. [VS Code](vscode.md)
 4. [AI coding agents](ai-agents.md)
 
+Only if your project needs it: [Docker](docker.md).
+
 If something goes wrong: [Troubleshooting](troubleshooting.md).

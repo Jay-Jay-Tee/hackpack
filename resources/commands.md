@@ -1,6 +1,6 @@
 # Commands worth knowing
 
-New to the terminal? See [setup/start-here.md](../setup/start-here.md).
+You don't need to memorise these. Keep this page open in a tab and come back to it. New to the terminal? See [setup/start-here.md](../setup/start-here.md).
 
 ## Terminal
 

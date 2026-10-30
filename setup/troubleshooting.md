@@ -1,5 +1,7 @@
 # Troubleshooting
 
+Something broke. Normal. Find your error below; if it's not here, paste the full error into your AI agent or show it to a mentor.
+
 ## "command not found" right after installing
 
 The shell hasn't picked up the new PATH. Close the terminal app completely and open it again. VS Code caches PATH too, so restart VS Code, not just its terminal panel.

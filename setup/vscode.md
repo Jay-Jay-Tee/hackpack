@@ -1,6 +1,6 @@
 # VS Code
 
-Any editor is fine, but VS Code is the most common at hackathons, which makes it easier to get help from teammates and mentors.
+Any editor works. VS Code is just what almost everyone at a hackathon uses, so when you're stuck, the person next to you will know where the buttons are.
 
 ## Extensions
 

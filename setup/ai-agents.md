@@ -2,7 +2,7 @@
 
 An agent can read your project, edit several files, and run commands like `npm install` or your tests. That's different from a chat window where you copy and paste code. One agent is enough; pick whichever you have access to.
 
-Install and log in before the event. Logins and subscriptions are the usual thing that goes wrong.
+Install it and log in **before** the event. You don't want to find out your subscription expired during the opening talk.
 
 ## The options
 

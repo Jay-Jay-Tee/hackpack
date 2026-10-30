@@ -2,7 +2,7 @@
 
 Written for Ubuntu/Debian (including WSL). Fedora and Arch commands are at the end. New to the terminal? Read [start-here.md](start-here.md) first.
 
-`sudo` runs a command as administrator and will ask for your password. Nothing appears while you type it, which is normal.
+`sudo` runs a command as administrator and asks for your password. Nothing shows up while you type it. Your keyboard isn't broken, just type it and press Enter.
 
 ## 1. Packages
 
@@ -47,6 +47,10 @@ gh auth login
 
 - [VS Code](vscode.md)
 - [AI coding agents](ai-agents.md)
+
+## Docker
+
+Only if your project needs it: see [docker.md](docker.md).
 
 ## Fedora and Arch
 
