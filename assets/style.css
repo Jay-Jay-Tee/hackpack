@@ -551,6 +551,15 @@ footer a:hover { color: var(--accent); }
     --accent: #a5b4fc;
   }
 
+  /* The section classes sit on <body>, so they beat :root. Set the dark
+     tint on them too, or the light tints inherit through and stay light. */
+  .sec-home, .sec-intro, .sec-setup, .sec-basics, .sec-git,
+  .sec-ai, .sec-guide, .sec-resources, .sec-templates,
+  .sec-scripts, .sec-extras {
+    --tint: #1a2030;
+    --edge: #2b3446;
+  }
+
   .sec-home      { --accent: #a5b4fc; }
   .sec-intro     { --accent: #f0b46b; }
   .sec-setup     { --accent: #93b4ff; }
