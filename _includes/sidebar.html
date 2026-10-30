@@ -1,7 +1,7 @@
 <ul class="nav-list">
 {%- for s in site.data.nav %}
-  <li>
-    <a href="{{ s.url | relative_url }}" class="section{% if page.url == s.url %} current{% endif %}"{% if page.url == s.url %} aria-current="page"{% endif %}>{{ s.title }}</a>
+  <li{% if s.key == section_key %} class="active"{% endif %}>
+    <a href="{{ s.url | relative_url }}" class="section{% if page.url == s.url %} current{% endif %}"{% if page.url == s.url %} aria-current="page"{% endif %}><span class="dot dot-{{ s.key }}" aria-hidden="true"></span>{{ s.title }}</a>
     {%- if s.pages %}
     <ul>
       {%- for p in s.pages %}

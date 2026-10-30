@@ -2,12 +2,15 @@
 # Add new pages here so they show up in the site navigation.
 
 - title: Home
+  key: home
   url: /
 
 - title: What is a hackathon?
+  key: intro
   url: /what-is-a-hackathon.html
 
 - title: Setup
+  key: setup
   url: /setup/
   pages:
     - title: Start here
@@ -28,6 +31,7 @@
       url: /setup/troubleshooting.html
 
 - title: How apps work
+  key: basics
   url: /basics/
   pages:
     - title: How the web works
@@ -44,6 +48,7 @@
       url: /basics/deploying.html
 
 - title: Git and GitHub
+  key: git
   url: /git/
   pages:
     - title: What is Git?
@@ -58,6 +63,7 @@
       url: /git/fixing-mistakes.html
 
 - title: Working with AI
+  key: ai
   url: /ai/
   pages:
     - title: How AI works
@@ -74,6 +80,7 @@
       url: /ai/skills.html
 
 - title: Guide
+  key: guide
   url: /guide/
   pages:
     - title: 1. Before the event
@@ -92,6 +99,7 @@
       url: /guide/07-mistakes.html
 
 - title: Resources
+  key: resources
   url: /resources/
   pages:
     - title: Commands
@@ -106,6 +114,7 @@
       url: /resources/apis-and-datasets.html
 
 - title: Templates
+  key: templates
   url: /templates/
   pages:
     - title: Example repo
@@ -118,7 +127,9 @@
       url: /templates/CHECKLIST.html
 
 - title: Scripts
+  key: scripts
   url: /scripts/
 
 - title: Extras (optional)
+  key: extras
   url: /extras/

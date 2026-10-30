@@ -6,17 +6,19 @@
 {%- assign titles = "" -%}
 {%- assign section_title = "" -%}
 {%- assign section_url = "" -%}
+{%- assign section_key = "home" -%}
 {%- assign this_title = page.title -%}
 {%- for s in site.data.nav -%}
   {%- assign urls = urls | append: s.url | append: "|" -%}
   {%- assign titles = titles | append: s.title | append: "|" -%}
-  {%- if s.url == page.url -%}{%- assign this_title = s.title -%}{%- endif -%}
+  {%- if s.url == page.url -%}{%- assign this_title = s.title -%}{%- assign section_key = s.key -%}{%- endif -%}
   {%- for p in s.pages -%}
     {%- assign urls = urls | append: p.url | append: "|" -%}
     {%- assign titles = titles | append: p.title | append: "|" -%}
     {%- if p.url == page.url -%}
       {%- assign section_title = s.title -%}
       {%- assign section_url = s.url -%}
+      {%- assign section_key = s.key -%}
       {%- assign this_title = p.title -%}
     {%- endif -%}
   {%- endfor -%}
@@ -35,7 +37,7 @@
 <meta name="description" content="{{ site.description }}">
 <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
-<body>
+<body class="sec-{{ section_key }}">
 
 <header class="top">
   <a class="brand" href="{{ '/' | relative_url }}">hackpack</a>

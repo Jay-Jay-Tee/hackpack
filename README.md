@@ -8,19 +8,20 @@ Never been to one? Read [What is a hackathon?](what-is-a-hackathon.md) first.
 
 ## Contents
 
-New to coding setup? Start with [setup/start-here.md](setup/start-here.md). It explains what each tool is and how to use the terminal.
+New to coding setup? Start with [Start here](setup/start-here.md). It explains what each tool is and how to use the terminal.
 
-- [`setup/`](setup/) – installing the basics on [Windows](setup/windows.md), [macOS](setup/macos.md) or [Linux](setup/linux.md), then [VS Code](setup/vscode.md), [AI coding agents](setup/ai-agents.md), and [fixes for common errors](setup/troubleshooting.md).
-- [`basics/`](basics/) – how apps work: the web, frontend and backend, APIs, databases, stacks and deploying, explained from zero.
-- [`git/`](git/) – what Git and GitHub are, a hands-on first repo, SSH keys, and fixing mistakes.
-- [`ai/`](ai/) – working with AI: how it works, writing Markdown, prompting well, a prompt library, `CLAUDE.md` / `AGENTS.md`, and skills (`SKILL.md`), with three example skills to copy.
-- [`resources/commands.md`](resources/commands.md) – terminal, git and GitHub commands worth knowing.
-- [`resources/glossary.md`](resources/glossary.md) – short explanations of terms like API, deploy, branch and `.env`.
-- [`guide/`](guide/) – notes on the event, in order: preparing, picking an idea, building, git with a team, using AI, the demo, and common mistakes.
-- [`templates/`](templates/) – a project README, a pitch outline, a submission checklist, and [an example repo](templates/example-repo.md) showing what a finished submission looks like.
-- [`resources/`](resources/) – free tiers, public APIs and what to learn first.
-- [`scripts/`](scripts/) – install scripts for macOS and Windows, and `check.sh` to see what's missing.
-- [`extras/`](extras/) – optional terminal styling from my Mac. Not needed.
+<div class="cards">
+<p><a class="c-intro" href="what-is-a-hackathon.html"><strong>What is a hackathon?</strong><br><span>What actually happens over the weekend, and what to expect.</span></a></p>
+<p><a class="c-setup" href="setup/"><strong>Setup</strong><br><span>Git, VS Code and an AI agent, installed and tested on Windows, macOS or Linux.</span></a></p>
+<p><a class="c-basics" href="basics/"><strong>How apps work</strong><br><span>The web, frontend and backend, APIs, databases and stacks, from zero.</span></a></p>
+<p><a class="c-git" href="git/"><strong>Git and GitHub</strong><br><span>What they are, a hands-on first repo, SSH keys, and fixing mistakes.</span></a></p>
+<p><a class="c-ai" href="ai/"><strong>Working with AI</strong><br><span>How it works, prompting, a prompt library, instruction files and skills.</span></a></p>
+<p><a class="c-guide" href="guide/"><strong>Guide</strong><br><span>The event itself: preparing, scoping, building, the demo, and common mistakes.</span></a></p>
+<p><a class="c-resources" href="resources/"><strong>Resources</strong><br><span>Commands, a glossary, free tiers, and public APIs and datasets.</span></a></p>
+<p><a class="c-templates" href="templates/"><strong>Templates</strong><br><span>A README, a pitch outline, a checklist, and a finished example repo.</span></a></p>
+<p><a class="c-scripts" href="scripts/"><strong>Scripts</strong><br><span>Install scripts for macOS and Windows, plus <code>check.sh</code>.</span></a></p>
+<p><a class="c-extras" href="extras/"><strong>Extras</strong><br><span>Optional terminal styling from my Mac. Not needed.</span></a></p>
+</div>
 
 Website: <https://jay-jay-tee.github.io/hackpack/>. Source: <https://github.com/Jay-Jay-Tee/hackpack>.
 
