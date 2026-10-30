@@ -1,3 +1,8 @@
+# Pitch outline
+
+Copy this into a document your team can edit (a Google Doc or a `PITCH.md` in your repo) and fill it in. Writing it before you start building is a good way to check the idea makes sense.
+
+~~~markdown
 # Pitch outline: project name
 
 Length: 3 minutes. Speakers:
@@ -47,3 +52,4 @@ Who would use it and the next concrete step.
 - [ ] Demo data reset
 - [ ] Display adapter and charger
 - [ ] Tabs open: demo, recording, slides
+~~~

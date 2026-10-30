@@ -1,3 +1,10 @@
+# Project README template
+
+Copy this into a file called `README.md` in your project and replace the placeholders. The links in it are examples; swap in your own demo, video and Devpost links.
+
+To copy it, use the copy button in the corner of the box on GitHub, or select all the text inside the box.
+
+~~~markdown
 # Project name
 
 One sentence on what it does and who it's for.
@@ -53,3 +60,4 @@ npm run dev
 - [Name](https://github.com/handle): what they worked on
 
 Built at <hackathon name>, <month year>.
+~~~
