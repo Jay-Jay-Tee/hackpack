@@ -425,14 +425,19 @@ ul.task-list li::marker { content: ""; }
   height: 100%;
   padding: 0.85rem 1rem;
   border: 1px solid var(--line);
+  border-color: color-mix(in srgb, var(--card, var(--accent)) 22%, var(--line));
   border-radius: var(--radius);
   background: var(--surface);
+  background: color-mix(in srgb, var(--card, var(--accent)) 7%, var(--surface));
   color: var(--text);
   text-decoration: none;
   transition: border-color 0.14s ease, background 0.14s ease;
 }
 
-.cards a:hover { background: var(--tint); border-color: var(--edge); }
+.cards a:hover {
+  background: color-mix(in srgb, var(--card, var(--accent)) 12%, var(--surface));
+  border-color: color-mix(in srgb, var(--card, var(--accent)) 45%, var(--line));
+}
 
 .cards strong { display: inline; color: var(--accent); font-size: 0.98rem; }
 .cards span { color: var(--muted); font-size: 0.88rem; line-height: 1.5; }
