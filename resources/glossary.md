@@ -28,17 +28,17 @@ Words people at hackathons say as if everyone already knows what they mean.
 
 **Docker / container**: a way to run software in a self-contained box that includes everything it needs, so it works the same on every computer. See [Docker](../setup/docker.md).
 
-**Frontmatter**: settings at the top of a Markdown file between two `---` lines, like a skill's name and description.
-
-**Instruction file**: a Markdown file such as `CLAUDE.md` or `AGENTS.md` that an AI agent reads at the start of every session. See [Instruction files](../ai/instruction-files.md).
-
-**Markdown**: plain text with symbols for formatting, saved as `.md`. See [Writing Markdown](../ai/markdown.md).
-
 **Endpoint / route**: a specific URL on your backend that does one thing, such as `/api/upload`.
 
 **Environment variables / `.env`**: settings and secrets (like API keys) kept outside your code. Locally they go in a `.env` file, which isn't committed; on the hosting site you enter them in its settings.
 
 **Framework**: a set of tools and conventions for building a type of app. Next.js and FastAPI are frameworks.
+
+**Frontmatter**: settings at the top of a Markdown file between two `---` lines, like a skill's name and description.
+
+**Instruction file**: a Markdown file such as `CLAUDE.md` or `AGENTS.md` that an AI agent reads at the start of every session. See [Instruction files](../ai/instruction-files.md).
+
+**Markdown**: plain text with symbols for formatting, saved as `.md`. See [Writing Markdown](../ai/markdown.md).
 
 **Merge conflict**: when two people changed the same lines and Git needs you to choose what the final version should be.
 
