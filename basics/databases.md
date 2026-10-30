@@ -2,6 +2,9 @@
 
 A **database** stores your app's data so it's still there tomorrow and every user sees the same thing. Users, posts, scores, uploaded file records: if it needs to survive a page refresh or be shared between people, it goes in a database.
 
+![A stack of hard drives, close up](../assets/img/hard-drive.jpg)
+*Photo: epSos.de, CC BY 2.0.*
+
 ## Why not just a variable or a file?
 
 - **A variable** in your code disappears when the server restarts (and serverless functions restart constantly).

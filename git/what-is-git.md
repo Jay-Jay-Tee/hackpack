@@ -53,7 +53,10 @@ Commits don't happen automatically. You decide when to make one. A good habit is
 
 ### The three places your changes can be
 
-This is the part that confuses everyone at first. A change moves through three stages:
+This is the part that confuses everyone at first. A change moves through three stages.
+
+![A laptop screen full of code](../assets/img/programming.jpg)
+*A commit is a snapshot of files like these. Photo: luis gomes, CC0.*
 
 1. **Working folder**: the files as you see them in VS Code. Editing a file changes it here.
 2. **Staging area**: changes you've marked as "include these in the next commit", with `git add`.

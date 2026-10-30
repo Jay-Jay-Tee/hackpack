@@ -22,6 +22,9 @@ Every photo on this site is either public domain, CC0, or under a Creative Commo
 | `hackathon-room.jpg` | Wikimedia hackathon, Morocco 2026 | [DERDAKI ILIAS](https://commons.wikimedia.org/wiki/File:Wikimedia_Morocco_Mini-Hackathon_2026_day_1_-_Participants_working_on_laptops_at_a_curved_conference_table_-_0001.jpg) | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
 | `pitch.jpg` | A pitch at Fellin Häkk 2026 | [Maido Parv](https://commons.wikimedia.org/wiki/File:Tom_Kristian_Abel_pitching_at_Fellin_H%C3%A4kk_hackathon_2026.jpg) | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
 | `code-screen.jpg` | Code on a screen | [Lewis Ngugi](https://commons.wikimedia.org/wiki/File:100DaysOfCode_(Unsplash).jpg) | CC0 |
+| `programming.jpg` | A laptop with code on it | [luis gomes](https://commons.wikimedia.org/wiki/File:Pexels-luis-gomes-546819.jpg) | CC0 |
+| `server-stack.jpg` | A rack of hard drives | [RubinObs/NOIRLab](https://commons.wikimedia.org/wiki/File:Hard_Drive_Icon_(rubin-A-stack-of-hard-drives-Servers-front-view).jpg) | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| `hard-drive.jpg` | Hard drives on a desk | [epSos.de](https://commons.wikimedia.org/wiki/File:Computer_Memory_Hard_Drive_Disk_HDD_Storage_Technology.jpg) | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) |
 
 The comics are by Randall Munroe: [Good Code](https://xkcd.com/844/), [Machine Learning](https://xkcd.com/1838/) and [Git](https://xkcd.com/1597/), under [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/). They're used here non-commercially, with credit.
 
