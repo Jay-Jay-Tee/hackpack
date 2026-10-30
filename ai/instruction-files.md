@@ -70,6 +70,7 @@ the demo matters more than perfect code.
 - Don't add new packages without asking
 - Keep secrets in `.env.local`; add any new variable names to `.env.example`
 - Prefer simple code over abstractions
+- Commit messages follow [Conventional Commits](../git/conventional-commits.md): `type(scope): summary`
 - If the Gemini call fails, fall back to `lib/demo-data.ts` so the demo never breaks
 ```
 
