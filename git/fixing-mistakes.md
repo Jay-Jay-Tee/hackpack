@@ -41,7 +41,7 @@ git stash pop     # bring them back
 
 ## I committed, but haven't pushed
 
-**The commit message is wrong**
+**The commit message is wrong** (what a good one looks like: [Conventional commits](conventional-commits.md))
 
 ```bash
 git commit --amend -m "better message"

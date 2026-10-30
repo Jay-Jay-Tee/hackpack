@@ -22,7 +22,7 @@ You don't need to memorise these. Keep this page open in a tab and come back to 
 | `git clone <url>` | Download a repo |
 | `git status` | See what's changed |
 | `git add -A` | Stage all changes |
-| `git commit -m "message"` | Save a snapshot |
+| `git commit -m "feat: message"` | Save a snapshot |
 | `git push` | Upload commits |
 | `git pull` | Get teammates' commits |
 | `git log --oneline` | List recent commits |

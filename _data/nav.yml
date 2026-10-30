@@ -57,6 +57,8 @@
       url: /git/what-is-github.html
     - title: Your first repo
       url: /git/first-repo.html
+    - title: Conventional commits
+      url: /git/conventional-commits.html
     - title: SSH keys
       url: /git/ssh.html
     - title: Fixing mistakes

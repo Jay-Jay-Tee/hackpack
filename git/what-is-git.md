@@ -39,7 +39,7 @@ You turn a normal folder into a repo with `git init`, or you get a copy of an ex
 
 ### Commit
 
-A snapshot of your project at one moment, with a short message describing what changed:
+A snapshot of your project at one moment, with a short message describing what changed (the [conventional commits](conventional-commits.md) page is about writing a good one):
 
 ```
 a1b2c3d  add photo upload page

@@ -224,4 +224,6 @@ Delete the practice repo from GitHub when you're done if you like (repo → Sett
 | Pull requests | `gh pr create`, `gh pr merge` |
 | Conflicts | edit the file, `git add`, `git commit` |
 
+The messages in this walkthrough are plain on purpose. Once you're comfortable, [Conventional commits](conventional-commits.md) is the habit worth picking up, and the rest of the booklet uses it.
+
 Next: [SSH keys](ssh.md) (optional), then [Fixing mistakes](fixing-mistakes.md) for when something goes wrong.

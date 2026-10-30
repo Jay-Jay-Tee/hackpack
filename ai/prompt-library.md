@@ -163,7 +163,8 @@ would I change to <goal>? Don't change anything.
 ```markdown
 Look at my uncommitted changes (git diff). Is there anything risky:
 leftover debug code, hardcoded secrets, broken edge cases?
-Then suggest a short commit message.
+Then write a conventional commit message: `type(scope): summary`,
+imperative, under 72 characters. Types: feat, fix, docs, chore.
 ```
 
 ## Finishing

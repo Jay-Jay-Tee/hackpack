@@ -16,6 +16,8 @@ Words people at hackathons say as if everyone already knows what they mean.
 
 **Commit**: a saved snapshot of your code in Git, with a message describing the change.
 
+**Conventional commits**: a fixed shape for commit messages, `type(scope): summary`, so the history is readable at a glance. See [Conventional commits](../git/conventional-commits.md).
+
 **CRUD**: Create, Read, Update, Delete; the four basic things most apps do with data.
 
 **Database**: where an app stores data permanently, such as users or posts. A **schema** describes what the data looks like (tables and fields). See [Databases](../basics/databases.md).

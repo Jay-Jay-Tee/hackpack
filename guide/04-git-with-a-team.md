@@ -9,7 +9,7 @@ One person creates it:
 ```bash
 git init
 git add .
-git commit -m "initial scaffold"
+git commit -m "feat: scaffold the project"
 gh repo create my-project --public --source=. --push
 ```
 
@@ -30,6 +30,8 @@ git config --global pull.rebase false
 ```
 
 `push.autoSetupRemote` means you don't need `--set-upstream` the first time you push a branch. A list of everyday commands is in [resources/commands.md](../resources/commands.md).
+
+Commit messages follow [Conventional Commits](../git/conventional-commits.md): `type(scope): summary`, like `feat(upload): add the upload page`. It costs a few seconds and makes the history readable to teammates and judges.
 
 ## .gitignore
 
@@ -55,7 +57,7 @@ If you push a key by accident, revoke it in the provider's dashboard straight aw
 git pull
 # work, then:
 git add -A
-git commit -m "add upload page"
+git commit -m "feat(upload): add the upload page"
 git pull
 git push
 ```
