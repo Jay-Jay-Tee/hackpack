@@ -10,7 +10,7 @@ Have everyone bring two ideas, then take no more than an hour to decide. Drop id
 - need hardware you can't get at the event
 - only make sense with several separate features
 
-For what's left, ask whether you could show it working in two minutes, and whether you could build the core in about twelve hours. If two ideas are tied, pick the one the team is more interested in. You'll need that motivation later.
+For what's left, ask whether you could show it working in two minutes, and whether you could build the core in about twelve hours. If two ideas are tied, pick the one the team is more interested in.
 
 ## One main feature
 
@@ -22,7 +22,7 @@ Before writing code, make three lists:
 
 - **Must**: the demo doesn't work without it. Keep this short.
 - **Should**: worth doing once the musts are done and deployed.
-- **Won't**: out of scope. Write it in the README so nobody argues about it at 2am.
+- **Won't**: out of scope. Write it in the README.
 
 At the halfway point, anything not started moves to "won't".
 
