@@ -2,7 +2,7 @@
 
 One sentence on what it does and who it's for.
 
-![Screenshot](docs/screenshot.png)
+(Add a screenshot or GIF here. It's the first thing judges look at.)
 
 [Live demo](https://your-app.vercel.app) · [Video](https://youtu.be/xxx) · [Devpost](https://devpost.com/software/xxx)
 

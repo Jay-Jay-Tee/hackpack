@@ -17,7 +17,7 @@ New to coding setup? Start with [setup/start-here.md](setup/start-here.md). It e
 - [`scripts/`](scripts/) – install scripts for macOS and Windows, and `check.sh` to see what's missing.
 - [`extras/`](extras/) – optional terminal styling from my Mac. Not needed.
 
-There's also a web version at <https://jay-jay-tee.github.io/hackpack/>.
+Website: <https://jay-jay-tee.github.io/hackpack/>. Source: <https://github.com/Jay-Jay-Tee/hackpack>.
 
 ## What you need
 

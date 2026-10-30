@@ -1,0 +1,11 @@
+title: hackpack
+description: A basic setup and notes for a first hackathon.
+baseurl: /hackpack
+url: https://jay-jay-tee.github.io
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+exclude:
+  - LICENSE

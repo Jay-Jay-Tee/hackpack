@@ -31,7 +31,7 @@ git config --global pull.rebase false
 
 ## .gitignore
 
-Commit a `.gitignore` before anyone installs dependencies. You can start from the one in [this repo](../.gitignore).
+Commit a `.gitignore` before anyone installs dependencies. You can start from the one in [this repo](https://github.com/Jay-Jay-Tee/hackpack/blob/main/.gitignore).
 
 Don't commit `node_modules/`, `venv/`, `dist/`, `build/`, `.env` or key files. Do commit lockfiles (such as `package-lock.json`) and a `.env.example` that lists variable names with placeholder values:
 
