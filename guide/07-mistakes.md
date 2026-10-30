@@ -27,7 +27,3 @@
 **Forgetting part of the submission.** Public repo, video, team members added to the entry. Use the [checklist](../templates/CHECKLIST.md).
 
 Also: you don't have to win. Talk to other teams, learn something, and you'll leave with a project and some new contacts either way.
-
----
-
-Back to the [README](../README.md)

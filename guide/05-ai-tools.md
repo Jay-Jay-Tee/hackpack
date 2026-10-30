@@ -45,7 +45,3 @@ Other things that help:
 Installing Claude Code, Codex, Copilot or Gemini CLI, and writing a project instructions file, is covered in [setup/ai-agents.md](../setup/ai-agents.md).
 
 If a judge asks whether you used AI, say yes and say what for.
-
----
-
-Next: [6. Demo and pitch](06-demo-and-pitch.md)

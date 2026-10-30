@@ -1,0 +1,71 @@
+# Sidebar, breadcrumbs and previous/next links are built from this list.
+# Add new pages here so they show up in the site navigation.
+
+- title: Home
+  url: /
+
+- title: Setup
+  url: /setup/
+  pages:
+    - title: Start here
+      url: /setup/start-here.html
+    - title: Windows
+      url: /setup/windows.html
+    - title: macOS
+      url: /setup/macos.html
+    - title: Linux
+      url: /setup/linux.html
+    - title: VS Code
+      url: /setup/vscode.html
+    - title: AI coding agents
+      url: /setup/ai-agents.html
+    - title: Troubleshooting
+      url: /setup/troubleshooting.html
+
+- title: Guide
+  url: /guide/
+  pages:
+    - title: 1. Before the event
+      url: /guide/01-before.html
+    - title: 2. Ideas and scoping
+      url: /guide/02-ideas-and-scoping.html
+    - title: 3. Building
+      url: /guide/03-building.html
+    - title: 4. Git with a team
+      url: /guide/04-git-with-a-team.html
+    - title: 5. AI tools
+      url: /guide/05-ai-tools.html
+    - title: 6. Demo and pitch
+      url: /guide/06-demo-and-pitch.html
+    - title: 7. Common mistakes
+      url: /guide/07-mistakes.html
+
+- title: Resources
+  url: /resources/
+  pages:
+    - title: Commands
+      url: /resources/commands.html
+    - title: Glossary
+      url: /resources/glossary.html
+    - title: What to learn first
+      url: /resources/learning.html
+    - title: Free tiers
+      url: /resources/free-stuff.html
+    - title: APIs and datasets
+      url: /resources/apis-and-datasets.html
+
+- title: Templates
+  url: /templates/
+  pages:
+    - title: Project README
+      url: /templates/README.template.html
+    - title: Pitch outline
+      url: /templates/PITCH.html
+    - title: Submission checklist
+      url: /templates/CHECKLIST.html
+
+- title: Scripts
+  url: /scripts/
+
+- title: Extras (optional)
+  url: /extras/

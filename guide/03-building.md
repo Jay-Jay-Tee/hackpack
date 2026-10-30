@@ -45,7 +45,3 @@ Thorough test suites, CI, microservices, password reset, email verification, dar
 4. Ask an AI tool, and give it the full error and the relevant file.
 5. Ask a mentor. That's what they're there for.
 6. After about 20 minutes, replace it with a placeholder (for example, return fixed data), move on and come back later.
-
----
-
-Next: [4. Git with a team](04-git-with-a-team.md)

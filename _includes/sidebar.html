@@ -1,0 +1,14 @@
+<ul class="nav-list">
+{%- for s in site.data.nav %}
+  <li>
+    <a href="{{ s.url | relative_url }}" class="section{% if page.url == s.url %} current{% endif %}"{% if page.url == s.url %} aria-current="page"{% endif %}>{{ s.title }}</a>
+    {%- if s.pages %}
+    <ul>
+      {%- for p in s.pages %}
+      <li><a href="{{ p.url | relative_url }}"{% if page.url == p.url %} class="current" aria-current="page"{% endif %}>{{ p.title }}</a></li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </li>
+{%- endfor %}
+</ul>

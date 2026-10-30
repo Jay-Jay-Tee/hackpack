@@ -32,7 +32,3 @@ Set up your laptop while you still have time to fix problems.
 ## A quick test
 
 If you can make a new folder, push it to GitHub, run a dev server and deploy it to a public URL in a few minutes, your setup is fine.
-
----
-
-Next: [2. Ideas and scoping](02-ideas-and-scoping.md)

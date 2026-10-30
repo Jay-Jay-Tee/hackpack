@@ -56,7 +56,3 @@ Every few hours, ask:
 - Anything behind a sign-up. Judges won't create an account; use a demo account or skip auth.
 - APIs that need approval. Mock them and say so.
 - Redesigns or pivots after the halfway point.
-
----
-
-Next: [3. Building](03-building.md)

@@ -46,7 +46,3 @@ macOS: `Cmd+Shift+5`. Windows: `Win+Alt+R`. OBS works on both.
 Run through it twice with a timer, once in front of someone not on the team. The first run is usually too long; cut from the introduction, not the demo.
 
 A fill-in outline is in [templates/PITCH.md](../templates/PITCH.md).
-
----
-
-Next: [7. Common mistakes](07-mistakes.md)

@@ -104,7 +104,3 @@ If it gets confusing, `git merge --abort` puts you back where you were before th
 - Make the repo public if the rules require it.
 - Add screenshots and run instructions to the README.
 - Don't force-push to shared branches.
-
----
-
-Next: [5. AI tools](05-ai-tools.md)

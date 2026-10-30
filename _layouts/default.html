@@ -1,27 +1,88 @@
+{%- comment -%}
+  Flatten _data/nav.yml into parallel url/title lists to find this page's
+  position (for previous/next) and its section (for breadcrumbs).
+{%- endcomment -%}
+{%- assign urls = "" -%}
+{%- assign titles = "" -%}
+{%- assign section_title = "" -%}
+{%- assign section_url = "" -%}
+{%- assign this_title = page.title -%}
+{%- for s in site.data.nav -%}
+  {%- assign urls = urls | append: s.url | append: "|" -%}
+  {%- assign titles = titles | append: s.title | append: "|" -%}
+  {%- if s.url == page.url -%}{%- assign this_title = s.title -%}{%- endif -%}
+  {%- for p in s.pages -%}
+    {%- assign urls = urls | append: p.url | append: "|" -%}
+    {%- assign titles = titles | append: p.title | append: "|" -%}
+    {%- if p.url == page.url -%}
+      {%- assign section_title = s.title -%}
+      {%- assign section_url = s.url -%}
+      {%- assign this_title = p.title -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
+{%- assign url_list = urls | split: "|" -%}
+{%- assign title_list = titles | split: "|" -%}
+{%- assign idx = -1 -%}
+{%- for u in url_list -%}{%- if u == page.url -%}{%- assign idx = forloop.index0 -%}{%- endif -%}{%- endfor -%}
+{%- assign last = url_list.size | minus: 1 -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{% if page.title and page.title != site.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+<title>{% if page.url != "/" %}{{ this_title }} · {% endif %}{{ site.title }}</title>
 <meta name="description" content="{{ site.description }}">
 <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
 </head>
 <body>
-<nav>
-  <a href="{{ '/' | relative_url }}"><b>hackpack</b></a>
-  <a href="{{ '/setup/start-here.html' | relative_url }}">Start here</a>
-  <a href="{{ '/setup/' | relative_url }}">Setup</a>
-  <a href="{{ '/guide/' | relative_url }}">Guide</a>
-  <a href="{{ '/resources/commands.html' | relative_url }}">Commands</a>
-  <a href="{{ '/resources/glossary.html' | relative_url }}">Glossary</a>
+
+<header class="top">
+  <a class="brand" href="{{ '/' | relative_url }}">hackpack</a>
   <a href="https://github.com/Jay-Jay-Tee/hackpack">GitHub</a>
-</nav>
-<main>
+</header>
+
+<div class="layout">
+  <aside class="sidebar" aria-label="All pages">
+    {% include sidebar.html %}
+  </aside>
+
+  <div class="content">
+    <details class="mobile-nav">
+      <summary>All pages</summary>
+      {% include sidebar.html %}
+    </details>
+
+    {%- if page.url != "/" %}
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      {%- if section_url != "" %} › <a href="{{ section_url | relative_url }}">{{ section_title }}</a>{% endif %}
+      › <span>{{ this_title }}</span>
+    </nav>
+    {%- endif %}
+
+    <main>
 {{ content }}
-</main>
-<footer>
-  <a href="https://github.com/Jay-Jay-Tee/hackpack/edit/main/{{ page.path }}">Suggest a fix to this page</a>
-</footer>
+    </main>
+
+    {%- if idx >= 0 %}
+    <nav class="pager" aria-label="Previous and next page">
+      {%- if idx > 0 %}
+      {%- assign i = idx | minus: 1 %}
+      <a class="prev" href="{{ url_list[i] | relative_url }}"><small>Previous</small>{{ title_list[i] }}</a>
+      {%- else %}<span></span>{% endif %}
+      {%- if idx < last %}
+      {%- assign i = idx | plus: 1 %}
+      <a class="next" href="{{ url_list[i] | relative_url }}"><small>Next</small>{{ title_list[i] }}</a>
+      {%- endif %}
+    </nav>
+    {%- endif %}
+
+    <footer>
+      <a href="https://github.com/Jay-Jay-Tee/hackpack/edit/main/{{ page.path }}">Suggest a fix to this page</a>
+    </footer>
+  </div>
+</div>
+
 </body>
 </html>
