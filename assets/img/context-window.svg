@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" width="720" height="220" role="img">
+<style>
+  text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: #191c22; }
+  .muted { fill: #5d6470; font-size: 12px; }
+  .label { font-size: 10.5px; fill: #5d6470; }
+  .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  .box { fill: #ffffff; stroke: #d5d9e2; stroke-width: 1.5; }
+  .edge { stroke: #6b7280; stroke-width: 1.5; fill: none; }
+  .arrow { fill: #6b7280; }
+  .accent { fill: #6d28d9; }
+  .accent-stroke { stroke: #6d28d9; stroke-width: 2.5; fill: none; }
+  .dash { stroke-dasharray: 5 4; }
+  @media (prefers-color-scheme: dark) {
+    text { fill: #e2e6ee; }
+    .muted { fill: #939cab; }
+    .label { fill: #939cab; }
+    .box { fill: #13171e; stroke: #2e3540; }
+    .edge { stroke: #8b95a5; }
+    .arrow { fill: #8b95a5; }
+    .accent { fill: #c4b5fd; }
+    .accent-stroke { stroke: #c4b5fd; }
+  }
+</style>
+
+<rect class="box" x="24" y="36" width="672" height="128" rx="4"/>
+<text x="44" y="60" class="accent" font-size="13" font-weight="600">The context window</text>
+
+<rect class="box" x="44" y="74" width="130" height="34" rx="3"/>
+<text x="109" y="96" text-anchor="middle" class="muted">system prompt</text>
+
+<rect class="box" x="184" y="74" width="100" height="34" rx="3"/>
+<text x="234" y="96" text-anchor="middle" class="muted">AGENTS.md</text>
+
+<rect class="box" x="294" y="74" width="120" height="34" rx="3"/>
+<text x="354" y="96" text-anchor="middle" class="muted">conversation</text>
+
+<rect class="box" x="424" y="74" width="100" height="34" rx="3"/>
+<text x="474" y="96" text-anchor="middle" class="muted">files read</text>
+
+<rect class="box" x="534" y="74" width="90" height="34" rx="3"/>
+<text x="579" y="96" text-anchor="middle" class="muted">tool output</text>
+
+<rect class="box" x="44" y="118" width="170" height="34" rx="3"/>
+<text x="129" y="140" text-anchor="middle" class="muted">your latest message</text>
+
+<rect class="box" x="224" y="118" width="130" height="34" rx="3"/>
+<text x="289" y="140" text-anchor="middle" class="muted">earlier attempts</text>
+
+<text x="360" y="192" text-anchor="middle" class="muted">If it isn't in here, the model doesn't know it. Long chats push the early parts out.</text>
+
+</svg>

@@ -35,6 +35,9 @@ The model can only "see" a fixed amount of text at once, called the **context wi
 - the whole conversation so far
 - files it has read, command output, errors you pasted
 
+![A wide box labelled the context window, filled with smaller boxes: system prompt, AGENTS.md, conversation, files read, tool output, your latest message, earlier attempts](../assets/img/context-window.svg)
+*Everything the model can see is in one box. A long session fills the box and the earliest parts drop out.*
+
 Modern windows are large (often hundreds of thousands of tokens), but they fill up, especially when an agent reads lots of files.
 
 **What this means for you:**

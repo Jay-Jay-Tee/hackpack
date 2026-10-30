@@ -392,7 +392,7 @@ main img {
   max-width: 100%;
   height: auto;
   margin: 1.6rem 0 0.4rem;
-  border-radius: 10px;
+  border-radius: var(--radius);
   border: 1px solid var(--line);
 }
 
@@ -403,7 +403,10 @@ main img[src*="xkcd"] {
   border-color: #eee;
 }
 
-main img + em {
+/* Captions: the italic line under a picture, whether it sits in the same
+   paragraph as the image or the one after it. */
+main img + em,
+main p:has(> img:only-child) + p > em:only-child {
   display: block;
   font-size: 0.88rem;
   color: var(--muted);

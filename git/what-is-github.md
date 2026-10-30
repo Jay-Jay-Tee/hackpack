@@ -13,16 +13,8 @@ You can use Git without GitHub. You can't really use GitHub without Git. Other s
 
 ## How your laptop and GitHub talk
 
-```
-  your laptop                              GitHub
- ┌─────────────┐     git push  ──────▶   ┌─────────────┐
- │  local repo │                          │ remote repo │
- │  (commits)  │     ◀──────  git pull    │  "origin"   │
- └─────────────┘                          └─────────────┘
-        ▲                                        │
-        │            git clone (first time)      │
-        └────────────────────────────────────────┘
-```
+![Your laptop on the left with the local repo, GitHub on the right with the remote repo. git push goes right, git pull comes back left](../assets/img/git-remote.svg)
+*Push sends your commits up; pull brings other people's down. Cloning is the same trip, once, when you first get the repo.*
 
 - **`git clone`**: download a repo from GitHub to your laptop, once.
 - **`git push`**: upload your new commits.

@@ -2,15 +2,8 @@
 
 Most apps are split into two halves that run in different places.
 
-```
-   FRONTEND                         BACKEND                        DATABASE
-   runs in the user's browser       runs on a server               stores data
-  ┌──────────────────────┐        ┌──────────────────────┐       ┌────────────┐
-  │ what you see and     │  API   │ logic, checks,       │       │ users,     │
-  │ click: pages,        │ ─────▶ │ secrets, talking to  │ ────▶ │ posts,     │
-  │ buttons, forms       │ ◀───── │ other services       │ ◀──── │ orders...  │
-  └──────────────────────┘        └──────────────────────┘       └────────────┘
-```
+![Three boxes: the frontend in the browser, the backend on a server, and the database. Arrows labelled API and SQL connect them left to right](../assets/img/frontend-backend.svg)
+*The browser talks to the backend, and the backend talks to the database. The user never reaches the database directly.*
 
 ## Frontend
 
