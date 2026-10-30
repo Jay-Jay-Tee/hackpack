@@ -20,7 +20,7 @@ Connect your GitHub repo once, and every push to `main` deploys automatically. M
     <source srcset="{{ '/assets/img/diagrams/deploy-dark.png' | relative_url }}" media="(prefers-color-scheme: dark)">
     <img src="{{ '/assets/img/diagrams/deploy-light.png' | relative_url }}" alt="Diagram: four boxes in a row. git push sends your code to GitHub, the repo. The host installs and builds it, and puts the result at a live URL anyone can open." width="1400" height="460">
   </picture>
-  <figcaption>Push, build, live. Every push to main repeats the last two steps.</figcaption>
+  <figcaption>Everything after GitHub runs again on every push to main.</figcaption>
 </figure>
 
 ## Types of hosting

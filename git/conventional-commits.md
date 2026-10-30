@@ -21,7 +21,7 @@ docs(readme): add the seed data steps
     <source srcset="{{ '/assets/img/diagrams/commit-message-dark.png' | relative_url }}" media="(prefers-color-scheme: dark)">
     <img src="{{ '/assets/img/diagrams/commit-message-light.png' | relative_url }}" alt="Diagram: the message feat(upload): accept HEIC photos, with its three parts underlined and labelled: feat is the type, upload is the scope, and accept HEIC photos is the summary." width="1400" height="430">
   </picture>
-  <figcaption>One line, three parts: type, optional scope, summary.</figcaption>
+  <figcaption>The scope in brackets is optional. The type and the summary are not.</figcaption>
 </figure>
 
 ## The types

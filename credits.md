@@ -23,4 +23,4 @@ Every photo on this site is either public domain, CC0, or under a Creative Commo
 
 The comics are by Randall Munroe: [Good Code](https://xkcd.com/844/), [Machine Learning](https://xkcd.com/1838/) and [Git](https://xkcd.com/1597/), under [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/). They're used here non-commercially, with credit.
 
-The diagrams are drawn for this booklet and rendered as an image per colour scheme. Photos were resized for the web. If one of these is credited wrongly, open an issue and it gets fixed.
+The diagrams are drawn for this booklet, in a light and a dark version. Photos were resized for the web. If one of these is credited wrongly, open an issue and it gets fixed.

@@ -1,13 +1,13 @@
 # Frontend and backend
 
-Most apps are split into two halves that run in different places.
+Most apps are split between the browser and a server.
 
 <figure class="diagram">
   <picture>
     <source srcset="{{ '/assets/img/diagrams/frontend-backend-dark.png' | relative_url }}" media="(prefers-color-scheme: dark)">
     <img src="{{ '/assets/img/diagrams/frontend-backend-light.png' | relative_url }}" alt="Diagram: three boxes in a row. Frontend runs in the browser and is what people see. Backend runs on a server and holds the rules and secrets. Database stores users, posts, orders and scores. An arrow labelled API runs from frontend to backend, and one labelled SQL from backend to database." width="1400" height="500">
   </picture>
-  <figcaption>Three parts, two boundaries. The user talks to the frontend; the frontend talks to the backend; the backend talks to the database.</figcaption>
+  <figcaption>The user only reaches the frontend. Everything else is asked for through the backend.</figcaption>
 </figure>
 
 The frontend runs in the browser and shows what people see and click: pages, buttons, forms. It asks the backend for anything it doesn't have. The backend runs on a server, holds the logic and the secrets, and talks to other services. The database is behind the backend, storing users, posts and orders. The user never reaches it directly.

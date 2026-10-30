@@ -1,6 +1,6 @@
 # How the web works
 
-Every web app, including whatever you build at a hackathon, is two computers talking: yours asks for something, another one answers. Once that picture is clear, APIs, backends and deploying make a lot more sense.
+Every web app works the same way underneath: your computer asks for something and another computer answers. That holds for a weather site, a chat app and whatever you build at a hackathon.
 
 ![Rows of server racks in a glass-walled room](../assets/img/server-room.jpg)
 *The data centre at CERN, where the first web server ran. Photo: Hugovanmeijeren, CC BY-SA 3.0.*
@@ -10,17 +10,17 @@ Every web app, including whatever you build at a hackathon, is two computers tal
 - A **client** is the thing asking. Usually a browser, sometimes a phone app or a script.
 - A **server** is a computer, somewhere, that's always on and waiting for requests. It sends back pages, data or files.
 
-Your browser sends a request and the server sends back a response. That's the whole exchange.
+Your browser sends a request; the server sends back a response.
 
 <figure class="diagram">
   <picture>
     <source srcset="{{ '/assets/img/diagrams/web-request-dark.png' | relative_url }}" media="(prefers-color-scheme: dark)">
     <img src="{{ '/assets/img/diagrams/web-request-light.png' | relative_url }}" alt="Diagram: a box labelled Your browser, the client, sends GET /rain-check/ to a box labelled A server, some computer online, which answers 200 OK with the page." width="1400" height="470">
   </picture>
-  <figcaption>One request, one response. A single page load is dozens of these: the HTML first, then CSS, JavaScript and images.</figcaption>
+  <figcaption>Loading a page takes several requests, not one: the browser gets the HTML first, then asks for the CSS, JavaScript and images it mentions.</figcaption>
 </figure>
 
-The rest of this page is the detail of how it's written and where it goes. A "server" isn't a special kind of machine. It's any computer running a program that answers requests. When you run `npm run dev`, your laptop becomes a server for itself.
+A "server" isn't a special kind of machine. It's any computer running a program that answers requests. When you run `npm run dev`, your laptop becomes a server for itself.
 
 ## What happens when you open a URL
 
