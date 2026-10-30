@@ -11,7 +11,7 @@ Never been to one? Read [What is a hackathon?](what-is-a-hackathon.md) first.
 New to coding setup? Start with [Start here](setup/start-here.md). It explains what each tool is and how to use the terminal.
 
 <div class="cards">
-<p><a class="c-intro" href="what-is-a-hackathon.md"><strong>What is a hackathon?</strong><br><span>What actually happens over the weekend, and what to expect.</span></a></p>
+<p><a class="c-intro" href="https://jay-jay-tee.github.io/hackpack/what-is-a-hackathon.html"><strong>What is a hackathon?</strong><br><span>What actually happens over the weekend, and what to expect.</span></a></p>
 <p><a class="c-setup" href="setup/"><strong>Setup</strong><br><span>Git, VS Code and an AI agent, installed and tested on Windows, macOS or Linux.</span></a></p>
 <p><a class="c-basics" href="basics/"><strong>How apps work</strong><br><span>The web, frontend and backend, APIs, databases and stacks, from zero.</span></a></p>
 <p><a class="c-git" href="git/"><strong>Git and GitHub</strong><br><span>What they are, a hands-on first repo, SSH keys, and fixing mistakes.</span></a></p>
