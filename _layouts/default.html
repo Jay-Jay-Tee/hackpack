@@ -92,7 +92,8 @@
     button.type = "button";
     button.textContent = "Copy";
     button.addEventListener("click", function () {
-      navigator.clipboard.writeText(pre.innerText.replace(/\n$/, "")).then(function () {
+      var code = pre.querySelector("code") || pre;
+      navigator.clipboard.writeText(code.innerText.replace(/\n$/, "")).then(function () {
         button.textContent = "Copied";
         setTimeout(function () { button.textContent = "Copy"; }, 1500);
       });
