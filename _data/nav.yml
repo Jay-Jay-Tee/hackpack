@@ -27,13 +27,31 @@
     - title: Troubleshooting
       url: /setup/troubleshooting.html
 
+- title: Git and GitHub
+  url: /git/
+  pages:
+    - title: What is Git?
+      url: /git/what-is-git.html
+    - title: What is GitHub?
+      url: /git/what-is-github.html
+    - title: Your first repo
+      url: /git/first-repo.html
+    - title: SSH keys
+      url: /git/ssh.html
+    - title: Fixing mistakes
+      url: /git/fixing-mistakes.html
+
 - title: Working with AI
   url: /ai/
   pages:
+    - title: How AI works
+      url: /ai/how-ai-works.html
     - title: Writing Markdown
       url: /ai/markdown.html
     - title: Prompting AI
       url: /ai/prompting.html
+    - title: Prompt library
+      url: /ai/prompt-library.html
     - title: Instruction files
       url: /ai/instruction-files.html
     - title: Skills (SKILL.md)

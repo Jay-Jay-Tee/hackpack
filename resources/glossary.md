@@ -60,6 +60,8 @@ Words people at hackathons say as if everyone already knows what they mean.
 
 **Skill**: a folder with a `SKILL.md` file that teaches an AI agent one procedure, loaded only when needed. See [Skills](../ai/skills.md).
 
+**SSH key**: a pair of files that lets your laptop prove to GitHub (or a server) who you are without a password. See [SSH keys](../git/ssh.md).
+
 **Smoke test**: a quick check that the main thing works at all, not a full set of tests.
 
 **Stub**: a placeholder that returns a fixed value so the rest of the app keeps working while the real thing isn't done.

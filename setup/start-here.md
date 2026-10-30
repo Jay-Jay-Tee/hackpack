@@ -49,8 +49,9 @@ Some things to know:
 1. Set up your computer: [Windows](windows.md), [macOS](macos.md) or [Linux](linux.md)
 2. [VS Code](vscode.md)
 3. [An AI coding agent](ai-agents.md)
-4. Learn to [work with AI](../ai/): Markdown, prompting, instruction files and skills
-5. Learn the [commands worth knowing](../resources/commands.md)
-6. Read the [guide](../guide/01-before.md)
+4. Learn [Git and GitHub](../git/), and do the [first repo walkthrough](../git/first-repo.md)
+5. Learn to [work with AI](../ai/): how it works, prompting, instruction files and skills
+6. Keep the [commands](../resources/commands.md) page open in a tab
+7. Read the [guide](../guide/01-before.md)
 
 If something fails, check [troubleshooting.md](troubleshooting.md), search the error message online, or ask an AI agent with the full error pasted in.

@@ -1,5 +1,7 @@
 # 4. Git with a team
 
+New to Git? Read [What is Git?](../git/what-is-git.md) and do [Your first repo](../git/first-repo.md) first. This page is about working as a team during the event.
+
 ## Setting up the repo
 
 One person creates it:

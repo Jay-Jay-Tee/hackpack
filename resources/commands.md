@@ -32,7 +32,7 @@ You don't need to memorise these. Keep this page open in a tab and come back to 
 | `git restore <file>` | Discard changes to a file |
 | `git stash` / `git stash pop` | Put changes aside and bring them back |
 
-Fixing mistakes is covered in [guide/04-git-with-a-team.md](../guide/04-git-with-a-team.md).
+Fixing mistakes is covered in [Fixing mistakes](../git/fixing-mistakes.md).
 
 ## GitHub CLI
 

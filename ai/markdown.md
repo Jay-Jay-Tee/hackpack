@@ -100,5 +100,3 @@ The same structure that makes a page easy to skim makes a prompt easy for an AI 
 - Bullet points for separate requirements, so none get lost in a paragraph.
 - Code blocks around errors, file contents and commands, so the AI knows exactly where they start and end.
 - Short and specific beats long and vague.
-
-Next: [Prompting AI](prompting.md) puts this to use.
