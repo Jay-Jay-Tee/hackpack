@@ -18,9 +18,6 @@ Most hackathons follow the same pattern:
 5. **Demos and judging.** Each team gets a few minutes to show their project to the judges.
 6. **Closing.** Winners are announced.
 
-![A packed hall with a "HACK TX" slide on the screen and people at tables with laptops](assets/img/opening.jpg)
-*Opening of HackTX 2012, University of Texas.*
-
 ![Four team members standing at the front of a lecture hall presenting their project slides](assets/img/demo.jpg)
 *A team presenting at HackUTD VIII.*
 
@@ -91,12 +88,7 @@ Things will break and the cause won't always be obvious. Git is a common source 
 
 Searching an error message sometimes turns up nothing useful. Ask a mentor when that happens.
 
-![xkcd comic "Wisdom of the Ancients": someone finds a single forum post from 2003 describing their exact problem, and the author's only follow-up says it's fixed, with no explanation](assets/img/xkcd-wisdom-of-the-ancients.png)
-
 Expect to be tired, for the Wi-Fi to be slow, and for something to break near the demo. Leave time for it.
-
-![A large group photo of hackathon participants holding puzzle-piece cutouts in front of a "WTS Hackathon 2024" slide](assets/img/group.jpg)
-*WTS Hackathon 2024, IIIT Hyderabad.*
 
 ## Next
 
