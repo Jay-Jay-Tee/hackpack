@@ -55,13 +55,6 @@ Commits don't happen automatically. You decide when to make one. A good habit is
 
 This is the part that confuses everyone at first. A change moves through three stages:
 
-```
- working folder          staging area             history
- (your files)            ("ready to commit")      (commits)
-
-  edit a file  ──git add──▶  staged  ──git commit──▶  saved snapshot
-```
-
 1. **Working folder**: the files as you see them in VS Code. Editing a file changes it here.
 2. **Staging area**: changes you've marked as "include these in the next commit", with `git add`.
 3. **History**: once you `git commit`, the staged changes become a snapshot.

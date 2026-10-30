@@ -2,19 +2,13 @@
 
 Your **stack** (or tech stack) is the set of tools your project is built with, layer by layer: what the frontend is written in, what runs the backend, where data is stored, and where it's hosted. "What's your stack?" just means "what did you build it with?"
 
-```
- ┌───────────────────────────┐
- │ Frontend   React + Tailwind│   what users see
- ├───────────────────────────┤
- │ Backend    Next.js API     │   logic and secrets
- ├───────────────────────────┤
- │ Database   Supabase        │   where data lives
- ├───────────────────────────┤
- │ Hosting    Vercel          │   where it runs online
- ├───────────────────────────┤
- │ Extras     Gemini API      │   outside services
- └───────────────────────────┘
-```
+| Layer | What it is | Example |
+| --- | --- | --- |
+| Frontend | What users see | React + Tailwind |
+| Backend | Logic and secrets | Next.js API routes |
+| Database | Where data lives | Supabase |
+| Hosting | Where it runs online | Vercel |
+| Extras | Outside services | Gemini API |
 
 rain-check's stack is tiny: plain HTML/CSS/JavaScript, no backend, no database, Open-Meteo for data, GitHub Pages for hosting.
 
@@ -24,55 +18,37 @@ rain-check's stack is tiny: plain HTML/CSS/JavaScript, no backend, no database, 
 
 The most common web stack at hackathons right now.
 
-```
-browser ──▶ Next.js pages (React) ──▶ Next.js API routes ──▶ Supabase (database, auth, storage)
-                                              │
-                                              └──▶ AI / other APIs (keys stay here)
-            all deployed together on Vercel
-```
+The browser loads React pages built by Next.js. Those pages call Next.js API routes, which talk to Supabase for the database, logins and file storage, and to the AI API, where the key stays hidden. Vercel hosts the whole thing.
 
 Good for: almost any web app. One language (JavaScript/TypeScript) everywhere.
 
 ### React (Vite) + FastAPI
 
-```
-browser ──▶ React app (Vite) ──HTTP──▶ FastAPI (Python) ──▶ database / ML model
-           hosted on Netlify/Vercel     hosted on Render/Railway
-```
+The browser loads a React app from Netlify or Vercel. It calls a FastAPI backend over HTTP, and that backend talks to the database or the model. The backend runs on Render or Railway.
 
 Good for: when the interesting part is in Python (machine learning, data processing). Two deployments to manage, and you'll need to allow [CORS](apis.md#cors).
 
 ### Firebase only
 
-```
-browser ──▶ your frontend ──▶ Firebase (Firestore, Auth, Storage, Hosting)
-```
+The browser loads your frontend, and Firebase handles the database, logins, storage and hosting behind it.
 
 Good for: getting logins and shared data working fast without writing a backend.
 
 ### Static site + public APIs
 
-```
-browser ──▶ HTML/CSS/JS ──▶ public APIs (no keys)
-           hosted on GitHub Pages / Netlify
-```
+The browser loads plain HTML, CSS and JavaScript from GitHub Pages or Netlify, and the JavaScript calls public APIs that need no key.
 
 Good for: simple tools and visualisations. This is rain-check. Nothing to break.
 
 ### Python data app (Streamlit)
 
-```
-browser ──▶ Streamlit app (pure Python) ──▶ pandas / models / APIs
-           hosted on Streamlit Community Cloud
-```
+The browser loads a Streamlit app, which is Python running on Streamlit Community Cloud. Inside it, pandas, your models or outside APIs do the work.
 
 Good for: data and ML projects where you want a UI without writing any frontend code.
 
 ### Mobile: Expo (React Native)
 
-```
-phone (Expo Go app) ──▶ your React Native code ──▶ Supabase / Firebase / your API
-```
+The phone runs your app through Expo Go, which talks to Supabase, Firebase or your own API.
 
 Good for: when it really needs to be on a phone (camera, location, notifications). Demo on a real phone by scanning a QR code; no app store needed.
 

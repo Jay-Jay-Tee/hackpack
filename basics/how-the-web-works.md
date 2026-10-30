@@ -10,16 +10,7 @@ Every web app, including whatever you build at a hackathon, is two computers tal
 - A **client** is the thing asking. Usually a browser, sometimes a phone app or a script.
 - A **server** is a computer, somewhere, that's always on and waiting for requests. It sends back pages, data or files.
 
-```
-  client (your browser)                     server (some computer online)
- ┌──────────────────┐   request: "give me /  " ┌──────────────────┐
- │                  │ ───────────────────────▶ │                  │
- │                  │                          │                  │
- │                  │ ◀─────────────────────── │                  │
- └──────────────────┘   response: the page     └──────────────────┘
-```
-
-A "server" isn't a special kind of machine. It's any computer running a program that answers requests. When you run `npm run dev`, your laptop becomes a server for itself.
+Your browser sends a request and the server sends back a response. That's the whole exchange; the rest of this page is the detail of how it's written and where it goes. A "server" isn't a special kind of machine. It's any computer running a program that answers requests. When you run `npm run dev`, your laptop becomes a server for itself.
 
 ## What happens when you open a URL
 

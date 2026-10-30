@@ -78,16 +78,12 @@ A **chat** model reads your message and writes a reply. That's it. It can't see 
 
 An **agent** is a model plus **tools**, running in a loop:
 
-```
-you: "fix the failing test"
-  │
-  ▼
-model decides: read the test file      → tool reads it, result goes into context
-model decides: run the tests           → tool runs them, output goes into context
-model decides: edit src/upload.ts      → tool edits it (after you approve)
-model decides: run the tests again     → they pass
-model: "Fixed. The bug was …"
-```
+1. You: "fix the failing test".
+2. The model decides to read the test file. The tool reads it and the result goes into the context.
+3. The model decides to run the tests. The output goes into the context.
+4. The model edits `src/upload.ts`, after you approve.
+5. It runs the tests again. They pass.
+6. It answers: "Fixed. The bug was …".
 
 Every tool result goes back into the context window, and the model decides the next step from there. This is how Claude Code, Codex, Copilot's agent mode and similar tools work.
 

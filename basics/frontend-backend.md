@@ -5,15 +5,7 @@ Most apps are split into two halves that run in different places.
 ![A laptop with source code on the screen](../assets/img/coding-laptop.jpg)
 *The frontend is the part of this picture running in the browser. Photo: Tirza van Dijk, CC0.*
 
-```
-   FRONTEND                         BACKEND                        DATABASE
-   runs in the user's browser       runs on a server               stores data
-  ┌──────────────────────┐        ┌──────────────────────┐       ┌────────────┐
-  │ what you see and     │  API   │ logic, checks,       │       │ users,     │
-  │ click: pages,        │ ─────▶ │ secrets, talking to  │ ────▶ │ posts,     │
-  │ buttons, forms       │ ◀───── │ other services       │ ◀──── │ orders...  │
-  └──────────────────────┘        └──────────────────────┘       └────────────┘
-```
+The frontend runs in the browser and shows what people see and click: pages, buttons, forms. It asks the backend for anything it doesn't have. The backend runs on a server, holds the logic and the secrets, and talks to other services. The database is behind the backend, storing users, posts and orders. The user never reaches it directly.
 
 ## Frontend
 

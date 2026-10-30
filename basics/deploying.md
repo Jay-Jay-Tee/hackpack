@@ -6,13 +6,12 @@ Deploy in the first hour of the hackathon, even if the page is empty. Problems a
 
 ## What a host does
 
-```
-  you                    GitHub                      host (Vercel, Netlify...)
- git push ──────────▶  your repo  ──notifies──▶  1. downloads the code
-                                                 2. installs packages
-                                                 3. runs the build
-                                                 4. puts it online at a URL
-```
+When you push, GitHub tells the host. The host then:
+
+1. downloads the code
+2. installs the packages
+3. runs the build
+4. puts the result online at a URL
 
 Connect your GitHub repo once, and every push to `main` deploys automatically. Most hosts also make a **preview URL** for every branch or pull request, so you can test a change before merging.
 
