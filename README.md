@@ -16,7 +16,7 @@ New to coding setup? Start with [setup/start-here.md](setup/start-here.md). It e
 - [`resources/commands.md`](resources/commands.md) – terminal, git and GitHub commands worth knowing.
 - [`resources/glossary.md`](resources/glossary.md) – short explanations of terms like API, deploy, branch and `.env`.
 - [`guide/`](guide/) – notes on the event, in order: preparing, picking an idea, building, git with a team, using AI, the demo, and common mistakes.
-- [`templates/`](templates/) – a project README, a pitch outline and a submission checklist.
+- [`templates/`](templates/) – a project README, a pitch outline, a submission checklist, and [an example repo](templates/example-repo.md) showing what a finished submission looks like.
 - [`resources/`](resources/) – free tiers, public APIs and what to learn first.
 - [`scripts/`](scripts/) – install scripts for macOS and Windows, and `check.sh` to see what's missing.
 - [`extras/`](extras/) – optional terminal styling from my Mac. Not needed.

@@ -1,6 +1,6 @@
 # Submission checklist
 
-Go through this a few hours before the deadline.
+Go through this a few hours before the deadline. For what a finished repo looks like, see the [example repo](example-repo.md).
 
 ## Submission
 

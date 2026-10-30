@@ -92,6 +92,8 @@
 - title: Templates
   url: /templates/
   pages:
+    - title: Example repo
+      url: /templates/example-repo.html
     - title: Project README
       url: /templates/README.template.html
     - title: Pitch outline

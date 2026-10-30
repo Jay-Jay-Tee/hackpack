@@ -1,6 +1,6 @@
 # Project README template
 
-Copy this into a file called `README.md` in your project and replace the placeholders. The links in it are examples; swap in your own demo, video and Devpost links.
+Copy this into a file called `README.md` in your project and replace the placeholders. To see it filled in on a real project, look at [rain-check](https://github.com/Jay-Jay-Tee/rain-check#readme) ([walkthrough](example-repo.md)). The links in it are examples; swap in your own demo, video and Devpost links.
 
 Use the Copy button in the corner of the box.
 

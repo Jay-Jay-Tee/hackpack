@@ -44,6 +44,8 @@ When you open a repo on GitHub, you'll see:
 
 ## Pull requests (PRs)
 
+For a real one to look at, see [PR #2 in the example repo](https://github.com/Jay-Jay-Tee/rain-check/pull/2).
+
 A pull request says: "I've made changes on a branch; please merge them into `main`." It shows every changed line, and teammates can comment or approve before merging.
 
 ```
