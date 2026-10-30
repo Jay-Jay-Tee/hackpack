@@ -1,0 +1,49 @@
+# ─────────────────────────────────────────────────────────────────────
+#  Brewfile — everything I use, installable in one command
+#
+#      brew bundle --file=./scripts/Brewfile
+#
+#  Or let scripts/install.sh handle it (dry-run by default).
+# ─────────────────────────────────────────────────────────────────────
+
+# ─── CLI essentials ──────────────────────────────────────────────────
+brew "git"
+brew "gh"
+brew "wget"
+brew "curl"
+brew "jq"
+brew "ripgrep"        # rg — fast search
+brew "fd"             # fast find
+brew "fzf"            # fuzzy history / file picker
+brew "zoxide"         # smart cd
+
+# ─── Shell eye-candy ─────────────────────────────────────────────────
+brew "starship"
+brew "eza"            # ls with icons
+brew "bat"            # cat with syntax highlighting
+brew "git-delta"      # readable diffs
+brew "lazygit"        # git TUI
+brew "btop"           # system monitor
+brew "tmux"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
+brew "zsh-completions"
+
+# ─── Runtimes ────────────────────────────────────────────────────────
+brew "node"
+brew "bun"
+brew "python@3.12"
+brew "openjdk"
+
+# ─── Deploy / infra (optional, comment out if unused) ────────────────
+brew "cloudflared"    # expose localhost to the internet in one command
+brew "libpq"          # psql, if you use Postgres
+
+# ─── Apps ────────────────────────────────────────────────────────────
+cask "ghostty"
+cask "font-jetbrains-mono-nerd-font"
+cask "visual-studio-code"
+cask "rectangle"      # window snapping
+cask "stats"          # menu-bar CPU/RAM
+cask "alt-tab"        # better Cmd+Tab
+cask "hiddenbar"      # hide menu-bar clutter

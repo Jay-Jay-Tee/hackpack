@@ -1,0 +1,41 @@
+# ── Secrets: never commit these ──
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.env
+*.p12
+
+# ── Dependencies ──
+node_modules/
+.pnp.*
+.yarn/*
+venv/
+.venv/
+__pycache__/
+*.pyc
+target/
+vendor/
+
+# ── Build output ──
+dist/
+build/
+.next/
+out/
+*.log
+
+# ── Editor / OS ──
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+
+# ── Local tooling ──
+.turbo/
+.cache/
+coverage/
+.vercel/
+.wrangler/
