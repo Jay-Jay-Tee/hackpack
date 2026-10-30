@@ -104,10 +104,4 @@ Get your laptop ready with [Start here](setup/start-here.md), learn the basics i
 
 ## Image credits
 
-- Junction 2015, by [Vmuru](https://commons.wikimedia.org/wiki/File:Junction_2015.jpg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
-- HackTX 2012, by [Randymcking](https://commons.wikimedia.org/wiki/File:HackTX_2012_More_Participants.jpg), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
-- HackUTD VIII, by [PascalCase-abrupt-kebab](https://commons.wikimedia.org/wiki/File:HackUTD_VIII_Participants_Presenting_a_Project.jpg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
-- WTS Hackathon 2024, by [Moniruj](https://commons.wikimedia.org/wiki/File:WTS_HACKATHON_2024.jpg), CC0
-- Comics by Randall Munroe: [Good Code](https://xkcd.com/844/), [Machine Learning](https://xkcd.com/1838/), [Git](https://xkcd.com/1597/), [Wisdom of the Ancients](https://xkcd.com/979/), [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/)
-
-Photos were resized for the web.
+Photographers, licences and links to the originals for every picture on the site are in [Image credits](credits.md). Photos were resized for the web.

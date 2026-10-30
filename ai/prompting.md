@@ -2,6 +2,9 @@
 
 An AI agent only knows what's in its context window: your project files it has read, and what you tell it ([why](how-ai-works.md)). Most bad answers come from prompts that leave out something you knew and it didn't. This page covers what goes into a good prompt, a workflow that works for real tasks, and what to do when it goes wrong.
 
+![A person typing on a laptop with code on the screen](../assets/img/code-screen.jpg)
+*Photo: Lewis Ngugi, CC0.*
+
 ## The parts of a good prompt
 
 Not every prompt needs all of these, but a prompt that's going wrong is usually missing one.

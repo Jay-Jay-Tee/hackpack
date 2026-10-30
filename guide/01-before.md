@@ -2,6 +2,9 @@
 
 If a word in this guide is unfamiliar, check the [glossary](../resources/glossary.md).
 
+![People sitting at tables with laptops, working together](../assets/img/hackathon-team.jpg)
+*Wikimedia Hackathon, 2013. Photo: Sebastiaan ter Burg, CC BY-SA 2.0.*
+
 ## A week before
 
 Set up your laptop while you still have time to fix problems.

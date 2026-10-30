@@ -12,9 +12,12 @@ Tools like Claude, ChatGPT and Gemini are built on **large language models** (LL
 
 It gets good at this by **training** on an enormous amount of text: books, websites, code, documentation. To predict the next word of a Python tutorial well, it has to pick up how Python works. To predict the next line of a bug fix, it has to pick up how bugs get fixed. That's where the apparent knowledge and reasoning come from.
 
+![Long rows of black server racks in a machine room](../assets/img/supercomputer.jpg)
+*Blue Waters, a supercomputer at the National Center for Supercomputing Applications. Training runs happen on machines like this. Photo: kosheahan, CC BY 2.0.*
+
 After that, models get further training to follow instructions, hold a conversation, refuse harmful requests and use tools. That's what turns "predicts text" into "assistant".
 
-**What this means for you:** the model produces the most plausible continuation of what it's been given. A vague prompt gets a plausible, generic answer. A specific prompt with real details gets a specific answer.
+So the model produces the most plausible continuation of what it's been given. A vague prompt gets a plausible, generic answer. A specific prompt with real details gets a specific answer.
 
 ## Tokens
 
@@ -35,12 +38,7 @@ The model can only "see" a fixed amount of text at once, called the **context wi
 - the whole conversation so far
 - files it has read, command output, errors you pasted
 
-![A wide box labelled the context window, filled with smaller boxes: system prompt, AGENTS.md, conversation, files read, tool output, your latest message, earlier attempts](../assets/img/context-window.svg)
-*Everything the model can see is in one box. A long session fills the box and the earliest parts drop out.*
-
 Modern windows are large (often hundreds of thousands of tokens), but they fill up, especially when an agent reads lots of files.
-
-**What this means for you:**
 
 - **It only knows what's in the window.** If you didn't tell it, and it didn't read it, it doesn't know it. Hence: give context.
 - **Long conversations get worse.** As the window fills with old attempts and dead ends, answers get less focused. Tools may "compact" (summarise) old messages, which loses detail. Start a new chat for a new task.
@@ -50,19 +48,17 @@ Modern windows are large (often hundreds of thousands of tokens), but they fill 
 
 Each new conversation starts blank. The model doesn't remember yesterday's chat, your project or your preferences, unless the tool puts that information back into the context window. That's exactly what instruction files and memory features do: they're text that gets loaded at the start.
 
-**What this means for you:** if something should always be known (your stack, your rules), put it in an [instruction file](instruction-files.md). Don't rely on "I told it last time".
+If something should always be known (your stack, your rules), put it in an [instruction file](instruction-files.md). Don't rely on "I told it last time".
 
 ## Its knowledge has a cutoff
 
 Training stops at some date. The model doesn't know about library versions, APIs or events after that, and it may confidently use an old way of doing things.
 
-**What this means for you:** for anything that changes fast (framework versions, API details, prices), give it the current docs or let it search. If code uses a function that "doesn't exist", an outdated API is a likely cause.
+For anything that changes fast (framework versions, API details, prices), give it the current docs or let it search. If code uses a function that "doesn't exist", an outdated API is a likely cause.
 
 ## It can be confidently wrong
 
 Because it generates plausible text, it sometimes produces things that look right and aren't: a function that doesn't exist, a package name it invented, a citation that isn't real. This is called **hallucination**. It doesn't "know" it's wrong; plausible and true just usually overlap.
-
-**What this means for you:**
 
 - Run the code. Test the fix. Click the button.
 - Be suspicious of package names you've never heard of; check they exist before installing (fake package names are a known security risk).
@@ -94,8 +90,6 @@ model: "Fixed. The bug was …"
 ```
 
 Every tool result goes back into the context window, and the model decides the next step from there. This is how Claude Code, Codex, Copilot's agent mode and similar tools work.
-
-**What this means for you:**
 
 - Agents can get information themselves, so you can say "look at how the other API routes do it" instead of pasting them.
 - They can also do a lot quickly, including the wrong thing. Commit before you start, and read the diff.

@@ -11,10 +11,21 @@ GitHub is a website that stores Git repositories online. Git keeps the history o
 
 You can use Git without GitHub. You can't really use GitHub without Git. Other sites do the same job (GitLab, Bitbucket), but GitHub is what nearly every hackathon uses.
 
+![A small white Octocat figure on a desk, next to some Studio Ghibli figurines](../assets/img/octocat.jpg)
+*The Octocat, GitHub's mascot, on someone's desk. Photo: Cristiano Betta, CC BY 2.0.*
+
 ## How your laptop and GitHub talk
 
-![Your laptop on the left with the local repo, GitHub on the right with the remote repo. git push goes right, git pull comes back left](../assets/img/git-remote.svg)
-*Push sends your commits up; pull brings other people's down. Cloning is the same trip, once, when you first get the repo.*
+```
+  your laptop                              GitHub
+ ┌─────────────┐     git push  ──────▶   ┌─────────────┐
+ │  local repo │                          │ remote repo │
+ │  (commits)  │     ◀──────  git pull    │  "origin"   │
+ └─────────────┘                          └─────────────┘
+        ▲                                        │
+        │            git clone (first time)      │
+        └────────────────────────────────────────┘
+```
 
 - **`git clone`**: download a repo from GitHub to your laptop, once.
 - **`git push`**: upload your new commits.

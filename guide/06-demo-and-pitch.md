@@ -4,6 +4,9 @@
 
 Pitches are usually two to five minutes. For three minutes, something like:
 
+![A person standing on a small stage, presenting to a seated audience](../assets/img/pitch.jpg)
+*A pitch at Fellin Häkk, 2026. Photo: Maido Parv, CC BY-SA 4.0.*
+
 1. **Problem (about 40 seconds).** Who has the problem and what it costs them. Start with this rather than introducing the team.
 2. **Demo (about 100 seconds).** Show the main path working.
 3. **How it works (about 20 seconds).** The stack in a sentence and the part you're proudest of.

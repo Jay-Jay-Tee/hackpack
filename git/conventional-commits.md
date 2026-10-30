@@ -12,9 +12,6 @@ fix(auth): stop the redirect loop after refresh
 docs(readme): add the seed data steps
 ```
 
-![The same line broken into parts: feat is the type, upload in brackets is the scope, and accept HEIC photos is the summary](../assets/img/commit-message.svg)
-*Three parts, in a fixed order. Only the summary changes much between commits.*
-
 - **type**: what kind of change it is, from a short fixed list
 - **scope**: optional, the part of the project; `upload`, `auth`, `api`, `landing`
 - **summary**: what changed, in the imperative ("add", not "added")

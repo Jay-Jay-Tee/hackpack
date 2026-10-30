@@ -2,13 +2,22 @@
 
 Every web app, including whatever you build at a hackathon, is two computers talking: yours asks for something, another one answers. Once that picture is clear, APIs, backends and deploying make a lot more sense.
 
+![Rows of server racks in a glass-walled room](../assets/img/server-room.jpg)
+*The data centre at CERN, where the first web server ran. Photo: Hugovanmeijeren, CC BY-SA 3.0.*
+
 ## Clients and servers
 
 - A **client** is the thing asking. Usually a browser, sometimes a phone app or a script.
 - A **server** is a computer, somewhere, that's always on and waiting for requests. It sends back pages, data or files.
 
-![Two boxes, your browser on the left and a server on the right. An arrow labelled GET /rain-check/ goes right, and an arrow labelled 200 OK + the page comes back](../assets/img/web-request.svg)
-*One request out, one response back. Everything else on this page is a detail of those two arrows.*
+```
+  client (your browser)                     server (some computer online)
+ ┌──────────────────┐   request: "give me /  " ┌──────────────────┐
+ │                  │ ───────────────────────▶ │                  │
+ │                  │                          │                  │
+ │                  │ ◀─────────────────────── │                  │
+ └──────────────────┘   response: the page     └──────────────────┘
+```
 
 A "server" isn't a special kind of machine. It's any computer running a program that answers requests. When you run `npm run dev`, your laptop becomes a server for itself.
 

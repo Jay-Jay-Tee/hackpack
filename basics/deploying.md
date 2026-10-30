@@ -6,10 +6,18 @@ Deploy in the first hour of the hackathon, even if the page is empty. Problems a
 
 ## What a host does
 
-![Four boxes in a row: git push, GitHub, the host which installs and builds, and a live URL. Arrows connect them left to right](../assets/img/deploy.svg)
-*You push; the host notices, installs, builds and publishes. Nobody copies files onto a server by hand.*
+```
+  you                    GitHub                      host (Vercel, Netlify...)
+ git push ──────────▶  your repo  ──notifies──▶  1. downloads the code
+                                                 2. installs packages
+                                                 3. runs the build
+                                                 4. puts it online at a URL
+```
 
 Connect your GitHub repo once, and every push to `main` deploys automatically. Most hosts also make a **preview URL** for every branch or pull request, so you can test a change before merging.
+
+![Racks of servers in a computing centre](../assets/img/datacentre.jpg)
+*Part of the Worldwide LHC Computing Grid at CERN. A host runs your app on machines like these, or on someone else's. Photo: Sashimi-b, CC BY 4.0.*
 
 ## Types of hosting
 

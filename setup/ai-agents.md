@@ -4,6 +4,9 @@ An agent can read your project, edit several files, and run commands like `npm i
 
 Install it and log in **before** the event. You don't want to find out your subscription expired during the opening talk.
 
+![Someone working on a laptop, screen reflected in their glasses](../assets/img/developer.jpg)
+*Photo: Parker Byrd, CC0.*
+
 ## The options
 
 ### Claude Code

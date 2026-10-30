@@ -6,6 +6,9 @@ Not sure what these words mean? See [How apps work](../basics/), especially [Sta
 
 A hackathon isn't a good time to learn a new language or framework. If you don't have a preference:
 
+![A room of people working on laptops at long tables](../assets/img/hackathon-room.jpg)
+*A Wikimedia hackathon in Morocco, 2026. Photo: DERDAKI ILIAS, CC BY-SA 4.0.*
+
 - **Website**: Next.js with Tailwind. Deploys to Vercel with almost no setup.
 - **Backend**: Next.js API routes or Express if you're in JavaScript, FastAPI if you prefer Python.
 - **Mobile**: React Native with Expo, which runs on your phone without going through an app store.
