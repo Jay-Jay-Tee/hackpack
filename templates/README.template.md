@@ -2,7 +2,7 @@
 
 Copy this into a file called `README.md` in your project and replace the placeholders. The links in it are examples; swap in your own demo, video and Devpost links.
 
-To copy it, use the copy button in the corner of the box on GitHub, or select all the text inside the box.
+Use the Copy button in the corner of the box.
 
 ~~~markdown
 # Project name
