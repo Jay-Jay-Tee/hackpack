@@ -83,15 +83,34 @@ a { color: var(--accent); }
 
 .top .brand {
   display: flex;
-  align-items: center;
-  gap: 0.55rem;
+  align-items: baseline;
+  gap: 0.45rem;
   font-weight: 700;
   font-size: 1.02rem;
   letter-spacing: -0.01em;
   color: var(--text);
 }
 
-.top .brand:hover { color: var(--accent); }
+.top .brand .by {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+
+.top .brand:hover,
+.top .brand:hover .by { color: var(--accent); }
+
+/* The GitHub mark, small, next to the word. The same glyph is the
+   watermark at the foot of the sidebar. */
+.top .repo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.top .repo svg { width: 15px; height: 15px; fill: currentColor; }
 
 .top > a:last-child { font-size: 0.86rem; color: var(--muted); }
 .top > a:last-child:hover { color: var(--accent); }
@@ -193,6 +212,21 @@ a { color: var(--accent); }
 .dot-extras    { background: #475569; }
 
 .nav-list li.active .dot { box-shadow: 0 0 0 3px var(--tint); }
+
+/* Watermark: the octocat, barely there, at the end of the nav. */
+.sidebar .mark {
+  width: 96px;
+  margin: 2.4rem 0 0 0.55rem;
+  color: var(--text);
+  opacity: 0.07;
+}
+
+.sidebar .mark svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  fill: currentColor;
+}
 
 /* On small screens the sidebar becomes a collapsible menu */
 .mobile-nav { display: none; }
@@ -296,7 +330,7 @@ code {
 pre {
   position: relative;
   background: var(--code-bg);
-  border: 1px solid var(--line);
+  border: 1px solid var(--edge);
   border-radius: var(--radius);
   padding: 0.95rem 1.1rem;
   overflow-x: auto;
@@ -312,6 +346,37 @@ pre code {
   white-space: pre;
 }
 
+/* Syntax colour, in the section's own hue: the accent for the structure
+   of the code, a softer mix for strings and numbers, grey for comments.
+   Only blocks with a language tag get tokens; the rest stay plain text. */
+.highlight .c, .highlight .c1, .highlight .cm, .highlight .cs, .highlight .cp {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.highlight .k, .highlight .kc, .highlight .kd, .highlight .kn,
+.highlight .kp, .highlight .kr, .highlight .kt,
+.highlight .nt, .highlight .na, .highlight .nb, .highlight .nv,
+.highlight .nc, .highlight .nn,
+.highlight .gu, .highlight .gh, .highlight .gd {
+  color: var(--accent);
+}
+
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sb,
+.highlight .se, .highlight .sx, .highlight .sr, .highlight .si {
+  color: color-mix(in srgb, var(--accent) 45%, var(--text));
+}
+
+.highlight .m, .highlight .mi, .highlight .mf, .highlight .mh,
+.highlight .mo, .highlight .il {
+  color: color-mix(in srgb, var(--accent) 70%, var(--text));
+}
+
+.highlight .o, .highlight .p { color: var(--muted); }
+
+/* Rouge flags anything it can't parse as an error. We're not a linter. */
+.highlight .err { color: inherit; background: none; }
+
 pre .copy {
   position: absolute;
   top: 0.45rem;
@@ -320,10 +385,10 @@ pre .copy {
   font-size: 0.72rem;
   cursor: pointer;
   padding: 0.2rem 0.55rem;
-  border: 1px solid var(--line);
+  border: 1px solid var(--edge);
   border-radius: 4px;
   background: var(--surface);
-  color: var(--muted);
+  color: var(--accent);
   opacity: 0;
   transition: opacity 0.12s ease, color 0.12s ease, border-color 0.12s ease,
     background 0.12s ease;
@@ -512,12 +577,27 @@ ul.task-list li::marker { content: ""; }
 .pager .next small::after { content: " →"; }
 
 footer {
-  padding: 0.5rem 0 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem 1.2rem;
+  margin-top: 2rem;
+  padding: 1rem 0 3rem;
+  border-top: 1px solid var(--line);
   font-size: 0.84rem;
   color: var(--muted);
 }
 
-footer a { color: var(--muted); }
+footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+footer svg { width: 14px; height: 14px; fill: currentColor; flex: 0 0 auto; }
 footer a:hover { color: var(--accent); }
 
 /* Dark mode */
