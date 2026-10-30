@@ -1,6 +1,6 @@
 # Start here
 
-If you've never set up a computer for coding, read this first. It explains what you're installing and why, and how to use the terminal enough to follow the other pages.
+If you've never set up a computer for coding, read this first. (If you're not sure what a hackathon involves, read [What is a hackathon?](../what-is-a-hackathon.md) before this.) It explains what you're installing and why, and how to use the terminal enough to follow the other pages.
 
 ## What you're installing
 

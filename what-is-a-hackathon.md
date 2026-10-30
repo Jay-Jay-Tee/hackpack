@@ -1,0 +1,96 @@
+# What is a hackathon?
+
+A hackathon is an event where people form small teams and build something, usually an app or website, in a fixed amount of time, often 24 to 48 hours. At the end, every team shows what they made and judges pick the winners.
+
+It has nothing to do with breaking into computers. "Hack" here just means building something quickly.
+
+![A big room at night full of people working on laptops, with energy drink cans on the table](assets/img/hall.jpg)
+*Junction 2015 in Helsinki. Note the cans.*
+
+## What happens
+
+Most hackathons follow the same pattern:
+
+1. **Opening.** The organisers explain the rules, the theme, the prizes and the deadline. Sponsors (companies supporting the event) often give short talks.
+2. **Forming teams.** Teams are usually 2 to 4 people. If you come alone, there's normally a session for finding a team, and plenty of people come alone.
+3. **Building.** This is most of the event. Mentors walk around to help when you're stuck, there are often workshops, and food is usually provided. Some people sleep at the venue.
+4. **Submitting.** Before the deadline, each team hands in a link to their code, a short description, and sometimes a video.
+5. **Demos and judging.** Each team gets a few minutes to show their project to the judges.
+6. **Closing.** Winners are announced, and everyone goes home to sleep.
+
+![A packed hall with a "HACK TX" slide on the screen and people at tables with laptops](assets/img/opening.jpg)
+*The opening of HackTX 2012 at the University of Texas.*
+
+![Four team members standing at the front of a lecture hall presenting their project slides](assets/img/demo.jpg)
+*A team presenting at HackUTD VIII. This is the part most people are nervous about, and it's usually a lot friendlier than it looks.*
+
+## Who goes
+
+Mostly students, from every year and every course, not only computer science. A team needs more than coders: someone who designs the screens, someone who understands the problem, someone who's good at presenting. At any hackathon, lots of people are there for the first time.
+
+## Do I need to be good at coding?
+
+No. If you can follow a tutorial and aren't afraid to ask questions, you can contribute. Many hackathons have beginner tracks or a prize for the best first-time team. You'll probably learn more in one weekend than in weeks of tutorials, because you're building something real with people who know different things.
+
+![xkcd comic "Good Code": a flowchart showing that you can either code well, which takes forever, or code fast, which leaves a mess](assets/img/xkcd-good-code.png)
+*Your hackathon code will look like this, and that's fine. The goal is a working demo, not tidy code.*
+
+## What it costs, and what you get
+
+Most student hackathons are **free**, and food is usually included. Some even help with travel.
+
+What you leave with:
+
+- A project you can put on your CV or GitHub
+- New friends, and contacts at companies (sponsors are often there to hire)
+- Free stuff: t-shirts, stickers, sometimes hardware, usually called "swag"
+- Sometimes a prize
+
+## Kinds of hackathons
+
+- **In person or online.** In person is more fun and easier to get help at. Online is easier to fit around other things.
+- **Open or themed.** Some let you build anything; others have a theme such as health, sustainability or education.
+- **Tracks and sponsor prizes.** Many events have several categories to enter, like "best use of a particular company's API". You can often enter more than one.
+- **Beginner-friendly events.** Look for "beginner" or "first-timer" in the description.
+
+To find events, look at [MLH](https://mlh.io/seasons/2027/events) and [Devpost](https://devpost.com/hackathons), and ask your university's computing club, which often runs or advertises them.
+
+## Words you'll hear
+
+- **Track**: a category of the competition, each with its own prize
+- **Sponsor**: a company that supports the event, often offering its own prize and mentors
+- **Mentor**: an experienced person there to help teams when they're stuck
+- **Devpost**: the website many hackathons use for submissions
+- **MVP** (minimum viable product): the smallest version of your idea that still works
+- **Demo / pitch**: showing your project and explaining why it matters
+
+There are more in the [glossary](resources/glossary.md).
+
+## Things that will probably happen
+
+Something won't work and you won't know why. Git will confuse you at least once (there's a whole page on [git with a team](guide/04-git-with-a-team.md)).
+
+![xkcd comic "Git": someone explains that when git breaks, you save your work elsewhere, delete the project and download a fresh copy](assets/img/xkcd-git.png)
+
+You'll search for an error and find exactly one forum post from years ago with the same problem and no answer. That's when you ask a mentor.
+
+![xkcd comic "Wisdom of the Ancients": someone finds a single forum post from 2003 describing their exact problem, and the author's only follow-up says it's fixed, with no explanation](assets/img/xkcd-wisdom-of-the-ancients.png)
+
+You'll also be tired, the Wi-Fi will be slow, and something will break shortly before the demo. All of this is normal, and it happens to every team, including the ones that win.
+
+![A large group photo of hackathon participants holding puzzle-piece cutouts in front of a "WTS Hackathon 2024" slide](assets/img/group.jpg)
+*WTS Hackathon 2024 at IIIT Hyderabad.*
+
+## Next
+
+Get your laptop ready with [Start here](setup/start-here.md), then read [the guide](guide/README.md), which takes you from the week before the event to the demo.
+
+## Image credits
+
+- Junction 2015, by [Vmuru](https://commons.wikimedia.org/wiki/File:Junction_2015.jpg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+- HackTX 2012, by [Randymcking](https://commons.wikimedia.org/wiki/File:HackTX_2012_More_Participants.jpg), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
+- HackUTD VIII, by [PascalCase-abrupt-kebab](https://commons.wikimedia.org/wiki/File:HackUTD_VIII_Participants_Presenting_a_Project.jpg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+- WTS Hackathon 2024, by [Moniruj](https://commons.wikimedia.org/wiki/File:WTS_HACKATHON_2024.jpg), CC0
+- Comics by Randall Munroe: [Good Code](https://xkcd.com/844/), [Git](https://xkcd.com/1597/), [Wisdom of the Ancients](https://xkcd.com/979/), [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/)
+
+Photos were resized for the web.

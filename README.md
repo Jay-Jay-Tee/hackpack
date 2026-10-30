@@ -4,6 +4,8 @@ A basic setup and some notes for people going to their first hackathon: getting 
 
 Take whatever's useful and ignore the rest.
 
+Never been to one? Read [What is a hackathon?](what-is-a-hackathon.md) first.
+
 ## Contents
 
 New to coding setup? Start with [setup/start-here.md](setup/start-here.md). It explains what each tool is and how to use the terminal.
