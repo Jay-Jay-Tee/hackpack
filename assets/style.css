@@ -24,7 +24,7 @@
   --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 
   --header-h: 56px;
-  --radius: 12px;
+  --radius: 4px;
 }
 
 /* Section colours */
@@ -76,22 +76,7 @@ a { color: var(--accent); }
   height: var(--header-h);
   padding: 0 1.5rem;
   background: var(--bg);
-  background: color-mix(in srgb, var(--bg) 86%, transparent);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
-}
-
-/* Thin rainbow rule: the one place all the section colours meet. */
-.top::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  height: 2px;
-  background: linear-gradient(90deg, #4338ca, #0369a1, #0f766e, #15803d, #b45309, #be123c, #6d28d9);
-  opacity: 0.45;
 }
 
 .top a { text-decoration: none; }
@@ -106,25 +91,10 @@ a { color: var(--accent); }
   color: var(--text);
 }
 
-.top .brand::before {
-  content: "";
-  width: 11px;
-  height: 11px;
-  border-radius: 3px;
-  background: linear-gradient(135deg, #4338ca, #6d28d9);
-}
-
 .top .brand:hover { color: var(--accent); }
 
-.top > a:last-child {
-  font-size: 0.86rem;
-  color: var(--muted);
-  padding: 0.25rem 0.7rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-}
-
-.top > a:last-child:hover { color: var(--accent); border-color: var(--edge); background: var(--tint); }
+.top > a:last-child { font-size: 0.86rem; color: var(--muted); }
+.top > a:last-child:hover { color: var(--accent); }
 
 /* Two columns: sidebar + content */
 .layout {
@@ -258,13 +228,7 @@ a { color: var(--accent); }
 .crumbs a { color: var(--muted); text-decoration: none; }
 .crumbs a:hover { color: var(--accent); }
 
-.crumbs a:nth-of-type(2) {
-  padding: 0.1rem 0.55rem;
-  border-radius: 999px;
-  background: var(--tint);
-  color: var(--accent);
-  font-weight: 500;
-}
+.crumbs a:nth-of-type(2) { color: var(--accent); font-weight: 500; }
 
 main { padding: 0.8rem 0 1rem; }
 
@@ -280,9 +244,9 @@ main h1 {
 main h1::before {
   content: "";
   display: block;
-  width: 42px;
-  height: 4px;
-  border-radius: 2px;
+  width: 32px;
+  height: 3px;
+  border-radius: 0;
   margin-bottom: 0.9rem;
   background: var(--accent);
 }
@@ -372,7 +336,7 @@ blockquote {
   margin: 1.3rem 0;
   padding: 0.75rem 1.1rem;
   border-left: 3px solid var(--accent);
-  border-radius: 0 10px 10px 0;
+  border-radius: 0;
   background: var(--tint);
   color: var(--text);
 }
@@ -463,20 +427,16 @@ ul.task-list li::marker { content: ""; }
   background: var(--surface);
   color: var(--text);
   text-decoration: none;
-  transition: border-color 0.14s ease, background 0.14s ease, transform 0.14s ease;
+  transition: border-color 0.14s ease, background 0.14s ease;
 }
 
-.cards a:hover {
-  background: var(--tint);
-  border-color: var(--edge);
-  transform: translateY(-1px);
-}
+.cards a:hover { background: var(--tint); border-color: var(--edge); }
 
 .cards strong { display: inline; color: var(--accent); font-size: 0.98rem; }
 .cards span { color: var(--muted); font-size: 0.88rem; line-height: 1.5; }
 
 /* Each card gets a coloured top edge, so the grid stays calm but not grey. */
-.cards a { border-top: 3px solid var(--card, var(--accent)); }
+.cards a { border-left: 3px solid var(--card, var(--accent)); }
 .cards a.c-intro     { --card: #b45309; }
 .cards a.c-setup     { --card: #1d4ed8; }
 .cards a.c-basics    { --card: #0f766e; }
@@ -506,10 +466,9 @@ ul.task-list li::marker { content: ""; }
   background: var(--surface);
   text-decoration: none;
   color: var(--text);
-  transition: border-color 0.14s ease, background 0.14s ease;
 }
 
-.pager a:hover { border-color: var(--edge); background: var(--tint); }
+.pager a:hover { border-color: var(--accent); }
 
 .pager small {
   display: block;
@@ -583,9 +542,6 @@ footer a:hover { color: var(--accent); }
   .dot-templates { background: #7dd3fc; }
   .dot-scripts   { background: #cbd5e1; }
   .dot-extras    { background: #cbd5e1; }
-
-  .top { background: color-mix(in srgb, var(--bg) 86%, transparent); }
-  .top .brand::before { background: linear-gradient(135deg, #a5b4fc, #c4b5fd); }
 
   main img[src*="xkcd"] { background: #fff; border-color: #2a2a2a; }
   blockquote code { background: var(--surface); }
