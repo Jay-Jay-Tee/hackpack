@@ -204,10 +204,9 @@ a { color: var(--accent); }
     display: block;
     margin-top: 1rem;
     padding: 0.7rem 0.9rem;
-    border: 1px solid var(--edge);
+    border: 1px solid var(--line);
     border-radius: var(--radius);
     background: var(--surface);
-    background: color-mix(in srgb, var(--accent) 4%, var(--surface));
     font-size: 0.95rem;
   }
   .mobile-nav summary { cursor: pointer; font-weight: 600; }
@@ -321,17 +320,21 @@ pre .copy {
   font-size: 0.72rem;
   cursor: pointer;
   padding: 0.2rem 0.55rem;
-  border: 1px solid var(--edge);
+  border: 1px solid var(--line);
   border-radius: 4px;
   background: var(--surface);
-  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
-  color: var(--accent);
+  color: var(--muted);
   opacity: 0;
-  transition: opacity 0.12s ease, color 0.12s ease, border-color 0.12s ease;
+  transition: opacity 0.12s ease, color 0.12s ease, border-color 0.12s ease,
+    background 0.12s ease;
 }
 
 pre:hover .copy, pre .copy:focus-visible { opacity: 1; }
-pre .copy:hover { color: var(--accent); border-color: var(--edge); }
+pre .copy:hover {
+  color: var(--accent);
+  border-color: var(--edge);
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+}
 
 /* Big prompts and quotes */
 blockquote {
@@ -425,18 +428,17 @@ ul.task-list li::marker { content: ""; }
   height: 100%;
   padding: 0.85rem 1rem;
   border: 1px solid var(--line);
-  border-color: color-mix(in srgb, var(--card, var(--accent)) 22%, var(--line));
   border-radius: var(--radius);
   background: var(--surface);
-  background: color-mix(in srgb, var(--card, var(--accent)) 7%, var(--surface));
   color: var(--text);
   text-decoration: none;
   transition: border-color 0.14s ease, background 0.14s ease;
 }
 
+/* Plain until you point at it; then the card takes its section's colour. */
 .cards a:hover {
-  background: color-mix(in srgb, var(--card, var(--accent)) 12%, var(--surface));
-  border-color: color-mix(in srgb, var(--card, var(--accent)) 45%, var(--line));
+  background: color-mix(in srgb, var(--card, var(--accent)) 8%, var(--surface));
+  border-color: color-mix(in srgb, var(--card, var(--accent)) 35%, var(--line));
 }
 
 .cards strong { display: inline; color: var(--accent); font-size: 0.98rem; }
@@ -478,10 +480,9 @@ ul.task-list li::marker { content: ""; }
 .pager a {
   flex: 0 1 48%;
   padding: 0.7rem 0.95rem;
-  border: 1px solid var(--edge);
+  border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
-  background: color-mix(in srgb, var(--accent) 7%, var(--surface));
   text-decoration: none;
   color: var(--text);
   transition: background 0.14s ease, border-color 0.14s ease;
@@ -489,7 +490,7 @@ ul.task-list li::marker { content: ""; }
 
 .pager a:hover {
   border-color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 14%, var(--surface));
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
 }
 
 .pager small {
