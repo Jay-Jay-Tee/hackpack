@@ -48,27 +48,9 @@ npm install -g @google/gemini-cli
 
 Run `gemini` in a project folder.
 
-## Project instructions file
+## Next: learn to use it
 
-Each agent reads a Markdown file in the project root for context. Create one in the first hour so the agent knows the stack and conventions, and commit it so the whole team's agents use the same instructions.
-
-- Claude Code: `CLAUDE.md` (running `/init` inside Claude Code writes a first draft)
-- Codex: `AGENTS.md`
-- Copilot: `.github/copilot-instructions.md`
-- Gemini CLI: `GEMINI.md`
-
-Example:
-
-```markdown
-# Project
-
-Next.js app with Tailwind and Supabase, deployed on Vercel.
-
-- Run with `npm run dev`
-- Don't add new dependencies without asking
-- Put API calls in `lib/api.ts`
-- This is a hackathon demo; prefer simple code over abstractions
-```
+Installing is the easy part. The [Working with AI](../ai/) section covers writing Markdown, prompting well, the project instructions file (`CLAUDE.md` / `AGENTS.md`) and skills.
 
 ## A safe way to work
 

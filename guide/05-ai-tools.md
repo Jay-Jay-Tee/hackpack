@@ -22,15 +22,7 @@ The main rule I'd follow: understand everything you ship. Judges often ask how s
 
 ## Asking well
 
-Give the context: the framework, the file, the full error, and what you expected to happen. For example:
-
-> Next.js App Router. Submitting an empty form on `app/upload/page.tsx` throws `TypeError: Cannot read properties of undefined (reading 'name')`. Here's the page and the form component. What's causing it?
-
-Other things that help:
-
-- Ask for the smallest change that fixes the problem.
-- Tell it not to add new dependencies.
-- Ask it to explain the cause before writing code.
+Give it the context, the full error, and what should happen. Ask for the smallest change, and for a plan before anything big. The full version, with examples, is [Prompting AI](../ai/prompting.md).
 
 ## Habits
 

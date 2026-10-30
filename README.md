@@ -11,6 +11,7 @@ Never been to one? Read [What is a hackathon?](what-is-a-hackathon.md) first.
 New to coding setup? Start with [setup/start-here.md](setup/start-here.md). It explains what each tool is and how to use the terminal.
 
 - [`setup/`](setup/) – installing the basics on [Windows](setup/windows.md), [macOS](setup/macos.md) or [Linux](setup/linux.md), then [VS Code](setup/vscode.md), [AI coding agents](setup/ai-agents.md), and [fixes for common errors](setup/troubleshooting.md).
+- [`ai/`](ai/) – working with AI: writing Markdown, prompting well, `CLAUDE.md` / `AGENTS.md`, and skills (`SKILL.md`), with three example skills to copy.
 - [`resources/commands.md`](resources/commands.md) – terminal, git and GitHub commands worth knowing.
 - [`resources/glossary.md`](resources/glossary.md) – short explanations of terms like API, deploy, branch and `.env`.
 - [`guide/`](guide/) – notes on the event, in order: preparing, picking an idea, building, git with a team, using AI, the demo, and common mistakes.

@@ -27,6 +27,18 @@
     - title: Troubleshooting
       url: /setup/troubleshooting.html
 
+- title: Working with AI
+  url: /ai/
+  pages:
+    - title: Writing Markdown
+      url: /ai/markdown.html
+    - title: Prompting AI
+      url: /ai/prompting.html
+    - title: Instruction files
+      url: /ai/instruction-files.html
+    - title: Skills (SKILL.md)
+      url: /ai/skills.html
+
 - title: Guide
   url: /guide/
   pages:
