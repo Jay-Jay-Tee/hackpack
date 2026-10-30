@@ -55,6 +55,23 @@ What you leave with:
 
 To find events, look at [MLH](https://mlh.io/seasons/2027/events) and [Devpost](https://devpost.com/hackathons), and ask your university's computing club, which often runs or advertises them.
 
+## How AI has changed hackathons
+
+A few years ago, most of a team's time went into writing code by hand. Now most teams use AI coding agents such as Claude Code, Codex, Copilot or Cursor, and that has changed several things:
+
+- **More gets built.** An agent can write a login page, a database setup or a whole screen in minutes. A small team can now finish in a weekend what used to take a week.
+- **Judges expect more.** Since everyone builds faster, a basic working app stands out less. Polish, a clear demo and a real problem matter more.
+- **Many projects use AI inside them.** Plenty of teams build on top of a language model API. Because "an app that sends text to a chatbot" is now common, judges look for what your project does beyond that.
+- **Beginners can contribute more.** If you can describe clearly what you want and check the result, an agent can help you build parts you couldn't have written alone.
+- **The skills that matter have shifted.** Less typing; more deciding what to build, splitting up the work, reading and testing what the agent wrote, and explaining it in the demo.
+- **Understanding still counts.** Judges often ask how something works. "The AI wrote it" isn't a good answer, so read the code your agent produces.
+- **Rules vary.** Most events allow AI tools, some ask you to say how you used them, and a few restrict them. Check the rules page before you start.
+
+![xkcd comic "Machine Learning": one person stands on a pile of linear algebra with a paddle and says that if the answers are wrong, you stir the pile until they start looking right](assets/img/xkcd-machine-learning.png)
+*AI output can look right without being right. Test it before you rely on it.*
+
+Setting up an agent is covered in [AI coding agents](setup/ai-agents.md), and using one during the event in [AI tools](guide/05-ai-tools.md).
+
 ## Words you'll hear
 
 - **Track**: a category of the competition, each with its own prize
@@ -91,6 +108,6 @@ Get your laptop ready with [Start here](setup/start-here.md), then read [the gui
 - HackTX 2012, by [Randymcking](https://commons.wikimedia.org/wiki/File:HackTX_2012_More_Participants.jpg), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
 - HackUTD VIII, by [PascalCase-abrupt-kebab](https://commons.wikimedia.org/wiki/File:HackUTD_VIII_Participants_Presenting_a_Project.jpg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 - WTS Hackathon 2024, by [Moniruj](https://commons.wikimedia.org/wiki/File:WTS_HACKATHON_2024.jpg), CC0
-- Comics by Randall Munroe: [Good Code](https://xkcd.com/844/), [Git](https://xkcd.com/1597/), [Wisdom of the Ancients](https://xkcd.com/979/), [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/)
+- Comics by Randall Munroe: [Good Code](https://xkcd.com/844/), [Machine Learning](https://xkcd.com/1838/), [Git](https://xkcd.com/1597/), [Wisdom of the Ancients](https://xkcd.com/979/), [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/)
 
 Photos were resized for the web.
