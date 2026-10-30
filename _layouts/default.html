@@ -85,6 +85,28 @@
 </div>
 
 <script>
+  // Keep the sidebar's scroll position between pages, and make sure the
+  // current page's link is visible.
+  (function () {
+    var sidebar = document.querySelector(".sidebar");
+    if (!sidebar) return;
+    var saved = sessionStorage.getItem("sidebarScroll");
+    if (saved !== null) sidebar.scrollTop = parseInt(saved, 10);
+
+    var current = sidebar.querySelector("a.current");
+    if (current) {
+      var box = sidebar.getBoundingClientRect();
+      var link = current.getBoundingClientRect();
+      if (link.top < box.top || link.bottom > box.bottom) {
+        sidebar.scrollTop += link.top - box.top - box.height / 2;
+      }
+    }
+
+    window.addEventListener("pagehide", function () {
+      sessionStorage.setItem("sidebarScroll", sidebar.scrollTop);
+    });
+  })();
+
   // Add a Copy button to every code block.
   document.querySelectorAll("main pre").forEach(function (pre) {
     var button = document.createElement("button");
