@@ -1,4 +1,4 @@
-# hackpack
+<h1>hackpack <span class="by">~jayjaytee</span></h1>
 
 A basic setup and some notes for people going to their first hackathon: getting a laptop ready with VS Code, Git, GitHub and an AI coding agent, the commands you'll use, and a short guide to the event itself.
 
