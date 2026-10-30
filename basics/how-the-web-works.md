@@ -10,7 +10,17 @@ Every web app, including whatever you build at a hackathon, is two computers tal
 - A **client** is the thing asking. Usually a browser, sometimes a phone app or a script.
 - A **server** is a computer, somewhere, that's always on and waiting for requests. It sends back pages, data or files.
 
-Your browser sends a request and the server sends back a response. That's the whole exchange; the rest of this page is the detail of how it's written and where it goes. A "server" isn't a special kind of machine. It's any computer running a program that answers requests. When you run `npm run dev`, your laptop becomes a server for itself.
+Your browser sends a request and the server sends back a response. That's the whole exchange.
+
+<figure class="diagram">
+  <picture>
+    <source srcset="{{ '/assets/img/diagrams/web-request-dark.png' | relative_url }}" media="(prefers-color-scheme: dark)">
+    <img src="{{ '/assets/img/diagrams/web-request-light.png' | relative_url }}" alt="Diagram: a box labelled Your browser, the client, sends GET /rain-check/ to a box labelled A server, some computer online, which answers 200 OK with the page." width="1400" height="470">
+  </picture>
+  <figcaption>One request, one response. A single page load is dozens of these: the HTML first, then CSS, JavaScript and images.</figcaption>
+</figure>
+
+The rest of this page is the detail of how it's written and where it goes. A "server" isn't a special kind of machine. It's any computer running a program that answers requests. When you run `npm run dev`, your laptop becomes a server for itself.
 
 ## What happens when you open a URL
 

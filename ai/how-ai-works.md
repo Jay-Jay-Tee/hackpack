@@ -12,9 +12,6 @@ Tools like Claude, ChatGPT and Gemini are built on **large language models** (LL
 
 It gets good at this by **training** on an enormous amount of text: books, websites, code, documentation. To predict the next word of a Python tutorial well, it has to pick up how Python works. To predict the next line of a bug fix, it has to pick up how bugs get fixed. That's where the apparent knowledge and reasoning come from.
 
-![Long rows of black server racks in a machine room](../assets/img/supercomputer.jpg)
-*Blue Waters, a supercomputer at the National Center for Supercomputing Applications. Training runs happen on machines like this. Photo: kosheahan, CC BY 2.0.*
-
 After that, models get further training to follow instructions, hold a conversation, refuse harmful requests and use tools. That's what turns "predicts text" into "assistant".
 
 So the model produces the most plausible continuation of what it's been given. A vague prompt gets a plausible, generic answer. A specific prompt with real details gets a specific answer.
@@ -39,6 +36,14 @@ The model can only "see" a fixed amount of text at once, called the **context wi
 - files it has read, command output, errors you pasted
 
 Modern windows are large (often hundreds of thousands of tokens), but they fill up, especially when an agent reads lots of files.
+
+<figure class="diagram">
+  <picture>
+    <source srcset="{{ '/assets/img/diagrams/context-window-dark.png' | relative_url }}" media="(prefers-color-scheme: dark)">
+    <img src="{{ '/assets/img/diagrams/context-window-light.png' | relative_url }}" alt="Diagram: a box labelled the context window, holding the system prompt, AGENTS.md, the conversation, files it read, tool output, your latest message and earlier attempts." width="1400" height="480">
+  </picture>
+  <figcaption>If it isn't in here, the model doesn't know it.</figcaption>
+</figure>
 
 - **It only knows what's in the window.** If you didn't tell it, and it didn't read it, it doesn't know it. Hence: give context.
 - **Long conversations get worse.** As the window fills with old attempts and dead ends, answers get less focused. Tools may "compact" (summarise) old messages, which loses detail. Start a new chat for a new task.

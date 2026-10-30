@@ -15,8 +15,13 @@ When you push, GitHub tells the host. The host then:
 
 Connect your GitHub repo once, and every push to `main` deploys automatically. Most hosts also make a **preview URL** for every branch or pull request, so you can test a change before merging.
 
-![Racks of servers in a computing centre](../assets/img/datacentre.jpg)
-*Part of the Worldwide LHC Computing Grid at CERN. A host runs your app on machines like these, or on someone else's. Photo: Sashimi-b, CC BY 4.0.*
+<figure class="diagram">
+  <picture>
+    <source srcset="{{ '/assets/img/diagrams/deploy-dark.png' | relative_url }}" media="(prefers-color-scheme: dark)">
+    <img src="{{ '/assets/img/diagrams/deploy-light.png' | relative_url }}" alt="Diagram: four boxes in a row. git push sends your code to GitHub, the repo. The host installs and builds it, and puts the result at a live URL anyone can open." width="1400" height="460">
+  </picture>
+  <figcaption>Push, build, live. Every push to main repeats the last two steps.</figcaption>
+</figure>
 
 ## Types of hosting
 

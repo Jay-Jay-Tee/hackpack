@@ -55,8 +55,13 @@ Commits don't happen automatically. You decide when to make one. A good habit is
 
 This is the part that confuses everyone at first. A change moves through three stages.
 
-![A laptop screen full of code](../assets/img/programming.jpg)
-*Code on a laptop. A commit saves a version of files like these. Photo: luis gomes, CC0.*
+<figure class="diagram">
+  <picture>
+    <source srcset="{{ '/assets/img/diagrams/git-stages-dark.png' | relative_url }}" media="(prefers-color-scheme: dark)">
+    <img src="{{ '/assets/img/diagrams/git-stages-light.png' | relative_url }}" alt="Diagram: the working folder holds the files you edit, the staging area holds what goes in the next commit, and history holds the commits you made. git add moves changes from the working folder to staging; git commit moves them from staging to history." width="1400" height="500">
+  </picture>
+  <figcaption>git status tells you which stage each file is in.</figcaption>
+</figure>
 
 1. **Working folder**: the files as you see them in VS Code. Editing a file changes it here.
 2. **Staging area**: changes you've marked as "include these in the next commit", with `git add`.

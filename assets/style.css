@@ -465,6 +465,23 @@ main img[src*="xkcd"] {
   border-color: #eee;
 }
 
+/* Diagrams: a matching pair of images, one per colour scheme. Their
+   background is the page background, so they sit in the column without
+   a frame around them. */
+main figure.diagram { margin: 1.8rem 0 1.9rem; }
+
+main figure.diagram img {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+main figure.diagram figcaption {
+  margin-top: 0.55rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
 /* Captions: the italic line under a picture, whether it sits in the same
    paragraph as the image or the one after it. */
 main img + em,

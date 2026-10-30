@@ -10,9 +10,6 @@ Your **stack** (or tech stack) is the set of tools your project is built with, l
 | Hosting | Where it runs online | Vercel |
 | Extras | Outside services | Gemini API |
 
-![A tall stack of hard drives in a server rack](../assets/img/server-stack.jpg)
-*Disks in a server rack. Photo: RubinObs/NOIRLab, CC BY 4.0.*
-
 rain-check's stack is tiny: plain HTML/CSS/JavaScript, no backend, no database, Open-Meteo for data, GitHub Pages for hosting.
 
 ## Common hackathon stacks

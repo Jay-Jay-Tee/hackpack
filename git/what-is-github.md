@@ -22,6 +22,14 @@ You can use Git without GitHub. You can't really use GitHub without Git. Other s
 
 Your teammates do the same with their own copies. GitHub is the shared meeting point.
 
+<figure class="diagram">
+  <picture>
+    <source srcset="{{ '/assets/img/diagrams/git-remote-dark.png' | relative_url }}" media="(prefers-color-scheme: dark)">
+    <img src="{{ '/assets/img/diagrams/git-remote-light.png' | relative_url }}" alt="Diagram: your laptop, where you commit, on the left, and GitHub, the remote copy, on the right. An arrow labelled git push points from the laptop to GitHub; an arrow labelled git pull points back." width="1400" height="460">
+  </picture>
+  <figcaption>A commit stays on your laptop until you push it.</figcaption>
+</figure>
+
 ## What's on a repo page
 
 When you open a repo on GitHub, you'll see:

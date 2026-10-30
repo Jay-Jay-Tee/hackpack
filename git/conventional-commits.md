@@ -16,6 +16,14 @@ docs(readme): add the seed data steps
 - **scope**: optional, the part of the project; `upload`, `auth`, `api`, `landing`
 - **summary**: what changed, in the imperative ("add", not "added")
 
+<figure class="diagram">
+  <picture>
+    <source srcset="{{ '/assets/img/diagrams/commit-message-dark.png' | relative_url }}" media="(prefers-color-scheme: dark)">
+    <img src="{{ '/assets/img/diagrams/commit-message-light.png' | relative_url }}" alt="Diagram: the message feat(upload): accept HEIC photos, with its three parts underlined and labelled: feat is the type, upload is the scope, and accept HEIC photos is the summary." width="1400" height="430">
+  </picture>
+  <figcaption>One line, three parts: type, optional scope, summary.</figcaption>
+</figure>
+
 ## The types
 
 | Type | Use it for | Hackathon example |
