@@ -21,7 +21,7 @@ git push
 git pull
 ```
 
-Then [guide/04-git-with-a-team.md](../guide/04-git-with-a-team.md) for working with others.
+Then [guide/04-git-with-a-team.md](../guide/04-git-with-a-team.md) for working with others. More commands are in [commands.md](commands.md).
 
 ## 3. HTML and CSS
 

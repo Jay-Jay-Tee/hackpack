@@ -1,19 +1,16 @@
-# install.ps1: Windows setup using winget.
+# install.ps1: installs the basics on Windows using winget.
 #
-#   .\scripts\install.ps1                    print what would happen
-#   .\scripts\install.ps1 -Apply             install packages
-#   .\scripts\install.ps1 -Apply -Dotfiles   also copy starship.toml (existing file is backed up)
+#   .\scripts\install.ps1          print what would happen
+#   .\scripts\install.ps1 -Apply   install
 #
 # If scripts are blocked: Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 # Reopen the terminal afterwards so PATH updates.
 [CmdletBinding()]
 param(
-  [switch]$Apply,
-  [switch]$Dotfiles
+  [switch]$Apply
 )
 
 $ErrorActionPreference = 'Stop'
-$Root = Split-Path -Parent $PSScriptRoot
 
 function Section($t) { Write-Host ""; Write-Host $t -ForegroundColor Cyan }
 function Ok($t)      { Write-Host "  ok  $t" -ForegroundColor Green }
@@ -35,17 +32,7 @@ $packages = @(
   'GitHub.cli',
   'Microsoft.VisualStudioCode',
   'OpenJS.NodeJS.LTS',
-  'astral-sh.uv',
-  'Starship.Starship',
-  'BurntSushi.ripgrep.MSVC',
-  'sharkdp.bat',
-  'eza-community.eza',
-  'junegunn.fzf',
-  'ajeetdsouza.zoxide',
-  'dandavison.delta',
-  'JesseDuffield.lazygit',
-  'jqlang.jq',
-  'DEVCOM.JetBrainsMonoNerdFont'
+  'astral-sh.uv'
 )
 
 foreach ($id in $packages) {
@@ -61,14 +48,18 @@ foreach ($id in $packages) {
 }
 
 Section "Git"
-$email = git config --global user.email 2>$null
-if ($email) {
-  Ok "$(git config --global user.name) <$email>"
+if (Get-Command git -ErrorAction SilentlyContinue) {
+  $email = git config --global user.email 2>$null
+  if ($email) {
+    Ok "$(git config --global user.name) <$email>"
+  } else {
+    Warn "Name and email not set. Run:"
+    Write-Host '      git config --global user.name "Your Name"'
+    Write-Host '      git config --global user.email "you@example.com"'
+    Write-Host '      git config --global core.autocrlf true'
+  }
 } else {
-  Warn "Name and email not set. Run:"
-  Write-Host '      git config --global user.name "Your Name"'
-  Write-Host '      git config --global user.email "you@example.com"'
-  Write-Host '      git config --global core.autocrlf true'
+  Skip "git not on PATH yet (reopen the terminal after installing)"
 }
 
 if (Get-Command gh -ErrorAction SilentlyContinue) {
@@ -76,26 +67,10 @@ if (Get-Command gh -ErrorAction SilentlyContinue) {
   if ($LASTEXITCODE -eq 0) { Ok "gh logged in" } else { Warn "gh not logged in yet. Run: gh auth login" }
 }
 
-Section "Dotfiles"
-if (-not $Dotfiles) {
-  Skip "skipped (add -Dotfiles to copy starship.toml)"
-} else {
-  $src = Join-Path $Root 'dotfiles/starship.toml'
-  $dst = Join-Path $HOME '.config/starship.toml'
-  if (-not $Apply) {
-    if (Test-Path $dst) { Write-Host "  would back up $dst and replace it" } else { Write-Host "  would create $dst" }
-  } else {
-    New-Item -ItemType Directory -Path (Split-Path -Parent $dst) -Force | Out-Null
-    if (Test-Path $dst) { Copy-Item $dst "$dst.bak.$(Get-Date -Format yyyyMMddHHmmss)" }
-    Copy-Item $src $dst -Force
-    Ok "copied $dst"
-  }
-  Skip "Your PowerShell profile isn't changed. See setup/windows.md for what to add."
-}
-
 Section "Next"
 if ($Apply) {
-  Write-Host "  Close and reopen the terminal, then check: git --version; node -v; uv --version"
+  Write-Host "  Close and reopen the terminal, check: git --version; node -v; uv --version"
+  Write-Host "  Then set up an AI agent: setup/ai-agents.md"
 } else {
-  Write-Host "  Run again with -Apply (and -Dotfiles if you want the Starship config)."
+  Write-Host "  Run again with -Apply to install."
 }

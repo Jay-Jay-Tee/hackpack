@@ -26,7 +26,7 @@ git config --global init.defaultBranch main
 git config --global push.autoSetupRemote true
 ```
 
-`push.autoSetupRemote` means you don't need `--set-upstream` the first time you push a branch. My full config is in [dotfiles/.gitconfig](../dotfiles/.gitconfig).
+`push.autoSetupRemote` means you don't need `--set-upstream` the first time you push a branch. A list of everyday commands is in [resources/commands.md](../resources/commands.md).
 
 ## .gitignore
 

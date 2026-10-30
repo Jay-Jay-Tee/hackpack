@@ -1,6 +1,6 @@
 # My ~/.zshrc (macOS, Apple Silicon).
 # If you already have a .zshrc, copy the sections you want instead of replacing it.
-# Needs the packages in scripts/Brewfile.
+# Needs the packages in extras/Brewfile.
 
 # ─── Homebrew (Apple Silicon) ────────────────────────────────────────
 # Intel Macs: /usr/local/bin/brew

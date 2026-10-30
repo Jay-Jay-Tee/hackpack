@@ -1,44 +1,9 @@
-# Everything I install with Homebrew.
+# Basic tools for macOS.
 #   brew bundle --file=scripts/Brewfile
 
-# Basics
 brew "git"
 brew "gh"
-brew "wget"
-brew "jq"
-brew "ripgrep"
-brew "fd"
-brew "fzf"
-brew "zoxide"
-
-# Shell
-brew "starship"
-brew "eza"
-brew "bat"
-brew "git-delta"
-brew "lazygit"
-brew "btop"
-brew "tmux"
-brew "zsh-autosuggestions"
-brew "zsh-syntax-highlighting"
-brew "zsh-completions"
-
-# Languages
 brew "node"
-brew "bun"
 brew "uv"
-brew "python@3.12"
-brew "openjdk"
 
-# Optional
-brew "cloudflared"   # share localhost on a public URL
-brew "libpq"         # psql client
-
-# Apps
-cask "ghostty"
-cask "font-jetbrains-mono-nerd-font"
 cask "visual-studio-code"
-cask "rectangle"
-cask "stats"
-cask "alt-tab"
-cask "hiddenbar"

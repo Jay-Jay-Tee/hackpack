@@ -9,7 +9,7 @@ Set up your laptop while you still have time to fix problems.
 - Make a GitHub account and run `gh auth login`.
 - Set your git name and email (`git config --global user.name` / `user.email`).
 - Deploy a hello-world page to Vercel, Netlify or Cloudflare Pages and open it on your phone. If you've never deployed anything before, this is the most useful item on the list.
-- Install your editor and extensions ([setup/editors.md](../setup/editors.md)).
+- Set up [VS Code](../setup/vscode.md) and an [AI coding agent](../setup/ai-agents.md), and log in to the agent.
 - Sign up for whatever the event uses: Devpost, Discord, Slack.
 - If you're a student, apply for the GitHub Student Developer Pack. Approval can take a few days. More in [resources/free-stuff.md](../resources/free-stuff.md).
 

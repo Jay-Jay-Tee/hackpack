@@ -40,14 +40,9 @@ Other things that help:
 - Don't run two agents on the same files.
 - If it hasn't helped after ten minutes or so, read the docs or ask a mentor instead.
 
-## What I use
+## Setup
 
-- **Claude Code** for changes across several files in a repo
-- **Codex / ChatGPT** for quick questions and explaining errors
-- **Copilot** for inline completions
-- **Gemini** when I need to paste in a lot of text, like a long spec or docs page
-
-Setup is in [setup/editors.md](../setup/editors.md).
+Installing Claude Code, Codex, Copilot or Gemini CLI, and writing a project instructions file, is covered in [setup/ai-agents.md](../setup/ai-agents.md).
 
 If a judge asks whether you used AI, say yes and say what for.
 

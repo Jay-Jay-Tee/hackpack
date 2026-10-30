@@ -1,0 +1,8 @@
+github.copilot-chat
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+ms-python.python
+bradlc.vscode-tailwindcss
+eamodio.gitlens
+ms-vsliveshare.vsliveshare
+yzhang.markdown-all-in-one
