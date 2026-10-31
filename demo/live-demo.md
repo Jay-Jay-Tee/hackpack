@@ -13,6 +13,9 @@ Choose the single route through the app that shows the main feature, and practis
 
 Leave out settings pages, sign-up screens and anything half-built. If a feature isn't on the path, don't click near it.
 
+![Someone at a lectern on a dark stage, with the event's slide on one screen and their app open on the other](../assets/img/stage-demo.jpg)
+*A demo at the Wikimania 2018 hackathon, Cape Town: slides on the left, the app on the right. Photo: Rogueassasin123, CC BY-SA 4.0.*
+
 Write the path down as numbered steps, with what you'll say at each one. That's your **demo script**. Whoever is driving the laptop should be able to do it without thinking.
 
 ## Talk about the user

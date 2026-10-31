@@ -15,6 +15,9 @@ Decide before the last day.
 - **One driver** at the laptop who runs the demo while the speaker talks. If the speaker also drives, they end up looking at the screen instead of the judges.
 - **Everyone else** stands with the team and helps with questions about the parts they built.
 
+![Four team members at the front of a room. One speaks into a microphone while another stands at the laptop on the lectern](../assets/img/team-on-stage.jpg)
+*One person speaks, one runs the laptop. Wiki Women Hackathon 2024, IIIT Hyderabad. Photo: Kasyap, CC BY-SA 4.0.*
+
 Each person should be able to explain the whole project in a sentence or two, in case someone's away when a judge comes past.
 
 ## Timing
@@ -52,6 +55,9 @@ If a judge points out a weakness, agree with the part that's true and say what y
 ## Table judging
 
 At a table, judges arrive in the middle of whatever you're doing, often with only a few minutes.
+
+![A team standing at a table explaining their project on a laptop to a judge sitting beside them](../assets/img/table-judging.jpg)
+*Table judging at the Wiki Women Hackathon 2024, IIIT Hyderabad. Photo: Kasyap, CC BY 4.0.*
 
 - Have a **30-second version** of the pitch ready: the problem, then straight into the demo.
 - Keep the app **open on the main screen**, reset and ready to start.
