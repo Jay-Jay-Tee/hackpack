@@ -1,5 +1,7 @@
 # 6. Demo and pitch
 
+The short version. Each part has its own page in [Slides and demo](../demo/): [slides](../demo/slides.md), [the live demo](../demo/live-demo.md), [the video](../demo/video.md), [presenting](../demo/presenting.md) and [sponsors](../demo/sponsors.md).
+
 ## Structure
 
 Pitches are usually two to five minutes. For three minutes, something like:
@@ -26,7 +28,7 @@ Then stop.
 
 Read the actual criteria on the event page. Common ones are usefulness, technical difficulty, originality, how complete it is, and the presentation. It helps to go through the pitch and check you've covered each one.
 
-Sponsor prizes ("best use of X") often have fewer serious entries. If you go for one, the sponsor's product should be part of the core feature, and you should mention it in the pitch, README and submission. Sponsor mentors can tell you what they're looking for.
+Sponsor prizes ("best use of X") often have fewer serious entries. If you go for one, the sponsor's product should be part of the core feature, and you should mention it in the pitch, README and submission. Sponsor mentors can tell you what they're looking for. More in [Sponsors](../demo/sponsors.md).
 
 ## Questions you'll probably get
 

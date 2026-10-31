@@ -10,4 +10,6 @@ Notes on the hackathon itself. They're short and meant to be read in order.
 6. [Demo and pitch](06-demo-and-pitch.md)
 7. [Common mistakes](07-mistakes.md)
 
+Slides, the demo, the video and sponsor prizes are covered in more detail in [Slides and demo](../demo/).
+
 Unfamiliar words are explained in the [glossary](../resources/glossary.md).

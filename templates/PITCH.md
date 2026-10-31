@@ -7,8 +7,6 @@ Copy this into a document your team can edit (a Google Doc or a `PITCH.md` in yo
 
 Length: 3 minutes. Speakers:
 
-Writing this before you build is a good way to check the idea makes sense.
-
 ## Problem (about 40 seconds)
 
 Who has the problem, how often, and what it costs them.

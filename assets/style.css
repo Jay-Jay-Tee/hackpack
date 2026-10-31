@@ -35,6 +35,7 @@
 .sec-git       { --accent: #c2410c; --tint: #fdf1e9; --edge: #f4d6c1; }
 .sec-ai        { --accent: #6d28d9; --tint: #f4efff; --edge: #ded0fa; }
 .sec-guide     { --accent: #be123c; --tint: #fdeff2; --edge: #f6cbd6; }
+.sec-demo      { --accent: #a21caf; --tint: #fbeffc; --edge: #f0cdf4; }
 .sec-resources { --accent: #15803d; --tint: #ecf7ef; --edge: #cbe7d4; }
 .sec-templates { --accent: #0369a1; --tint: #eaf5fb; --edge: #c6e3f1; }
 .sec-scripts   { --accent: #475569; --tint: #f1f3f7; --edge: #dbe0e9; }
@@ -206,6 +207,7 @@ a { color: var(--accent); }
 .dot-git       { background: #c2410c; }
 .dot-ai        { background: #6d28d9; }
 .dot-guide     { background: #be123c; }
+.dot-demo      { background: #a21caf; }
 .dot-resources { background: #15803d; }
 .dot-templates { background: #0369a1; }
 .dot-scripts   { background: #475569; }
@@ -544,6 +546,7 @@ ul.task-list li::marker { content: ""; }
 .cards a.c-git       { --card: #c2410c; }
 .cards a.c-ai        { --card: #6d28d9; }
 .cards a.c-guide     { --card: #be123c; }
+.cards a.c-demo      { --card: #a21caf; }
 .cards a.c-resources { --card: #15803d; }
 .cards a.c-templates { --card: #0369a1; }
 .cards a.c-scripts   { --card: #475569; }
@@ -634,7 +637,7 @@ footer a:hover { color: var(--accent); }
   /* The section classes sit on <body>, so they beat :root. Set the dark
      tint on them too, or the light tints inherit through and stay light. */
   .sec-home, .sec-intro, .sec-setup, .sec-basics, .sec-git,
-  .sec-ai, .sec-guide, .sec-resources, .sec-templates,
+  .sec-ai, .sec-guide, .sec-demo, .sec-resources, .sec-templates,
   .sec-scripts, .sec-extras {
     --tint: #1a2030;
     --edge: #2b3446;
@@ -647,6 +650,7 @@ footer a:hover { color: var(--accent); }
   .sec-git       { --accent: #fdba74; }
   .sec-ai        { --accent: #c4b5fd; }
   .sec-guide     { --accent: #fda4af; }
+  .sec-demo      { --accent: #f0abfc; }
   .sec-resources { --accent: #86efac; }
   .sec-templates { --accent: #7dd3fc; }
   .sec-scripts   { --accent: #cbd5e1; }
@@ -659,6 +663,7 @@ footer a:hover { color: var(--accent); }
   .dot-git       { background: #fdba74; }
   .dot-ai        { background: #c4b5fd; }
   .dot-guide     { background: #fda4af; }
+  .dot-demo      { background: #f0abfc; }
   .dot-resources { background: #86efac; }
   .dot-templates { background: #7dd3fc; }
   .dot-scripts   { background: #cbd5e1; }

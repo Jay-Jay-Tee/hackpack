@@ -17,6 +17,7 @@ New to coding setup? Start with [Start here](setup/start-here.md). It explains w
 <p><a class="c-git" href="git/"><strong>Git and GitHub</strong><br><span>What they are, a hands-on first repo, SSH keys, and fixing mistakes.</span></a></p>
 <p><a class="c-ai" href="ai/"><strong>Working with AI</strong><br><span>How it works, prompting, a prompt library, instruction files and skills.</span></a></p>
 <p><a class="c-guide" href="guide/"><strong>Guide</strong><br><span>The event itself: preparing, scoping, building, the demo, and common mistakes.</span></a></p>
+<p><a class="c-demo" href="demo/"><strong>Slides and demo</strong><br><span>Slides, the live demo, the video, presenting, and sponsor prizes.</span></a></p>
 <p><a class="c-resources" href="resources/"><strong>Resources</strong><br><span>Commands, a glossary, free tiers, and public APIs and datasets.</span></a></p>
 <p><a class="c-templates" href="templates/"><strong>Templates</strong><br><span>A README, a pitch outline, a checklist, and a finished example repo.</span></a></p>
 <p><a class="c-scripts" href="scripts/"><strong>Scripts</strong><br><span>Install scripts for macOS and Windows, plus <code>check.sh</code>.</span></a></p>
