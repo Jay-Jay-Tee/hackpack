@@ -18,7 +18,7 @@ One to two minutes is enough. A simple structure:
 2. **The demo path**, the same one as the [live demo](live-demo.md#pick-one-path) (60–90 seconds).
 3. **How it's built**, in a sentence, and the live URL (10–15 seconds).
 
-Write the voice-over as a short script and read it a couple of times before recording. A script in your own words sounds better than improvising, and much better than one written by an AI.
+Write the voice-over as a short script and read it a couple of times before recording. Write it in your own words; scripts from an AI tend to sound like an advert.
 
 ## Recording your screen
 
@@ -37,7 +37,7 @@ The macOS recorder doesn't record sound unless you pick a microphone in **Option
 
 ## Sound
 
-Bad sound is the most common problem with hackathon videos. Judges forgive a plain video but stop watching one they can't hear.
+A plain video is fine, but one where the voice-over is hard to hear is tiring to watch.
 
 - Record in the quietest place you can find. Hackathon halls are loud; a stairwell or an empty room is better.
 - A phone headset or earphones with a mic are usually clearer than the laptop's microphone.

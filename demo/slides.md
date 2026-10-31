@@ -1,6 +1,6 @@
 # Slides
 
-The slides are there to frame the demo, not replace it. Most hackathon pitches need five or six slides, and a judge should be able to read each one in a few seconds.
+Most hackathon pitches need five or six slides. The demo is the main part; the slides set it up and finish it off. A judge should be able to read each slide in a few seconds.
 
 ## Which tool
 
@@ -32,7 +32,7 @@ If a sponsor prize needs their product, put its logo on the How it works slide a
 
 ## Making them readable
 
-The room is big and the projector is usually worse than your laptop screen. Write for the back row.
+The room is big and the projector is usually worse than your laptop screen, so make everything bigger than looks right on your laptop.
 
 - **One idea per slide.** If a slide needs a heading and three paragraphs, it's two slides, or it's something to say rather than show.
 - **Big text.** At least 28pt for body text and 40pt for headings. If you need smaller, there's too much on the slide.
@@ -67,7 +67,7 @@ If you're presenting from Google Slides with no reliable internet, download it a
 
 ## Speaker notes
 
-Write a few words per slide in the speaker notes, not a script. Reading a script out loud sounds like reading. Presenter view (which shows your notes on your laptop and only the slide on the projector) only works if the screen is set to **extend**, not mirror; see [the live demo](live-demo.md#your-laptop) for that. When switching between slides and a live app, it's often simpler to mirror and skip presenter view.
+Write a few words per slide in the speaker notes rather than a full script, because reading a script out loud is obvious to the audience. Presenter view (which shows your notes on your laptop and only the slide on the projector) only works if the screen is set to **extend**, not mirror; see [the live demo](live-demo.md#your-laptop) for that. When switching between slides and a live app, it's often simpler to mirror and skip presenter view.
 
 ## Using AI on the slides
 

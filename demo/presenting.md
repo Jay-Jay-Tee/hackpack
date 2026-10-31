@@ -30,7 +30,7 @@ Don't spend time introducing the team at the start. Names are on the title slide
 - Stand where the judges can see you and the screen.
 - Look at the judges, not at the slides. Glance at the screen only to check where you are.
 - If there's a microphone, hold it close and keep it there. People tend to drift it away from their mouth.
-- Speak slower than feels natural. Nerves make everyone fast.
+- Speak slower than feels natural. Most people speed up when they're nervous.
 - Say the project name early, and once at the end.
 - When you finish, stop and say "thanks". Don't trail off into "so yeah, that's it".
 
@@ -45,9 +45,9 @@ Questions are part of the score at most events. Common ones:
 - Who would pay for it, or use it?
 - What would you do with another month?
 
-Agree beforehand who answers which kind of question. Keep answers short, and if you don't know, say so: "We didn't get to that; we'd do it by…" is better than guessing. Judges can usually tell.
+Agree beforehand who answers which kind of question. Keep answers short, and if you don't know, say so: "We didn't get to that; we'd do it by…" is better than guessing.
 
-If a judge asks about a weakness, agree with the part that's true and say what you'd do about it. Arguing with a judge never helps.
+If a judge points out a weakness, agree with the part that's true and say what you'd do about it, instead of arguing.
 
 ## Table judging
 

@@ -18,7 +18,7 @@ Before you choose:
 
 1. **Read the exact requirements** on the event page or the sponsor's slide at the opening. "Use our API" can mean a specific product, plan or feature.
 2. **Check what the prize is judged on.** Some sponsors care most about how deeply you used their product; others want a good project that happens to use it.
-3. **Pick one or two that fit your idea**, not every track you could technically enter. A product squeezed in to qualify is obvious, and judges from that company notice first.
+3. **Pick one or two that fit your idea**, not every track you could technically enter. If their product is only there to qualify, the sponsor's judges will see that straight away.
 
 Decide during [ideas and scoping](../guide/02-ideas-and-scoping.md), not after building. Adding a sponsor's product at the end usually means it isn't part of the main feature, which is what sponsor judges look for.
 
@@ -27,7 +27,7 @@ Decide during [ideas and scoping](../guide/02-ideas-and-scoping.md), not after b
 Go to the sponsor's table or find their mentors early, ideally on the first day:
 
 - Ask what they'd like to see built with their product, and what a strong entry looks like to them.
-- Ask about anything that's confusing in their docs. They'd rather fix your problem than have you give up on their product.
+- Ask about anything that's confusing in their docs. Helping people use their product is why they're there.
 - If you get stuck later, they're often the fastest help available, because they built the thing.
 
 Write down the names of the people you talk to. The same people are often the judges for that prize.
@@ -61,4 +61,4 @@ You don't have to talk to recruiters to enter a sponsor prize, and they won't mi
 
 ## Swag
 
-Free t-shirts, stickers and bottles, usually at the sponsor tables. Take what you'll use. The best stuff tends to go in the first few hours.
+Free t-shirts, stickers and bottles, usually at the sponsor tables. It usually goes quickly, so visit the tables early if you want any.

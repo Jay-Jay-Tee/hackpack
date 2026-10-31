@@ -1,6 +1,6 @@
 # The live demo
 
-The demo is the part judges remember. It should show one person getting one useful thing out of your app, start to finish, in about a minute and a half.
+The demo should show one person getting one useful thing out of your app, start to finish, in about a minute and a half.
 
 ## Pick one path
 
@@ -15,7 +15,7 @@ Leave out settings pages, sign-up screens and anything half-built. If a feature 
 
 Write the path down as numbered steps, with what you'll say at each one. That's your **demo script**. Whoever is driving the laptop should be able to do it without thinking.
 
-## Talk about the user, not the code
+## Talk about the user
 
 Describe what's happening for the person using it: "She takes a photo of her fridge, and in a few seconds she has three things she can cook tonight." Not: "This sends a POST request to our API, which calls the vision model."
 
@@ -33,7 +33,7 @@ The app should look like someone's been using it, without your test entries show
 
 ## Your laptop
 
-Set it up before your slot, not while the judges wait.
+Do all of this before your slot.
 
 - **Notifications off.** Windows: Focus (Settings → System → Focus, or the bell in the taskbar). macOS: Do Not Disturb in Control Centre. Quit chat apps so nothing personal pops up.
 - **Close everything else.** Only the app, the slides and the backup video should be open. Close other browser tabs, especially ones you'd rather not project.
@@ -59,7 +59,7 @@ Record the demo path working, once, as soon as it does. Keep the video **downloa
 
 ## When it breaks
 
-It might. Judges have seen it many times and care more about what you do next.
+Demos break often enough that judges are used to it. What you do next is what they'll remember.
 
 1. Don't debug on stage. You won't fix it in the time you have.
 2. Say what happened in one sentence: "The Wi-Fi's dropped, so here's a recording of the same thing."
